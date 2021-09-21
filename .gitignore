@@ -40,3 +40,8 @@ override.tf.json
 hugo.exe
 hugo.darwin
 hugo.linux
+
+### Parcel, Lit, TailwindCSS
+**/.cache/
+**/dist/
+**/node_modules
