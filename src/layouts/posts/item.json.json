@@ -1,0 +1,6 @@
+{
+    "title": "{{ .Title }}",
+    "slug": "{{ .Params.slug }}",
+    "permalink": "{{ .Permalink }}",
+    "tags": {{ .Params.tags }}
+}
