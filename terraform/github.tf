@@ -8,7 +8,7 @@ resource "github_repository" "r" {
   description = "My Personal Site"
   gitignore_template = "Terraform"
   has_downloads = false
-  homepage_url = "samuel-allen.com"
+  homepage_url = var.domain
   license_template = "unlicense"
   visibility = "public"
   vulnerability_alerts = true
