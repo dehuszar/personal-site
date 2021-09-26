@@ -6,7 +6,7 @@ theme = "blank"
 
 [permalinks]
   posts = '/:year/:month/:title/'
-  skill = '/about/cv/skills/:slug'
+  skill = '/cv/skills/:slug'
 
 [taxonomies]
   category = 'categories' 
@@ -15,8 +15,7 @@ theme = "blank"
 
 [outputs]
   home = ['HTML', 'JSON', 'RSS']
-  page = ['HTML']
+  page = ['HTML', 'JSON']
   section = ['HTML', 'JSON', 'RSS']
   taxonomy = ['HTML', 'JSON', 'RSS']
   term = ['HTML', 'JSON', 'RSS']
-

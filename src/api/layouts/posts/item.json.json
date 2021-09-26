@@ -1,6 +1,10 @@
 {
-    "title": "{{ .Title }}",
-    "slug": "{{ .Params.slug }}",
-    "permalink": "{{ .Permalink }}",
-    "tags": {{ .Params.tags }}
+  "title": "{{ .Title }}",
+  "slug": "{{ .Params.slug }}",
+  "permalink": "{{ .RelPermalink }}",
+  {{ with  .OutputFormats.Get "json" -}}
+  "datapermalink": "{{ .Permalink }}",
+  {{ end }}
+  "body": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
+  "tags": ["{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}"]
 }

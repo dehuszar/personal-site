@@ -1,9 +1,6 @@
 ---
-menu:
-  main:
-    identifier: "music"
-    name: "Music"
-    title: "Music"
-    url: "/music/"
+title: "Music"
+slug: "music"
+tags: []
 ---
 # Music goes here
