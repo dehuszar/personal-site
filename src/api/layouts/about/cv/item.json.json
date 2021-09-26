@@ -4,5 +4,6 @@
     "logo": "{{ .Params.logo }}",
     "slug": "{{ .Params.slug }}",
     "permalink": "{{ .Permalink }}",
-    "tags": ["{{ .Params.tags }}"]
+    "tags": ["{{ .Params.tags }}"],
+    "body": "{{ .Content }}"
 }
