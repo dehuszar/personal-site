@@ -5,6 +5,6 @@ menu:
     name: "Skills"
     parent: "cv"
     title: "Skills"
-    homepage: "/about/cv/skills/"
+    homepage: "/cv/skills/"
 ---
 I can do things

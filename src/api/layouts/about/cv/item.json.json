@@ -1,9 +1,0 @@
-{
-    "title": "{{ .Title }}",
-    "homepage": "{{ .Params.homepage }}",
-    "logo": "{{ .Params.logo }}",
-    "slug": "{{ .Params.slug }}",
-    "permalink": "{{ .Permalink }}",
-    "tags": ["{{ .Params.tags }}"],
-    "body": "{{ .Content }}"
-}
