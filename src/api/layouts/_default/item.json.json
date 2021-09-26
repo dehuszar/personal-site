@@ -1,6 +1,10 @@
 {
   "title": "{{ .Title }}",
   "slug": "{{ .Params.slug }}",
-  "permalink": "{{ .Permalink }}",
+  "permalink": "{{ .RelPermalink }}",
+  {{ with  .OutputFormats.Get "json" -}}
+  "datapermalink": "{{ .Permalink }}",
+  {{ end }}
+  "body": "{{ replace .Content "\n" "\\n" | replaceRE "\"" "\\\"" | replaceRE "\t" "\\t" }}",
   "tags": ["{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}"]
 }
