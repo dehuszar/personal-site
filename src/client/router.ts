@@ -7,16 +7,20 @@ import single from './layouts/single';
 
 const url = "http://localhost:1313";
 
+const getRoutes = c => {
+  return {
+    name: c.name,
+    path: `${c.parentPath}${c.path}`,
+    children: c.children ? c.children.filter(c => !c.skip).map(getRoutes) : undefined
+  }
+};
+
 const getPageContext = (context) => {
   const { path, params, router } = context;
   return JSON.stringify({
     path,
     params,
-    routes: router.root.children.map(r => ({
-      name: r.name,
-      path: r.path,
-      children: r.children
-    }))
+    routes: router.root.children.filter(c => !c.skip).map(getRoutes)
   });
 }
 
@@ -39,56 +43,64 @@ const routes = [
   {
     name: 'home',
     path: '/',
-    action: context => fetchData(`${url}/posts/index.json`)
-      .then(data => renderPage(single, data, context))
-  },
-  {
-    name: 'about',
-    path: '/about',
-    action: context => fetchData(`${url}/about/index.json`)
+    parentPath: '',
+    action: context => fetchData(`${url}/index.json`)
       .then(data =>
         renderPage(single, data, context)
       ),
-      children: [{
-        name: 'cv',
-        path: '/about/cv',
-        action: context => fetchData(`${url}/about/cv/index.json`)
+  },
+  {
+    name: 'cv',
+    parentPath: '',
+    path: '/cv',
+          
+    children: [
+      {
+        path: '',
+        parentPath: '',
+        skip: true,
+        action: context => fetchData(`${url}/cv/index.json`)
           .then(data =>
-            renderPage(single, data, context)
-          ),
-          children: [{
-            name: 'education',
-            path: '/about/cv/education',
-            action: context => fetchData(`${url}/about/cv/education/index.json`)
-              .then(data =>
-                renderPage(list, data, context)
-              )
-          }, {
-            name: 'experience',
-            path: '/about/cv/experience',
-            action: context => fetchData(`${url}/about/cv/experience/index.json`)
-              .then(data =>
-                renderPage(list, data, context)
-              )
-          }, {
-            name: 'skills',
-            path: '/about/cv/skills',
-            action: context => fetchData(`${url}/about/cv/skills/index.json`)
-              .then(data =>
-                renderPage(list, data, context)
-              )
-          }]
+            renderPage(list, data, context)
+          )
+      },
+      {
+        name: 'education',
+        parentPath: '/cv',
+        path: '/education',
+        action: context => fetchData(`${url}/cv/education/index.json`)
+          .then(data =>
+            renderPage(list, data, context)
+          )
+      }, {
+        name: 'experience',
+        parentPath: '/cv',
+        path: '/experience',
+        action: context => fetchData(`${url}/cv/experience/index.json`)
+          .then(data =>
+            renderPage(list, data, context)
+          )
+      }, {
+        name: 'skills',
+        parentPath: '/cv',
+        path: '/skills',
+        action: context => fetchData(`${url}/cv/skills/index.json`)
+          .then(data =>
+            renderPage(list, data, context)
+          )
       }]
   },
   {
     name: 'music',
     path: '/music',
+    parentPath: '',
     action: context => fetchData(`${url}/music/index.json`)
     .then(data => renderPage(single, data, context))
   },
   {
     name: 'posts',
     path: '/posts',
+    parentPath: '',
     action: context => fetchData(`${url}/music/index.json`)
     .then(data => renderPage(list, data, context))
   }

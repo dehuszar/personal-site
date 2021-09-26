@@ -6,10 +6,10 @@ import './NavList';
 export class PageHeader extends LitElement {
   @property({type: String}) pageTitle = '';
   @property({type: String}) siteTitle = '';
-  @property() pageContext = {};
+  // pageContent is an object which gets passed in stringified
+  @property({type: String}) pageContext = '';
   render() {
     const pageContext = JSON.parse(this.pageContext);
-    console.log("pageContext: ", pageContext)
 
     return html`
       <style>
@@ -30,18 +30,3 @@ export class PageHeader extends LitElement {
     `;
   }
 }
-
-//<ul>
-// ${pageContext.routes.map(r => html`
-// <li class="${pageContext.path === r.path ? "active" : ""}">
-//   <a href="${r.path}">${r.name}</a>
-//   ${r.children ? html`<ul>
-//     ${r.children && r.children.map(c => html`
-//       <li>
-//         <a href="${c.path}">${c.name}</a>
-//       </li>
-//     `)}
-//     </ul>` : ``}
-// </li>
-// `)}
-// </ul>

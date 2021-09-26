@@ -7,15 +7,15 @@ export class PageHeader extends LitElement {
   @property() routes = [];
 
   render() {
-    console.log(this.routes)
-    return html`
+    const routes = JSON.parse(this.routes);
+    return Array.isArray(routes) ? html`
         <style>
           :host {
             font-size: 1em;
           }
         </style>
         <ul>
-            ${JSON.parse(this.routes).map(r => html`
+            ${routes.map(r => html`
               <li class="${this.currentPath.startsWith(r.path) ? "active" : ""}">
                 <a href="${r.path}">${r.name}</a>
                 ${r.children 
@@ -27,6 +27,6 @@ export class PageHeader extends LitElement {
                   : ``}
               </li>
             `)}
-    `
+    ` : ``
   }
 }
