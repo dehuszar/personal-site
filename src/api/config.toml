@@ -5,7 +5,7 @@ title = 'Samuel deHuszar Allen'
 theme = "blank"
 
 [permalinks]
-  posts = '/:year/:month/:title/'
+  posts = '/posts/:year/:month/:title/'
   skill = '/cv/skills/:slug'
 
 [taxonomies]
@@ -14,8 +14,10 @@ theme = "blank"
   tag = 'tags'
 
 [outputs]
-  home = ['HTML', 'JSON', 'RSS']
+  home = ['HTML', 'JSON']
+  music = ['HTML', 'JSON', 'RSS']
   page = ['HTML', 'JSON']
-  section = ['HTML', 'JSON', 'RSS']
-  taxonomy = ['HTML', 'JSON', 'RSS']
-  term = ['HTML', 'JSON', 'RSS']
+  posts = ['HTML', 'JSON', 'RSS']
+  section = ['HTML', 'JSON']
+  taxonomy = ['HTML', 'JSON']
+  term = ['HTML', 'JSON']
