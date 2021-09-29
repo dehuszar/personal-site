@@ -33,9 +33,12 @@ const renderPage = (layout, data, context) =>
   }), document.body);
 
 let fetchData = async (path, context) => {
-  const dynamicPath = path.includes("/:")
-    ? path.replace(context.route.path, `/${context.params[context.route.path.replace("/:", "")]}`)
-    : path;
+  let dynamicPath = path;
+  
+  if (path.includes("/:")){
+    Object.entries(context.params).forEach(([k, v]) => dynamicPath = dynamicPath.replace(`:${k}`, `${v}`));
+  }
+
   let response = await fetch(dynamicPath);
   let data = await response.json();
   return data.data;
@@ -145,14 +148,55 @@ const routes = [
     path: '/music',
     parentPath: '',
     action: context => fetchData(`${url}/music/index.json`, context)
-    .then(data => renderPage(single, data, context))
+    .then(data => renderPage(list, data, context))
   },
   {
     name: 'posts',
     path: '/posts',
     parentPath: '',
-    action: context => fetchData(`${url}/music/index.json`, context)
-    .then(data => renderPage(list, data, context))
+    children: [
+      {
+        path: '',
+        parentPath: '/posts',
+        skip: true,
+        action: context => fetchData(`${url}/posts/index.json`, context)
+          .then(data =>
+            renderPage(list, data, context)
+          )
+      },{
+        path: '/:year',
+        parentPath: '/posts',
+        skip: true,
+        children: [
+          {
+            path: '',
+            parentPath: '/:year',
+            children: [
+              {
+                path: '/:month',
+                parentPath: '/:year',
+                skip: true,
+                children: [
+                  {
+                    path: '',
+                    parentPath: '/:month',
+                    skip: true
+                  },{
+                    path: '/:post',
+                    parentPath: '/:month',
+                    skip: true,
+                    action: context => fetchData(`${url}/posts/:year/:month/:post/index.json`, context)
+                      .then(data =>
+                        renderPage(single, data, context)
+                      )
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
 
