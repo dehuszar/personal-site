@@ -3,8 +3,8 @@
     "title": "{{ .Title }}",
     "content": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
     "items": [
-    {{ range $index, $e := .Data.Pages }}
-    {{ if $index }}, {{ end }}{{ .Render "item" }}
-    {{ end }}
-]}
+        {{ range $index, $e := .Data.Pages }}
+        {{ if $index }}, {{ end }}{{ .Render "item" }}
+        {{ end }}
+    ]}
 {{ end }}

@@ -32,8 +32,11 @@ const renderPage = (layout, data, context) =>
     content: JSON.stringify(data)
   }), document.body);
 
-let fetchData = async path => {
-  let response = await fetch(path);
+let fetchData = async (path, context) => {
+  const dynamicPath = path.includes("/:")
+    ? path.replace(context.route.path, `/${context.params[context.route.path.replace("/:", "")]}`)
+    : path;
+  let response = await fetch(dynamicPath);
   let data = await response.json();
   return data.data;
 }
@@ -44,7 +47,7 @@ const routes = [
     name: 'home',
     path: '/',
     parentPath: '',
-    action: context => fetchData(`${url}/index.json`)
+    action: context => fetchData(`${url}/index.json`, context)
       .then(data =>
         renderPage(single, data, context)
       ),
@@ -59,7 +62,7 @@ const routes = [
         path: '',
         parentPath: '',
         skip: true,
-        action: context => fetchData(`${url}/cv/index.json`)
+        action: context => fetchData(`${url}/cv/index.json`, context)
           .then(data =>
             renderPage(list, data, context)
           )
@@ -68,40 +71,87 @@ const routes = [
         name: 'education',
         parentPath: '/cv',
         path: '/education',
-        action: context => fetchData(`${url}/cv/education/index.json`)
-          .then(data =>
-            renderPage(list, data, context)
-          )
+        children: [
+          {
+            path: '',
+            parentPath: '/education',
+            skip: true,
+            action: context => fetchData(`${url}/cv/education/index.json`, context)
+              .then(data =>
+                renderPage(list, data, context)
+              )
+          },
+          {
+            path: '/:school',
+            parentPath: '/education',
+            skip: true,
+            action: context => fetchData(`${url}/cv/education/:school/index.json`, context)
+              .then(data =>
+                renderPage(single, data, context)
+              )
+          }
+        ],
       }, {
         name: 'experience',
         parentPath: '/cv',
         path: '/experience',
-        action: context => fetchData(`${url}/cv/experience/index.json`)
-          .then(data =>
-            renderPage(list, data, context)
-          )
+        children: [
+          {
+            path: '',
+            parentPath: '/experience',
+            skip: true,
+            action: context => fetchData(`${url}/cv/experience/index.json`, context)
+              .then(data =>
+                renderPage(list, data, context)
+              )
+          },{
+            path: '/:job',
+            parentPath: '/experience',
+            skip: true,
+            action: context => fetchData(`${url}/cv/experience/:job/index.json`, context)
+              .then(data =>
+                renderPage(single, data, context)
+              )
+          }
+        ]
       }, {
         name: 'skills',
         parentPath: '/cv',
         path: '/skills',
-        action: context => fetchData(`${url}/cv/skills/index.json`)
-          .then(data =>
-            renderPage(list, data, context)
-          )
+        children: [
+          {
+            path: '',
+            parentPath: '/skills',
+            skip: true,
+            action: context => fetchData(`${url}/cv/skills/index.json`, context)
+              .then(data =>
+                renderPage(list, data, context)
+              )
+          },
+          {
+            path: '/:skill',
+            parentPath: '/skills',
+            skip: true,
+            action: context => fetchData(`${url}/cv/skills/:skill/index.json`, context)
+              .then(data =>
+                renderPage(single, data, context)
+              )
+          }
+        ]
       }]
   },
   {
     name: 'music',
     path: '/music',
     parentPath: '',
-    action: context => fetchData(`${url}/music/index.json`)
+    action: context => fetchData(`${url}/music/index.json`, context)
     .then(data => renderPage(single, data, context))
   },
   {
     name: 'posts',
     path: '/posts',
     parentPath: '',
-    action: context => fetchData(`${url}/music/index.json`)
+    action: context => fetchData(`${url}/music/index.json`, context)
     .then(data => renderPage(list, data, context))
   }
 ];

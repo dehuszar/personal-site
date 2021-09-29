@@ -18,13 +18,13 @@ export class PageHeader extends LitElement {
             ${routes.map(r => html`
               <li class="${this.currentPath.startsWith(r.path) ? "active" : ""}">
                 <a href="${r.path}">${r.name}</a>
-                ${r.children 
+                ${r.children && r.children.length > 0
                   ? html`
                     <nav-list
                       currentPath=${this.currentPath}
                       routes=${JSON.stringify(r.children)}
                     ></nav-list>`
-                  : ``}
+                  : html``}
               </li>
             `)}
     ` : ``

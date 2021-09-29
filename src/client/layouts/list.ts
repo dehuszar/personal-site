@@ -12,7 +12,7 @@ export default data => html`
   <primary-nav
     pageContext=${data.pageContext}></primary-nav>
   <page-content>
-    ${JSON.parse(data.content).map(p => html`
+    ${JSON.parse(data.content).items.map(p => html`
       <article>
         <h1><a href="${p.permalink}">${p.title}</a></h1>
       </article>

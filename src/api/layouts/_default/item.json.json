@@ -6,5 +6,5 @@
   "datapermalink": "{{ .Permalink }}",
   {{ end }}
   "body": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
-  "tags": ["{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}"]
+  "tags": [{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}]
 }
