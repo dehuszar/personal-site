@@ -7,5 +7,9 @@
   "datapermalink": "{{ .Permalink }}",
   {{ end }}
   "body": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
-  "tags": [{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}]
+  "tags": [
+    {{ range $index, $taxonomy := .Params.tags }}
+    {{ if $index }}, {{ end }}"{{ $taxonomy }}"
+    {{ end }}
+  ]
 }

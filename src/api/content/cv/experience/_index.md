@@ -1,5 +1,6 @@
 ---
 title: 'Experience'
+type: 'cv/experience'
 slug: 'experience'
 tags: []
 ---
