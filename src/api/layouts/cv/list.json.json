@@ -1,0 +1,24 @@
+{{ define "response" }}
+{{- $schools := where .Site.RegularPages "Type" "school" -}}
+{{- $jobs := where .Site.RegularPages "Type" "job" -}}
+{{- $skills := where .Site.RegularPages "Type" "skill" -}}
+{
+    "title": "{{ .Title }}",
+    "content": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
+    "education": [
+        {{ range $index, $e := $schools }}
+        {{ if $index }}, {{ end }}{{ .Render "school" }}
+        {{ end }}
+    ],
+    "experience": [
+        {{ range $index, $e := $jobs }}
+        {{ if $index }}, {{ end }}{{ .Render "job" }}
+        {{ end }}
+    ],
+    "skills": [
+        {{ range $index, $e := $skills }}
+        {{ if $index }}, {{ end }}{{ .Render "skill" }}
+        {{ end }}
+    ]
+}
+{{ end }}

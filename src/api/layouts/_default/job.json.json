@@ -1,5 +1,6 @@
 {
     "title": "{{ .Title }}",
+    "type": "{{ .Type }}",
     "homepage": "{{ .Params.homepage }}",
     "logo": "{{ .Params.logo }}",
     "slug": "{{ .Params.slug }}",
@@ -8,5 +9,9 @@
     "datapermalink": "{{ .Permalink }}",
     {{ end }}
     "body": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
-    "tags": ["{{ .Params.tags }}"]
+    "tags": [
+        {{ range $index, $taxonomy := .Params.tags }}
+        {{ if $index }}, {{ end }}"{{ $taxonomy }}"
+        {{ end }}
+    ]
 }

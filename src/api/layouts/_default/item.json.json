@@ -2,6 +2,7 @@
   "title": "{{ .Title }}",
   "slug": "{{ .Params.slug }}",
   "permalink": "{{ .RelPermalink }}",
+  "type": "{{ .Type }}",
   {{ with  .OutputFormats.Get "json" -}}
   "datapermalink": "{{ .Permalink }}",
   {{ end }}
