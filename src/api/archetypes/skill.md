@@ -2,6 +2,7 @@
 homepage: ''
 logo: ''
 slug: ''
-tags: ['test']
+tags: []
+type: "skill"
 title: ''
 ---

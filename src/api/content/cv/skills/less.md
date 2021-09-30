@@ -1,6 +1,7 @@
 ---
+homepage: 'https://lesscss.org/'
 slug: 'less'
 tags: ['CSS', 'Pre-Processing', 'Development', 'Applications', 'Front End']
 title: 'Less'
-homepage: 'https://lesscss.org/'
+type: "skill"
 ---

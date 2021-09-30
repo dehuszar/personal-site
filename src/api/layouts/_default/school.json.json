@@ -1,0 +1,17 @@
+{
+    "title": "{{ .Title }}",
+    "type": "{{ .Type }}",
+    "homepage": "{{ .Params.homepage }}",
+    "logo": "{{ .Params.logo }}",
+    "slug": "{{ .Params.slug }}",
+    "permalink": "{{ .RelPermalink }}",
+    {{ with  .OutputFormats.Get "json" -}}
+    "datapermalink": "{{ .Permalink }}",
+    {{ end }}
+    "body": {{ trim ( .Content | jsonify | safeJS ) "\n" }},
+    "tags": [
+        {{ range $index, $taxonomy := .Params.tags }}
+        {{ if $index }}, {{ end }}"{{ $taxonomy }}"
+        {{ end }}
+    ]
+}
