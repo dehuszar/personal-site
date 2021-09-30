@@ -2,6 +2,7 @@ import UniversalRouter from 'universal-router';
 import {LitElement, html, render} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
+import cv from './layouts/cv';
 import list from './layouts/list';
 import single from './layouts/single';
 
@@ -67,7 +68,7 @@ const routes = [
         skip: true,
         action: context => fetchData(`${url}/cv/index.json`, context)
           .then(data =>
-            renderPage(list, data, context)
+            renderPage(cv, data, context)
           )
       },
       {
