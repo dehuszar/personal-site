@@ -1,0 +1,7 @@
+{
+  "mode": "jit",
+  "modules": true,
+  "plugins": {
+    "autoprefixer": true
+  }
+}

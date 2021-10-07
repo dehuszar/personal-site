@@ -17,9 +17,10 @@ const getRoutes = c => {
 };
 
 const getPageContext = (context) => {
-  const { path, params, router } = context;
+  const { path, params, parentPath, router } = context;
   return JSON.stringify({
     path,
+    parentPath,
     params,
     routes: router.root.children.filter(c => !c.skip).map(getRoutes)
   });
@@ -51,6 +52,7 @@ const routes = [
     name: 'home',
     path: '/',
     parentPath: '',
+    skip: true,
     action: context => fetchData(`${url}/index.json`, context)
       .then(data =>
         renderPage(single, data, context)
