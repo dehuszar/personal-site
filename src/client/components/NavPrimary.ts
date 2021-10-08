@@ -2,8 +2,8 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import './NavList';
 
-@customElement('primary-nav')
-export class PrimaryNav extends LitElement {
+@customElement('nav-primary')
+export class NavPrimary extends LitElement {
   // pageContent is an object which gets passed in stringified
   @property({type: String}) pageContext = '';
   

@@ -3,10 +3,10 @@ import { customElement, property } from 'lit/decorators.js';
 import { anchorStyles } from '../css/anchors.css.ts';
 import { headerStyles } from '../css/headers.css.ts';
 
-@customElement('school-summary')
-export class SchoolSummary extends LitElement {
+@customElement('summary-skill')
+export class SummarySkill extends LitElement {
   @property({ type: String }) permalink = '';
-  @property({ type: String }) school = '';
+  @property({ type: String }) skill = '';
 
   static get styles() {
     return [
@@ -23,7 +23,7 @@ export class SchoolSummary extends LitElement {
 
   render() {
     return html`
-      <h1><a href="${this.permalink}">${this.school}</a></h1>
+      <h1><a href="${this.permalink}">${this.skill}</a></h1>
     `;
   }
 }

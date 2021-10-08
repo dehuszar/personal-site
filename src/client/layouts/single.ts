@@ -3,15 +3,15 @@ import {customElement, property} from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import '../components/PageHeader';
 import '../components/PageContent';
-import '../components/PrimaryNav';
+import '../components/NavPrimary';
 
 export default data => {
   const { permalink, title, body } = JSON.parse(data.content);
   return html`
     <page-header
       siteTitle="${data.siteTitle}">
-      <primary-nav
-        pageContext=${data.pageContext}></primary-nav>
+      <nav-primary
+        pageContext=${data.pageContext}></nav-primary>
     </page-header>
     <page-content pageTitle="${data.pageTitle}">
       <article>
