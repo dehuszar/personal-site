@@ -6,7 +6,7 @@ import './NavList';
 
 @customElement('page-header')
 export class PageHeader extends LitElement {
-  @property({type: String}) siteTitle = '';
+  @property({ type: String }) siteTitle = '';
 
   static get styles() {
     return [
