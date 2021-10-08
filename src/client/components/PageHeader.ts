@@ -2,7 +2,6 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { anchorStyles } from '../css/anchors.css.ts';
 import { headerStyles } from '../css/headers.css.ts';
-import './NavList';
 
 @customElement('page-header')
 export class PageHeader extends LitElement {
