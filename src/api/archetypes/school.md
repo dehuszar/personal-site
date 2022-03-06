@@ -1,9 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-slug: ""
-type: "school"
 date: {{ .Date }}
 draft: true
+end_year: ""
+location: ""
+slug: ""
+start_year: ""
 tags: []
+title: "{{ replace .Name "-" " " | title }}"
+type: "school"
 ---
 

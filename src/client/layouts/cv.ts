@@ -8,6 +8,15 @@ import '../components/SummarySchool';
 import '../components/SummarySkill';
 
 export default data => html`
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+    }
+
+    .skills header {
+      grid-column-end: span 3;
+    }
+  </style>
   <page-header
     siteTitle="${data.siteTitle}">
     <nav-primary
@@ -19,7 +28,12 @@ export default data => html`
         <h3>Education</h3>
       </header>
       ${JSON.parse(data.content).education.map(p => html`
-      <summary-school permalink=${p.permalink} school=${p.title}></summary-school>
+      <summary-school
+        endYear=${p.endYear}
+        location=${p.location}
+        permalink=${p.permalink}
+        school=${p.title}
+        startYear=${p.startYear}></summary-school>
     `)}
     </section>
     <section class="experience">

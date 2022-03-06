@@ -1,6 +1,9 @@
 ---
-title: "University of Washington"
+end_year: "2002"
+location: "Seattle, WA"
 slug: "university-of-washington"
-type: "school"
+start_year: "1998"
 tags: []
+title: "University of Washington"
+type: "school"
 ---

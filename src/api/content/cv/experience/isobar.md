@@ -2,8 +2,8 @@
 title: "Isobar"
 slug: "isobar"
 type: "job"
-start_date: "2014-03"
-end_date: ""
+start_year: "2014"
+end_year: "2016"
 draft: false
 tags: []
 ---
