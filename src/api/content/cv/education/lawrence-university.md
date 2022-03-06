@@ -1,7 +1,9 @@
 ---
-title: Lawrence University
+end_year: "1997"
+location: "Appleton, WI"
 slug: "lawrence-university"
-type: "school"
-start_date: "1996-08-01"
+start_year: "1996"
 tags: []
+title: Lawrence University
+type: "school"
 ---

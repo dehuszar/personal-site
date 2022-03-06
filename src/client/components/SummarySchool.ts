@@ -5,8 +5,11 @@ import { headerStyles } from '../css/headers.css.ts';
 
 @customElement('summary-school')
 export class SummarySchool extends LitElement {
+  @property({ type: String }) endYear = '';
+  @property({ type: String }) location = '';
   @property({ type: String }) permalink = '';
   @property({ type: String }) school = '';
+  @property({ type: String }) startYear = '';
 
   static get styles() {
     return [
@@ -24,6 +27,8 @@ export class SummarySchool extends LitElement {
   render() {
     return html`
       <h1><a href="${this.permalink}">${this.school}</a></h1>
+      <p>${this.location}</p>
+      <p>${this.startYear} - ${this.endYear}</p>
     `;
   }
 }
