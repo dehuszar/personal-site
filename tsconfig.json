@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "module": "es6",
+    "target": "ESNext",
+    "useDefineForClassFields": false,
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules"]
+}

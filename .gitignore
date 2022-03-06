@@ -29,20 +29,9 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
-
-### Hugo ###
-# Generated files by hugo
-**/public/
-**/resources/_gen/
-**/themes/
-
-# Executable may be added to repository
-hugo.exe
-hugo.darwin
-hugo.linux
-
-### Parcel, Lit, TailwindCSS
+### Parcel, Lit
 **/.cache/
+**/.parcel-cache
+**/build/
 **/dist/
 **/node_modules
-**/.parcel-cache
