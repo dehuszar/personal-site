@@ -1,0 +1,46 @@
+{
+  "name": "samuel-allen.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "node build.js",
+    "serve": "serve build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dehuszar/personal-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dehuszar/personal-site/issues"
+  },
+  "homepage": "https://github.com/dehuszar/personal-site#readme",
+  "devDependencies": {
+    "@metalsmith/layouts": "^2.4.0",
+    "@metalsmith/markdown": "^1.4.0",
+    "@parcel/transformer-typescript-tsc": "^2.3.2",
+    "autoprefixer": "^10.4.2",
+    "metalsmith": "^2.4.2",
+    "parcel": "^2.3.2",
+    "postcss": "^8.4.7",
+    "postcss-modules": "^4.3.1",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@metalsmith/collections": "^1.2.1",
+    "@metalsmith/permalinks": "^2.4.0",
+    "@metalsmith/rss": "^1.0.1",
+    "lit": "^2.2.0",
+    "metalsmith-sitemap": "^1.2.2",
+    "metalsmith-to-json": "^1.0.2",
+    "universal-router": "^9.1.0"
+  },
+  "browserslist": [
+    "> 5%"
+  ]
+}
