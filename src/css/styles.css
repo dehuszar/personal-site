@@ -1,8 +1,10 @@
-/* @import "tailwindcss/base"; */
-
 :root {
   --primary-black: rgba(83, 77, 77, 1);
   --text-color: var(--primary-black);
   --sans-serif-font: 'Lato', sans-serif;
   --serif-font: 'Lora', serif;
+}
+
+body {
+  padding: 1em;
 }

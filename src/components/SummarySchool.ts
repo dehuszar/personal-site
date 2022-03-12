@@ -16,6 +16,10 @@ export class SummarySchool extends LitElement {
       anchorStyles,
       headerStyles,
       css`
+        :host {
+          margin: 0 0 1em 0;
+        }
+
         h1 {
           font-family: 'Lato', sans-serif;
           font-size: 1em;

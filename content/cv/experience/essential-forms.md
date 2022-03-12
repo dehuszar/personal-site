@@ -1,7 +1,7 @@
 ---
 title: "Essential Forms"
 slug: "essential-forms"
-type: "job"
+type: "experience"
 startYear: "2004"
 endYear: "2014"
 draft: false

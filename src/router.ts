@@ -6,6 +6,8 @@ import cv from './layouts/cv';
 import list from './layouts/list';
 import single from './layouts/single';
 
+const siteTitle = "Samuel deHuszar Allen"
+
 const getRoutes = c => {
   return {
     name: c.name,
@@ -22,6 +24,19 @@ const getPageContext = (context) => {
     params,
     routes: router.root.children.filter(c => !c.skip).map(getRoutes)
   });
+}
+
+const preparePageData = (data, context) => {
+  const filters = context.pathname.split('/').filter(segment => segment)
+  const page = data.filter(r => r.type === "page" && r.slug === filters[0])[0];
+  const type = filters[1] ? data.filter(r => r.type === filters[1]) : data;
+  const single = filters[2] ? type.filter(r => r.slug === filters[2])[0] : undefined;
+
+  return {
+    page,
+    type,
+    single
+  }
 }
 
 const renderPage = (layout, data, context) => 
@@ -44,7 +59,6 @@ let fetchData = async (path, context) => {
   return data;
 }
 
-const siteTitle = "Samuel deHuszar Allen"
 const routes = [
   {
     name: 'home',
@@ -53,7 +67,7 @@ const routes = [
     skip: true,
     action: context => fetchData(`/data/posts.json`, context)
       .then(data =>
-        renderPage(single, data, context)
+        renderPage(single, preparePageData(data, context), context)
       ),
   },
   {
@@ -68,7 +82,7 @@ const routes = [
         skip: true,
         action: context => fetchData(`/data/cv.json`, context)
           .then(data =>
-            renderPage(cv, data, context)
+            renderPage(cv, preparePageData(data, context), context)
           )
       },
       {
@@ -82,7 +96,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(list, data, context)
+                renderPage(list, preparePageData(data, context), context)
               )
           },
           {
@@ -91,7 +105,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, data, context)
+                renderPage(single, preparePageData(data, context), context)
               )
           }
         ],
@@ -106,7 +120,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(list, data, context)
+                renderPage(list, preparePageData(data, context), context)
               )
           },{
             path: '/:job',
@@ -114,7 +128,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, data, context)
+                renderPage(single, preparePageData(data, context), context)
               )
           }
         ]
@@ -129,7 +143,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(list, data, context)
+                renderPage(list, preparePageData(data, context), context)
               )
           },
           {
@@ -138,7 +152,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, data, context)
+                renderPage(single, preparePageData(data, context), context)
               )
           }
         ]
@@ -149,7 +163,7 @@ const routes = [
     path: '/music',
     parentPath: '',
     action: context => fetchData(`/data/music.json`, context)
-    .then(data => renderPage(list, data, context))
+    .then(data => renderPage(list, preparePageData(data, context), context))
   },
   {
     name: 'posts',
@@ -162,7 +176,7 @@ const routes = [
         skip: true,
         action: context => fetchData(`/data/posts.json`, context)
           .then(data =>
-            renderPage(list, data, context)
+            renderPage(list, preparePageData(data, context), context)
           )
       },{
         path: '/:year',
@@ -188,7 +202,7 @@ const routes = [
                     skip: true,
                     action: context => fetchData(`/data/posts.json`, context)
                       .then(data =>
-                        renderPage(single, data, context)
+                        renderPage(single, preparePageData(data, context), context)
                       )
                   }
                 ]

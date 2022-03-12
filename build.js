@@ -8,10 +8,10 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
   .destination('./dist/data')     // destination directory
   .clean(true)                // clean destination before
   .use(markdown())            // transpile all md into html
-  .use( tojson({
+  .use(tojson({
     outputPath : '',
     createIndexes : true,
-    indexPaths : ['posts', 'music', 'cv'],
+    indexPaths : ['posts', 'music', 'cv', 'pages'],
     onlyOutputIndex : true
   }))
   .build(function(err) {      // build process

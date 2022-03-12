@@ -1,7 +1,7 @@
 ---
 title: SkySpecs
 slug: "skyspecs"
-type: "job"
+type: "experience"
 startYear: "2016"
 endYear: "present"
 draft: false
