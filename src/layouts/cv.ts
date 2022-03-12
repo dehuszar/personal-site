@@ -7,14 +7,23 @@ import '../components/SummaryJob';
 import '../components/SummarySchool';
 import '../components/SummarySkill';
 
-const education = r => r.type === "school";
-const experience = r => r.type === "job";
+const education = r => r.type === "education";
+const experience = r => r.type === "experience";
 const skills = r => r.type === "skill";
 
-export default data => html`
+export default data => {
+  
+  const { siteTitle, pageContext } = data;
+  const { page, type, single } = JSON.parse(data.content);
+
+  return html`
   <style>
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Lora', serif;
+    }
+
+    header h3 {
+      border-bottom: 1px solid black;
     }
 
     .skills header {
@@ -22,16 +31,16 @@ export default data => html`
     }
   </style>
   <page-header
-    siteTitle="${data.siteTitle}">
+    siteTitle="${siteTitle}">
     <nav-primary
-      pageContext=${data.pageContext}></nav-primary>
+      pageContext=${pageContext}></nav-primary>
   </page-header>
-  <page-content pageTitle="${data.pageTitle}">
+  <page-content pageTitle="${page.title}">
     <section class="education">
       <header>
         <h3>Education</h3>
       </header>
-      ${JSON.parse(data.content).filter(education).map(p => html`
+      ${JSON.parse(data.content).type.filter(education).map(p => html`
       <summary-school
         endYear=${p.endYear}
         location=${p.location}
@@ -44,7 +53,7 @@ export default data => html`
       <header>
         <h3>Experience</h3>
       </header>
-      ${JSON.parse(data.content).filter(experience).map(p => html`
+      ${JSON.parse(data.content).type.filter(experience).map(p => html`
         <summary-job slug=${p.slug} job=${p.title}></summary-job>
       `)}
     </section>
@@ -52,9 +61,10 @@ export default data => html`
       <header>
         <h3>Skills</h3>
       </header>
-      ${JSON.parse(data.content).filter(skills).map(p => html`
+      ${JSON.parse(data.content).type.filter(skills).map(p => html`
         <summary-skill slug=${p.slug} skill=${p.title}></summary-skill>
       `)}
     </section>
   </page-content>
 `
+}

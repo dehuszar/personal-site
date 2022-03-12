@@ -5,5 +5,5 @@ slug: "lawrence-university"
 startYear: "1996"
 tags: []
 title: Lawrence University
-type: "school"
+type: "education"
 ---

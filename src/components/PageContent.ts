@@ -18,7 +18,7 @@ export class PageContent extends LitElement {
           display: grid;
           grid-template-columns: repeat(12, 1fr);
           grid-template-rows: repeat(12, 50px);
-          gap: 1em;
+          gap: 3em;
           padding: 0 2em;
         }
 
@@ -29,8 +29,12 @@ export class PageContent extends LitElement {
         }
 
         header h2 {
-          line-height: 2em;
+          line-height: 3em;
           margin: 0;
+        }
+
+        header h3 {
+          text-decoration: underline;
         }
 
         ::slotted(section) {
@@ -48,7 +52,7 @@ export class PageContent extends LitElement {
 
         ::slotted(.skills) {
           grid-column-start: 7;
-          grid-column-end: span 6;
+          grid-column-end: span 7;
 
           grid-template-columns: repeat(3, 1fr);
         }

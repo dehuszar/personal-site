@@ -6,17 +6,19 @@ import '../components/PageContent';
 import '../components/NavPrimary';
 
 export default data => {
-  const { permalink, title, body } = JSON.parse(data.content);
+  const { siteTitle, pageContext } = data;
+  const { page, type, single } = JSON.parse(data.content);
+
   return html`
     <page-header
-      siteTitle="${data.siteTitle}">
+      siteTitle="${siteTitle}">
       <nav-primary
-        pageContext=${data.pageContext}></nav-primary>
+        pageContext=${pageContext}></nav-primary>
     </page-header>
-    <page-content pageTitle="${data.pageTitle}">
+    <page-content pageTitle="${page.title}">
       <article>
-        <h1><a href="${permalink}">${title}</a></h1>
-        ${unsafeHTML(body)}
+        <h1><a href="${single.permalink}">${single.title}</a></h1>
+        ${unsafeHTML(single.body)}
       </article>
     </page-content>
   `

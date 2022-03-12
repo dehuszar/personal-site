@@ -2,6 +2,6 @@
 slug: 'skills'
 tags: []
 title: 'Skills'
-type: 'cv/skills'
+type: 'page'
 ---
 I can do things

@@ -5,5 +5,5 @@ slug: "university-of-washington"
 startYear: "1998"
 tags: []
 title: "University of Washington"
-type: "school"
+type: "education"
 ---
