@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { anchorStyles } from '../css/anchors.css.ts';
 
 @customElement('nav-list')
-export class PageHeader extends LitElement {
+export class NavList extends LitElement {
   @property({type: String}) currentPath = '';
   @property({type: String}) pathName = '';
   @property() routes = [];
