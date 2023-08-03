@@ -27,11 +27,15 @@ const getPageContext = (context) => {
 }
 
 const preparePageData = (data, context) => {
-  const filters = context.pathname.split('/').filter(segment => segment)
-  const page = data.filter(r => r.type === "page" && r.slug === filters[0])[0];
-  const type = filters[1] ? data.filter(r => r.type === filters[1]) : data;
-  const single = filters[2] ? type.filter(r => r.slug === filters[2])[0] : undefined;
+  const {pathname} = context;
+  const isHome = pathname === "/";
+  const homePageSlug = "about";
+  const homePage = data.filter(r => r.slug === homePageSlug);
+  const filters = pathname.split('/').filter(segment => segment);
 
+  const page = isHome ? homePage?.at(0) : data.filter(r => r.type === "page" && r.slug === filters[0])[0];
+  const type = filters[1] ? data.filter(r => r.type === filters[1]) : data;
+  const single = isHome ? homePage?.at(0) : filters[2] ? type.filter(r => r.slug === filters[2])[0] : undefined;
   return {
     page,
     type,
@@ -65,7 +69,7 @@ const routes = [
     path: '/',
     parentPath: '',
     skip: true,
-    action: context => fetchData(`/data/posts.json`, context)
+    action: context => fetchData(`/data/pages.json`, context)
       .then(data =>
         renderPage(single, preparePageData(data, context), context)
       ),

@@ -9,6 +9,8 @@ export default data => {
   const { siteTitle, pageContext } = data;
   const { page, type, single } = JSON.parse(data.content);
 
+  const { contents, permalink, title } = single;
+
   return html`
     <page-header
       siteTitle="${siteTitle}">
@@ -17,8 +19,8 @@ export default data => {
     </page-header>
     <page-content pageTitle="${page.title}">
       <article>
-        <h1><a href="${single.permalink}">${single.title}</a></h1>
-        ${unsafeHTML(single.body)}
+        <h1><a href="${permalink}">${title}</a></h1>
+        ${unsafeHTML(contents)}
       </article>
     </page-content>
   `
