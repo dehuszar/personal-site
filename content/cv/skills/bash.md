@@ -1,7 +1,8 @@
 ---
+experience: ['skyspecs']
 slug: 'bash'
-tags: ['Linux', 'CLI', 'Scripting']
+tags: ['linux', 'scripting']
 title: 'Bash'
-type: "skill"
+type: 'skill'
 ---
 Bash is cool
