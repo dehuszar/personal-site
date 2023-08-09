@@ -1,8 +1,9 @@
 ---
+experience: ['personal']
 slug: 'golang'
-tags: ['Development', 'CMS', 'Golang', 'Services', 'Back End']
+tags: ['development', 'back-end']
 title: 'Golang'
-type: "skill"
+type: 'skill'
 ---
 
 Golang is cool
