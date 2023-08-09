@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { anchorStyles } from '../css/anchors.css.ts';
-import { headerStyles } from '../css/headers.css.ts';
+import { anchorStyles } from '../css/anchors.css';
+import { headerStyles } from '../css/headers.css';
 
 @customElement('summary-skill')
 export class SummarySkill extends LitElement {
@@ -13,6 +13,11 @@ export class SummarySkill extends LitElement {
       anchorStyles,
       headerStyles,
       css`
+        :host {
+          grid-column-end: span 1;
+          padding-right: 2em;
+        }
+        
         h1 {
           font-family: 'Lato', sans-serif;
           font-size: 1em;

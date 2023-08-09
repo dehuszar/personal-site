@@ -6,10 +6,12 @@ import '../components/NavPrimary';
 import '../components/SummaryJob';
 import '../components/SummarySchool';
 import '../components/SummarySkill';
+import '../components/SummaryTool';
 
 const education = r => r.type === "education";
 const experience = r => r.type === "experience";
 const skills = r => r.type === "skill";
+const tools = r => r.type === "tool";
 
 export default data => {
   
@@ -26,8 +28,13 @@ export default data => {
       border-bottom: 1px solid black;
     }
 
-    .skills header {
+    section header {
       grid-column-end: span 3;
+      max-height: 3em;
+    }
+
+    summary-tool {
+      grid-column-end: span 1;
     }
   </style>
   <page-header
@@ -63,6 +70,14 @@ export default data => {
       </header>
       ${JSON.parse(data.content).type.filter(skills).map(p => html`
         <summary-skill slug=${p.slug} skill=${p.title}></summary-skill>
+      `)}
+    </section>
+    <section class="tools">
+      <header>
+        <h3>Tools</h3>
+      </header>
+      ${JSON.parse(data.content).type.filter(tools).map(p => html`
+        <summary-tool slug=${p.slug} tool=${p.title}></summary-tool>
       `)}
     </section>
   </page-content>
