@@ -17,7 +17,7 @@ export class PageContent extends LitElement {
         :host {
           display: grid;
           grid-template-columns: repeat(12, 1fr);
-          grid-template-rows: repeat(12, 50px);
+          grid-template-rows: repeat(12, 3em);
           gap: 3em;
           padding: 0 2em;
         }
@@ -37,24 +37,33 @@ export class PageContent extends LitElement {
           text-decoration: underline;
         }
 
+        ::slotted(*) {
+          grid-row-end: span 6;
+        }
+
         ::slotted(section) {
-          grid-column-end: span 3;
+          grid-column-end: span 2;
           display: inline-grid;
         }
 
         ::slotted(article) {
-          grid-row-end: span 1;
+          grid-row-end: span 10;
+          grid-column-end: span 8;
+          grid-column-start: 3;
         }
 
         ::slotted(.experience) {
-          grid-column-start: 4;
+          grid-column-start: 3;
         }
 
         ::slotted(.skills) {
-          grid-column-start: 7;
-          grid-column-end: span 7;
+          grid-column-start: 5;
+          grid-column-end: span 4;
+        }
 
-          grid-template-columns: repeat(3, 1fr);
+        ::slotted(.tools) {
+          grid-column-start: 9;
+          grid-column-end: span 4;
         }
       `
     ];

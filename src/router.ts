@@ -160,6 +160,30 @@ const routes = [
               )
           }
         ]
+      }, {
+        name: 'tools',
+        parentPath: '/cv',
+        path: '/tool',
+        children: [
+          {
+            path: '',
+            parentPath: '/tool',
+            skip: true,
+            action: context => fetchData(`/data/cv.json`, context)
+              .then(data =>
+                renderPage(list, preparePageData(data, context), context)
+              )
+          },
+          {
+            path: '/:tool',
+            parentPath: '/tool',
+            skip: true,
+            action: context => fetchData(`/data/cv.json`, context)
+              .then(data =>
+                renderPage(single, preparePageData(data, context), context)
+              )
+          }
+        ]
       }]
   },
   {
