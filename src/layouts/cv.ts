@@ -29,12 +29,20 @@ export default data => {
     }
 
     section header {
-      grid-column-end: span 3;
+      grid-column-end: span 2;
       max-height: 3em;
     }
 
     summary-tool {
       grid-column-end: span 1;
+    }
+
+    .skills header {
+      grid-column-end: span 3;
+    }
+
+    .tools header {
+      grid-column-end: span 3;
     }
   </style>
   <page-header

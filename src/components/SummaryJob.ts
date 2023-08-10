@@ -14,7 +14,7 @@ export class SummaryJob extends LitElement {
       headerStyles,
       css`
         :host {
-          grid-column-end: span 2;
+          grid-column-end: span 1;
         }
         
         h1 {
