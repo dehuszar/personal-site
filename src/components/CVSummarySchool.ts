@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { anchorStyles } from '../css/anchors.css.ts';
-import { headerStyles } from '../css/headers.css.ts';
+import { anchorStyles } from '../css/anchors.css.js';
+import { headerStyles } from '../css/headers.css.js';
 
 @customElement('summary-school')
 export class SummarySchool extends LitElement {

@@ -4,15 +4,12 @@ import { experience, education, skills, tools } from '../lib/getRecordsByType';
 import '../components/PageHeader';
 import '../components/PageContent';
 import '../components/NavPrimary';
-import '../components/SummaryJob';
-import '../components/SummarySchool';
-import '../components/SummarySkill';
-import '../components/SummaryTool';
+import '../components/CVSectionExperience';
+import '../components/CVSummaryJob';
+import '../components/CVSummarySchool';
+import '../components/CVSummarySkill';
+import '../components/CVSummaryTool';
 
-const education = r => r.type === "education";
-const experience = r => r.type === "experience";
-const skills = r => r.type === "skill";
-const tools = r => r.type === "tool";
 
 export default data => {
   
