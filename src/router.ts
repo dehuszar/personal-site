@@ -4,7 +4,7 @@ import {customElement, property} from 'lit/decorators.js';
 
 import cv from './layouts/cv';
 import list from './layouts/list';
-import single from './layouts/single';
+import article from './layouts/article';
 
 const siteTitle = "Samuel deHuszar Allen"
 
@@ -33,13 +33,32 @@ const preparePageData = (data, context) => {
   const homePage = data.filter(r => r.slug === homePageSlug);
   const filters = pathname.split('/').filter(segment => segment);
 
-  const page = isHome ? homePage?.at(0) : data.filter(r => r.type === "page" && r.slug === filters[0])[0];
-  const type = filters[1] ? data.filter(r => r.type === filters[1]) : data;
-  const single = isHome ? homePage?.at(0) : filters[2] ? type.filter(r => r.slug === filters[2])[0] : undefined;
+  const getPageContent = r =>
+    r.type === "page"
+    && r.slug === filters?.at(0);
+
+  const getArticleList = r => r.type === filters?.at(1);
+
+  const page = isHome
+    ? homePage?.at(0)
+    : data.filter(getPageContent).at(0);
+
+  const articleList = filters?.at(1)
+    ? data.filter(getArticleList)
+    : data;
+
+  const getSelectedArticle = r => r.slug === filters?.at(2)
+
+  const article = isHome
+    ? homePage?.at(0)
+    : filters?.at(2)
+      ? articleList.filter(getSelectedArticle).at(0)
+      : undefined;
+  
   return {
     page,
-    type,
-    single
+    articleList,
+    article
   }
 }
 
@@ -71,7 +90,7 @@ const routes = [
     skip: true,
     action: context => fetchData(`/data/pages.json`, context)
       .then(data =>
-        renderPage(single, preparePageData(data, context), context)
+        renderPage(article, preparePageData(data, context), context)
       ),
   },
   {
@@ -109,7 +128,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, preparePageData(data, context), context)
+                renderPage(article, preparePageData(data, context), context)
               )
           }
         ],
@@ -132,7 +151,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, preparePageData(data, context), context)
+                renderPage(article, preparePageData(data, context), context)
               )
           }
         ]
@@ -156,7 +175,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, preparePageData(data, context), context)
+                renderPage(article, preparePageData(data, context), context)
               )
           }
         ]
@@ -180,7 +199,7 @@ const routes = [
             skip: true,
             action: context => fetchData(`/data/cv.json`, context)
               .then(data =>
-                renderPage(single, preparePageData(data, context), context)
+                renderPage(article, preparePageData(data, context), context)
               )
           }
         ]
@@ -230,7 +249,7 @@ const routes = [
                     skip: true,
                     action: context => fetchData(`/data/posts.json`, context)
                       .then(data =>
-                        renderPage(single, preparePageData(data, context), context)
+                        renderPage(article, preparePageData(data, context), context)
                       )
                   }
                 ]
