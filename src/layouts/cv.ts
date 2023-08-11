@@ -10,7 +10,6 @@ import '../components/CVSummarySchool';
 import '../components/CVSummarySkill';
 import '../components/CVSummaryTool';
 
-
 export default data => {
   
   const { siteTitle, pageContext } = data;
@@ -62,14 +61,7 @@ export default data => {
         startYear=${p.startYear}></summary-school>
     `)}
     </section>
-    <section class="experience">
-      <header>
-        <h3>Experience</h3>
-      </header>
-      ${JSON.parse(data.content).articleList.filter(experience).map(p => html`
-        <summary-job slug=${p.slug} job=${p.title}></summary-job>
-      `)}
-    </section>
+    <cv-section-exp content=${data.content}></cv-section-exp>
     <section class="skills">
       <header>
         <h3>Skills</h3>

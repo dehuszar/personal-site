@@ -54,12 +54,6 @@ export class PageContent extends LitElement {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        ::slotted(.experience) {
-          grid-column: 1 / 5;
-          grid-row-start: 6;
-          grid-template-columns: repeat(2, 1fr);
-        }
-
         ::slotted(.skills) {
           grid-column-end: span 4;
           grid-column-start: 5;
