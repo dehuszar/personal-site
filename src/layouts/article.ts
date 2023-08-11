@@ -7,9 +7,9 @@ import '../components/NavPrimary';
 
 export default data => {
   const { siteTitle, pageContext } = data;
-  const { page, type, single } = JSON.parse(data.content);
+  const { page, type, article } = JSON.parse(data.content);
 
-  const { contents, permalink, title } = single;
+  const { contents, permalink, title } = article;
 
   return html`
     <page-header

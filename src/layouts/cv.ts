@@ -1,5 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import { experience, education, skills, tools } from '../lib/getRecordsByType';
 import '../components/PageHeader';
 import '../components/PageContent';
 import '../components/NavPrimary';
@@ -16,7 +17,7 @@ const tools = r => r.type === "tool";
 export default data => {
   
   const { siteTitle, pageContext } = data;
-  const { page, type, single } = JSON.parse(data.content);
+  const { page, articleList, article } = JSON.parse(data.content);
 
   return html`
   <style>
@@ -55,7 +56,7 @@ export default data => {
       <header>
         <h3>Education</h3>
       </header>
-      ${JSON.parse(data.content).type.filter(education).map(p => html`
+      ${JSON.parse(data.content).articleList.filter(education).map(p => html`
       <summary-school
         endYear=${p.endYear}
         location=${p.location}
@@ -68,7 +69,7 @@ export default data => {
       <header>
         <h3>Experience</h3>
       </header>
-      ${JSON.parse(data.content).type.filter(experience).map(p => html`
+      ${JSON.parse(data.content).articleList.filter(experience).map(p => html`
         <summary-job slug=${p.slug} job=${p.title}></summary-job>
       `)}
     </section>
@@ -76,7 +77,7 @@ export default data => {
       <header>
         <h3>Skills</h3>
       </header>
-      ${JSON.parse(data.content).type.filter(skills).map(p => html`
+      ${JSON.parse(data.content).articleList.filter(skills).map(p => html`
         <summary-skill slug=${p.slug} skill=${p.title}></summary-skill>
       `)}
     </section>
@@ -84,7 +85,7 @@ export default data => {
       <header>
         <h3>Tools</h3>
       </header>
-      ${JSON.parse(data.content).type.filter(tools).map(p => html`
+      ${JSON.parse(data.content).articleList.filter(tools).map(p => html`
         <summary-tool slug=${p.slug} tool=${p.title}></summary-tool>
       `)}
     </section>
