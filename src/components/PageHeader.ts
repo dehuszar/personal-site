@@ -12,13 +12,15 @@ export class PageHeader extends LitElement {
       anchorStyles,
       headerStyles,
       css`
-        header {
+        :host {
           display: flex;
+          grid-column-end: span 12;
         }
 
         h1 {
-          padding: 0.5em 1em;
+          line-height: 2;
           margin: 0;
+          padding: 0;
         }
 
         a {
@@ -32,12 +34,9 @@ export class PageHeader extends LitElement {
     ];
   }
   render() {
-
     return html`
-      <header>
-        <h1 class="site-title"><a href="/">${this.siteTitle}</a></h1>
-        <slot></slot>
-      </header>
+      <h1 class="site-title"><a href="/">${this.siteTitle}</a></h1>
+      <slot></slot>
     `;
   }
 }
