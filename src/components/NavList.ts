@@ -4,9 +4,9 @@ import { anchorStyles } from '../css/anchors.css.ts';
 
 @customElement('nav-list')
 export class NavList extends LitElement {
-  @property({type: String}) currentPath = '';
-  @property({type: String}) pathName = '';
-  @property() routes = [];
+  @property({ type: String }) currentPath = '';
+  @property({ type: String }) pathName = '';
+  @property({ type: String }) routes = '';
 
   static get styles() {
     return [
@@ -41,8 +41,10 @@ export class NavList extends LitElement {
     const routes = JSON.parse(this.routes);
     return Array.isArray(routes) ? html`
       <ul>
-        ${routes.map(r => html`
-          <li class="${window.location.pathname.startsWith(r.path) ? "active" : ""}">
+        ${routes
+          .filter(r => !r.skip)
+          .map(r => html`
+          <li class="${this.currentPath.startsWith(r.path) ? "active" : ""}">
             <a href="${r.path}">${r.name}</a>
           </li>
         `)}
