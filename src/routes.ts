@@ -1,6 +1,7 @@
-import { html, render } from 'lit';
+import { html } from 'lit';
 
-import './components/StaticPage';
+import './components/PageSingle';
+import './components/PageCV';
 
 import "urlpattern-polyfill";
 
@@ -9,6 +10,11 @@ export const routes = [
     name: 'home',
     path: '/',
     skip: true,
-    render: () => html`<static-page page="about"></static-page>`
+    render: () => html`<page-single page="about"></page-single>`
+  },
+  {
+    name: 'cv',
+    path: '/cv',
+    render: () => html`<page-cv></page-cv>`
   }
 ];

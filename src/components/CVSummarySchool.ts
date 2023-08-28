@@ -17,7 +17,7 @@ export class SummarySchool extends LitElement {
       headerStyles,
       css`
         :host {
-          grid-column-end: span 2;
+          grid-column: 1 / 4;
         }
 
         h1 {
