@@ -4,6 +4,9 @@ import { anchorStyles } from '../css/anchors.css.js';
 import { headerStyles } from '../css/headers.css.js';
 import { cvSectionStyles } from '../css/cv-sections.js';
 
+const columns = 4;
+const rows = 9;
+
 @customElement('cv-section-tools')
 export class CVSectionTools extends LitElement {
   @property({ type: String }) content = null
@@ -15,14 +18,14 @@ export class CVSectionTools extends LitElement {
       cvSectionStyles,
       css`
         :host {
-          grid-column: 9 / span 4;
-          grid-row: 1 / 9;
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(9, 3em);
+          grid-column: 9 / span ${columns};
+          grid-row: 1 / ${rows};
+          grid-template-columns: repeat(${columns}, 1fr);
+          grid-template-rows: repeat(${rows}, 3em);
         }
 
         header {
-          grid-column: span 4;
+          grid-column: span ${columns};
         }
       `
     ]

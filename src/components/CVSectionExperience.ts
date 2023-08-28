@@ -1,8 +1,9 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { anchorStyles } from '../css/anchors.css.js';
-import { headerStyles } from '../css/headers.css.js';
 import { cvSectionStyles } from '../css/cv-sections.js';
+
+const columns = 2;
+const rows = 4;
 
 @customElement('cv-section-exp')
 export class CVSectionExp extends LitElement {
@@ -10,19 +11,17 @@ export class CVSectionExp extends LitElement {
 
   static get styles() {
     return [
-      // anchorStyles,
-      // headerStyles,
       cvSectionStyles,
       css`
         :host {
-          grid-column: 1 / span 3;
-          grid-row: 5 / span 4;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 3em);
+          grid-column: 1 / span ${columns};
+          grid-row: 5 / span ${rows};
+          grid-template-columns: repeat(${columns}, 1fr);
+          grid-template-rows: repeat(${rows}, 3em);
         }
 
         header {
-          grid-column: 1 / span 3;
+          grid-column: 1 / span ${columns};
         }
       `
     ]
