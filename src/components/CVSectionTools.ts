@@ -4,25 +4,25 @@ import { anchorStyles } from '../css/anchors.css.js';
 import { headerStyles } from '../css/headers.css.js';
 import { cvSectionStyles } from '../css/cv-sections.js';
 
-@customElement('cv-section-exp')
-export class CVSectionExp extends LitElement {
+@customElement('cv-section-tools')
+export class CVSectionTools extends LitElement {
   @property({ type: String }) content = null
 
   static get styles() {
     return [
-      // anchorStyles,
-      // headerStyles,
+      anchorStyles,
+      headerStyles,
       cvSectionStyles,
       css`
         :host {
-          grid-column: 1 / span 3;
-          grid-row: 5 / span 4;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 3em);
+          grid-column: 9 / span 4;
+          grid-row: 1 / 9;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(9, 3em);
         }
 
         header {
-          grid-column: 1 / span 3;
+          grid-column: span 4;
         }
       `
     ]
@@ -31,13 +31,11 @@ export class CVSectionExp extends LitElement {
   render() {
     return html`
       <header>
-        <h3>Experience</h3>
+        <h3>Tools</h3>
       </header>
-      ${JSON.parse(this.content)
-        .map(({slug, title}) =>
-          html`<summary-job slug=${slug} job=${title}></summary-job>`
-        )
-      }
+      ${JSON.parse(this.content).map(p => html`
+        <summary-tool slug=${p.slug} tool=${p.title}></summary-tool>
+      `)}
     `
   }
 }

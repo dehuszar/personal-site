@@ -2,8 +2,8 @@ import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
-@customElement('static-page')
-export class StaticPage extends LitElement {
+@customElement('page-single')
+export class PageSingle extends LitElement {
   @property({ type: String }) title = ''
   @property({ type: String }) contents = ''
   @property({ type: String }) page = ''
@@ -13,11 +13,11 @@ export class StaticPage extends LitElement {
     super.connectedCallback();
     
     if (!this.data) {
-      this.fetchStaticPage();
+      this.fetchPageSingle();
     }
   }
 
-  async fetchStaticPage() {
+  async fetchPageSingle() {
     const response = await fetch(`/data/pages.json`);
     const data = await response.json();
     this.data = data.find(p => p.slug === this.page);

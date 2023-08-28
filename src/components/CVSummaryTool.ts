@@ -15,6 +15,7 @@ export class SummaryTool extends LitElement {
       css`
         :host {
           padding-right: 2em;
+          grid-column: span 1;
         }
 
         h1 {
