@@ -1,6 +1,8 @@
 import { html, render } from 'lit';
 
-import './components/StaticPage';
+import './components/PageSingle';
+import './components/PageCV';
+import './components/CVArticle';
 
 import "urlpattern-polyfill";
 
