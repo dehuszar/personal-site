@@ -10,6 +10,7 @@ const rows = 9;
 @customElement('cv-section-skills')
 export class CVSectionSkills extends LitElement {
   @property({ type: String }) content = null
+  @property({ type: String }) sectionType = null
 
   static get styles() {
     return [
@@ -34,11 +35,11 @@ export class CVSectionSkills extends LitElement {
   render() {
     return html`
       <header>
-          <h3>Skills</h3>
-        </header>
-        ${JSON.parse(this.content).map(p => html`
-          <summary-skill slug=${p.slug} skill=${p.title}></summary-skill>
-        `)}
+        <h3>Skills</h3>
+      </header>
+      ${JSON.parse(this.content).map(p => html`
+        <summary-skill slug=${p.slug} skill=${p.title}></summary-skill>
+      `)}
     `
   }
 }

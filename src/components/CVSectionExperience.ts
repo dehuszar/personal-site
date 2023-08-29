@@ -15,7 +15,7 @@ export class CVSectionExp extends LitElement {
       css`
         :host {
           grid-column: 1 / span ${columns};
-          grid-row: 5 / span ${rows};
+          grid-row: 4 / span ${rows};
           grid-template-columns: repeat(${columns}, 1fr);
           grid-template-rows: repeat(${rows}, 3em);
         }

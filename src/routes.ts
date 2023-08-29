@@ -2,6 +2,7 @@ import { html } from 'lit';
 
 import './components/PageSingle';
 import './components/PageCV';
+import './components/CVArticle';
 
 import "urlpattern-polyfill";
 
@@ -16,5 +17,11 @@ export const routes = [
     name: 'cv',
     path: '/cv',
     render: () => html`<page-cv></page-cv>`
+  },
+  {
+    name: 'school',
+    path: '/cv/education/:school',
+    skip: true,
+    render: ({school}) => html`<cv-article sectionType="education" school="${school}"></cv-article>`
   }
 ];
