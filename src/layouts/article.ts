@@ -1,27 +1,19 @@
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
-import '../components/PageHeader';
-import '../components/PageContent';
-import '../components/NavPrimary';
 
-export default data => {
-  const { siteTitle, pageContext } = data;
-  const { page, type, article } = JSON.parse(data.content);
+import { fetchData } from '../lib/fetchData';
 
-  const { contents, permalink, title } = article;
-
-  return html`
-    <page-header
-      siteTitle="${siteTitle}">
-      <nav-primary
-        pageContext=${pageContext}></nav-primary>
-    </page-header>
-    <page-content pageTitle="${page.title}">
-      <article>
-        <h1><a href="${permalink}">${title}</a></h1>
-        ${unsafeHTML(contents)}
-      </article>
-    </page-content>
+export default async () => {
+  const data = await fetchData(`/data/pages.json`);
+  const { contents, permalink, title } = data;
+  
+  const template = await html`
+    <article>
+      <h1><a href="${permalink}">${title}</a></h1>
+      ${unsafeHTML(contents)}
+    </article>
   `
+  debugger
+  return template;
 }
