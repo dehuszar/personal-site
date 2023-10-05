@@ -1,7 +1,13 @@
-const Metalsmith  = require('metalsmith');
-const markdown    = require('@metalsmith/markdown');
-const permalinks    = require('@metalsmith/permalinks');
-const tojson = require('metalsmith-to-json');
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+import Metalsmith from 'metalsmith';
+import markdown from '@metalsmith/markdown';
+import permalinks from '@metalsmith/permalinks';
+import tojson from 'metalsmith-to-json';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
     
 Metalsmith(__dirname)         // __dirname defined by node.js:
   .source('./content')            // source directory
