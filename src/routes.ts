@@ -23,5 +23,11 @@ export const routes = [
     path: '/cv/education/:school',
     skip: true,
     render: ({school}) => html`<cv-article sectionType="education" school="${school}"></cv-article>`
+  },
+  {
+    name: 'job',
+    path: '/cv/experience/:job',
+    skip: true,
+    render: ({job}) => html`<cv-article sectionType="experience" job="${job}"></cv-article>`
   }
 ];

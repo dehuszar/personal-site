@@ -1,4 +1,4 @@
-import { css, html, LitElement } from "lit";
+import { css, html, LitElement, PropertyValueMap } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { education, experience, skills, tools } from '../lib/getRecordsByType';
 import { cvSectionStyles } from "../css/cv-sections";
@@ -12,17 +12,27 @@ import './CVSummaryJob';
 import './CVSummarySchool';
 import './CVSummarySkill';
 import './CVSummaryTool';
-import * as images from "../images/*"
+import * as images from "../images/*";
+
+import { articleJob } from './CVArticleJobTemplate.js';
+import { articleSchool } from './CVArticleSchoolTemplate.js';
 
 @customElement('cv-article')
 export class CVArticle extends LitElement {
   @property({ type: Array }) data = null
   @property({ type: Array }) education = []
-  @property({ type: Array }) experiences = []
+  @property({ type: Array }) experience = []
   @property({ type: Array }) skills = []
   @property({ type: Array }) tools = []
   @property({ type: String }) sectionType = null
-  @property({ type: String }) articleType = null
+  @property({ reflect: true }) get articleType() {
+    return {
+      education: this.school,
+      experience: this.job,
+      skills: this.skill,
+      tools: this.tool
+    }
+  }
   @property({ type: String }) school = null
   @property({ type: String }) job = null
   @property({ type: String }) skill = null
@@ -32,9 +42,11 @@ export class CVArticle extends LitElement {
     degree: String,
     imageAlt: String,
     imageSrc: String,
+    imageType: String,
     endYear: String,
     location: String,
     slug: String,
+    startYear: String,
     tags: String,
     title: String,
     type: String,
@@ -56,9 +68,17 @@ export class CVArticle extends LitElement {
         }
 
         img {
-          border-radius: 50%;
+          border-radius: 0;
           grid-column: 9 / span 4;
           max-width: 100%;
+        }
+
+        img.photo {
+          border-radius: 50%;
+        }
+
+        p {
+          line-height: 1.6;
         }
       `
     ]
@@ -66,16 +86,15 @@ export class CVArticle extends LitElement {
 
   connectedCallback(): void {
     super.connectedCallback();
-    
-    this.articleType = {
-      education: this.school,
-      experience: this.job,
-      skills: this.skill,
-      tools: this.tool
-    }
 
     if (!this.data) {
       this.fetchPageCV();
+    }
+  }
+
+  protected willUpdate(changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+    if (changedProperties.get('job')) {
+      this.setArticle();
     }
   }
 
@@ -83,18 +102,18 @@ export class CVArticle extends LitElement {
     const response = await fetch(`/data/cv.json`);
     this.data = await response.json();
     this.education = this.data.filter(education);
-    this.experiences = this.data.filter(experience);
+    this.experience = this.data.filter(experience);
     this.skills = this.data.filter(skills);
     this.tools = this.data.filter(tools);
     this.setArticle();
   }
 
-  async setArticle() {
-    const article = await this[this.sectionType]
+  setArticle() {
+    const article = this[this.sectionType]
       .find(e => e.slug === this.articleType[this.sectionType]);
     this.article = article;
   }
-  
+
   render() {
     const {
       contents,
@@ -102,8 +121,10 @@ export class CVArticle extends LitElement {
       endYear,
       imageAlt,
       imageSrc,
+      imageType,
       location,
       slug,
+      startYear,
       tags,
       title,
       type,
@@ -117,7 +138,7 @@ export class CVArticle extends LitElement {
           ${animate()}></cv-section-edu>
         <cv-section-exp
           currentType=${this.sectionType}
-          content=${JSON.stringify(this.experiences)}
+          content=${JSON.stringify(this.experience)}
           ${animate()}></cv-section-exp>`,
       experience: html`
         <cv-section-edu
@@ -126,7 +147,7 @@ export class CVArticle extends LitElement {
           ${animate()}></cv-section-edu>
         <cv-section-exp
           currentType=${this.sectionType}
-          content=${JSON.stringify(this.experiences)}
+          content=${JSON.stringify(this.experience)}
           ${animate()}></cv-section-exp>`,
       skills: html`
         <cv-section-skills
@@ -140,14 +161,39 @@ export class CVArticle extends LitElement {
           ${animate()}></cv-section-tools>`
     }
 
-    return html`
-      ${nav[this.sectionType]}
-      <article>
-        <h2>${title}</h2>
-        <h4>${location} - ${degree}${Boolean(degree) && Boolean(endYear) ? ` - ` : ``}Class of ${endYear}</h4>
-        ${unsafeHTML(contents.toString())}
-      </article>
-      <img src="${images[imageSrc]}" alt="${imageAlt}" />
-    `;
+
+    const schoolContent = {
+      contents,
+      degree,
+      endYear,
+      imageAlt,
+      images,
+      imageSrc,
+      imageType,
+      location,
+      nav,
+      sectionType: this.sectionType,
+      title,
+    }
+
+    const jobContent = {
+      contents,
+      endYear,
+      imageAlt,
+      images,
+      imageSrc,
+      imageType,
+      nav,
+      sectionType: this.sectionType,
+      startYear,
+      title,
+    }
+
+    switch (this.sectionType) {
+      case 'education':
+        return articleSchool(schoolContent);
+      case 'experience':
+        return articleJob(jobContent);
+    }
   }
 }
