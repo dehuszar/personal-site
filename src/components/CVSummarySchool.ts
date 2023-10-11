@@ -17,7 +17,7 @@ export class SummarySchool extends LitElement {
       headerStyles,
       css`
         :host {
-          grid-column-end: span 2;
+          grid-column: 1 / span 2;
         }
 
         h1 {
@@ -30,9 +30,8 @@ export class SummarySchool extends LitElement {
 
   render() {
     return html`
-      <h1><a href="/cv/education/${this.slug}">${this.school}</a></h1>
-      <p>${this.location}</p>
-      <p>${this.startYear} - ${this.endYear}</p>
+      <h1><a href="/cv/education/${this.slug}">${this.school}
+      <br>${this.location} - ${this.endYear}</a></h1>
     `;
   }
 }

@@ -15,7 +15,6 @@ export class SummarySkill extends LitElement {
       css`
         :host {
           grid-column-end: span 1;
-          padding-right: 2em;
         }
         
         h1 {

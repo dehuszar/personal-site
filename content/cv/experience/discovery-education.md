@@ -1,7 +1,7 @@
 ---
 endYear: "2014"
 imageAlt: "Discovery Education logo"
-imageSrc: "discovery-education.png"
+imageSrc: "discovery-logo.svg"
 imageType: "logo"
 slug: "discovery-education"
 startYear: "2014"

@@ -8,4 +8,4 @@ export const anchorStyles = css`
    a {
       text-decoration: none;
    }
-`
+`;
