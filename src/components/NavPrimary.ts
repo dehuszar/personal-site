@@ -17,15 +17,13 @@ export class NavPrimary extends LitElement {
     
   render() {
     const pageContext = JSON.parse(this.pageContext);
-
     return html`
-        <nav>
-          <nav-list
-            currentPath=${pageContext.path}
-            pathName=${pageContext.pathName}
-            routes=${JSON.stringify(pageContext.routes)}
-          ></nav-list>
-        </nav>
+      <nav>
+        <nav-list
+          currentPath=${pageContext.path}
+          routes=${JSON.stringify(pageContext.routes)}
+        ></nav-list>
+      </nav>
     `;
   }
 }

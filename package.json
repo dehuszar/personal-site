@@ -24,6 +24,7 @@
   "devDependencies": {
     "@metalsmith/layouts": "^2.4.0",
     "@metalsmith/markdown": "^1.4.0",
+    "@parcel/resolver-glob": "^2.9.3",
     "@parcel/transformer-typescript-tsc": "^2.3.2",
     "autoprefixer": "^10.4.2",
     "metalsmith": "^2.6.1",
@@ -33,13 +34,16 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@lit-labs/motion": "^1.0.4",
+    "@lit-labs/router": "^0.1.1",
     "@metalsmith/collections": "^1.2.1",
     "@metalsmith/permalinks": "^2.4.0",
     "@metalsmith/rss": "^1.0.1",
     "lit": "^2.8.0",
     "metalsmith-sitemap": "^1.2.2",
     "metalsmith-to-json": "^1.0.2",
-    "universal-router": "^9.1.0"
+    "universal-router": "^9.1.0",
+    "urlpattern-polyfill": "^9.0.0"
   },
   "browserslist": [
     "> 5%"
