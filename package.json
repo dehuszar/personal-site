@@ -34,12 +34,12 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@lit-labs/motion": "^1.0.4",
-    "@lit-labs/router": "^0.1.1",
+    "@lit-labs/motion": "^1.0.5",
+    "@lit-labs/router": "^0.1.2",
     "@metalsmith/collections": "^1.2.1",
     "@metalsmith/permalinks": "^2.4.0",
     "@metalsmith/rss": "^1.0.1",
-    "lit": "^2.8.0",
+    "lit": "^3.0.0",
     "metalsmith-sitemap": "^1.2.2",
     "metalsmith-to-json": "^1.0.2",
     "universal-router": "^9.1.0",
