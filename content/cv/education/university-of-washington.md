@@ -9,8 +9,6 @@ slug: "university-of-washington"
 tags: []
 title: "University of Washington"
 type: "education"
-imageSrc: "university-of-washington-seattle-campus.webp"
-imageAlt: "Picture of the University of Washington quad, with cherry-blossom trees in bloom"
 ---
 After a long journey trying to figure out what kind of community and culture I most belonged to, I made my way to Seattle Washington.  It was a beautiful city, campus, and culture, and I thrived here.
 
