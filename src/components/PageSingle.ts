@@ -23,12 +23,22 @@ export class PageSingle extends LitElement {
     this.data = data.find(p => p.slug === this.page);
     this.title = this.data.title;
     this.contents = this.data.contents;
+
+    this.updateTitle()
+  }
+
+  updateTitle() {
+    this.dispatchEvent(new CustomEvent("update-title", { 
+      bubbles: true,
+      detail: {
+        title: this.title
+      }
+    }));
   }
   
   render() {
     return html`
       <article>
-        <h1>${this.title}</h1>
         ${unsafeHTML(this.contents)}
       </article>
     `
