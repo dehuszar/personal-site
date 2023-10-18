@@ -17,6 +17,7 @@ export class PageCV extends LitElement {
   @property({ type: Array }) education = []
   @property({ type: Array }) experiences = []
   @property({ type: Array }) skills = []
+  @property({ type: String }) title = ""
   @property({ type: Array }) tools = []
 
   static get styles() {
@@ -47,7 +48,19 @@ export class PageCV extends LitElement {
     this.education = this.data.filter(education);
     this.experiences = this.data.filter(experience);
     this.skills = this.data.filter(skills);
+    this.title = this.data.find(d => d.type === "page")?.title
     this.tools = this.data.filter(tools);
+    console.log(this.title)
+    this.updateTitle()
+  }
+
+  updateTitle() {
+    this.dispatchEvent(new CustomEvent("update-title", { 
+      bubbles: true,
+      detail: {
+        title: this.title
+      }
+    }));
   }
   
   render() {

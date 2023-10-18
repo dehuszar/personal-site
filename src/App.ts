@@ -3,7 +3,13 @@ import { customElement, property } from "lit/decorators.js";
 import { Router } from "@lit-labs/router";
 import { animate } from "@lit-labs/motion";
 import { classMap } from "lit/directives/class-map.js";
-import { routes } from './routes.ts';
+
+
+import './components/PageSingle';
+import './components/PageCV';
+import './components/CVArticle';
+
+import "urlpattern-polyfill";
 
 import './components/PageHeader';
 import './components/NavPrimary';
@@ -11,9 +17,6 @@ import './components/NavPrimary';
 import { mainStyles } from "./css/main.css.js";
 
 const siteTitle = "Samuel deHuszar Allen"
-
-const getTitle = routes => routes.find(r => 
-    r.path === window.location.pathname)?.name;
 
 @customElement("main-application")
 export class App extends LitElement {
@@ -24,13 +27,42 @@ export class App extends LitElement {
     ]
   }
 
-  private _router = new Router(this, routes);
+  private _router = new Router(this, [
+  {
+    name: 'home',
+    path: '/',
+    skip: true,
+    render: () => html`<page-single @update-title="${this.setTitle}" page="about"></page-single>`
+  },
+  {
+    name: 'cv',
+    path: '/cv',
+    render: () => html`<page-cv @update-title="${this.setTitle}"></page-cv>`
+  },
+  {
+    name: 'school',
+    path: '/cv/education/:school',
+    skip: true,
+    render: ({school}) => html`<cv-article sectionType="education" school="${school}" @update-title="${this.setTitle}"></cv-article>`
+  },
+  {
+    name: 'job',
+    path: '/cv/experience/:job',
+    skip: true,
+    render: ({job}) => html`<cv-article sectionType="experience" job="${job}" @update-title="${this.setTitle}"></cv-article>`
+  }
+]);
 
   @property()
   pageContext = {
-    title: getTitle(routes),
+    title: this.title,
     currentPath: window.location.pathname,
-    routes: routes
+    routes: this._router.routes
+  }
+  @property({ type: String }) title = ""
+
+  setTitle(e:CustomEvent) {
+    this.title = e.detail.title;
   }
 
   render() {
@@ -40,7 +72,7 @@ export class App extends LitElement {
       </page-header>
       <main>
         <header class="page-title">
-          <h2>${this.pageContext.title}</h2>
+          <h2>${this.title}</h2>
         </header>
         ${this._router.outlet()}
       </main>
