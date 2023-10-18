@@ -43,13 +43,13 @@ export class App extends LitElement {
     name: 'school',
     path: '/cv/education/:school',
     skip: true,
-    render: ({school}) => html`<cv-article sectionType="education" school="${school}" @update-title="${this.setTitle}"></cv-article>`
+    render: ({school}) => html`<cv-article sectionType="education" school="${school}"></cv-article>`
   },
   {
     name: 'job',
     path: '/cv/experience/:job',
     skip: true,
-    render: ({job}) => html`<cv-article sectionType="experience" job="${job}" @update-title="${this.setTitle}"></cv-article>`
+    render: ({job}) => html`<cv-article sectionType="experience" job="${job}"></cv-article>`
   }
 ]);
 
