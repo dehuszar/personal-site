@@ -1,0 +1,12 @@
+:root {
+  --primary-black: rgba(33, 33, 33, 1);
+  --text-color: var(--primary-black);
+  --sans-serif-font: 'Lato', sans-serif;
+  --serif-font: 'Lora', serif;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,27 @@
+<doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    {% include "partials/head.njk" %}
+  </head>
+
+  <body class="{{ bodyClass }}">
+    
+    {% include "partials/header.njk" %}
+    
+    <main>
+			{{ contents | safe }}
+			{% block content %}
+			<ul>
+				{% for post in collections.posts %}
+				<li><a href="/posts/{{ post.slug }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+			{% endblock %}
+    </main>
+
+    {% include "partials/footer.njk" %}
+    
+  </body>
+  
+</html>
