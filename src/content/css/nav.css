@@ -1,0 +1,27 @@
+nav {
+	grid-column-start: 11;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	text-align: center;
+}
+
+nav li {
+	/* flex: 1; */
+	list-style: none;
+}
+
+nav a {
+	display: block;
+	font-family: var(--serif-font);
+	font-weight: light;
+	padding: 1em 2em;
+}
+
+nav li.active a {
+	font-weight: bold;
+}

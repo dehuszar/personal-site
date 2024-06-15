@@ -1,0 +1,51 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lora', serif;
+}
+
+.site-header {
+	display: grid;
+	grid-column: span 12;
+	grid-row: span 2;
+	grid-template-columns: subgrid;
+	grid-template-rows: subgrid;
+}
+
+.site-header a {
+	text-decoration: none;
+}
+
+.site-header a, .site-header a:visited {
+	color: var(--text-color);
+}
+
+.site-title {
+	grid-column: span 10;
+	grid-row: span 2;
+	font-size: 2.5em;
+	line-height: 2;
+	margin: 0;
+	padding: 0;
+}
+
+.page-title {
+	display: grid;
+	grid-column: span 12;
+	grid-template-columns: subgrid;
+	grid-template-rows: subgrid;
+}
+
+.page-title h2 {
+	grid-column: span 4;
+	line-height: 2em;
+	margin: 0;
+}
+
+.page-title p {
+	grid-column: span 8;
+}
+
+header h3 {
+	border-bottom: 1px solid black;
+	text-decoration: underline;
+}
+

@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 const prod = process.env.NODE_ENV === 'production';
     
 Metalsmith(__dirname)         // __dirname defined by node.js:
-  .source('./content')            // source directory
+  .source('./src/content')            // source directory
   // .destination('./dist/data')     // destination directory
 	.destination('./build/')
   .clean(true)                // clean destination before
@@ -47,10 +47,23 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
 			sortBy: 'date',
 			reverse: true
 		},
-		cv: {
-			pattern: 'cv/**/*.md',
+		education: {
+			pattern: 'cv/education/*.md',
+			sortBy: 'school',
+			reverse: true
+		},
+		experience: {
+			pattern: 'cv/experience/*.md',
 			sortBy: 'endYear',
 			reverse: true
+		},
+		skills: {
+			pattern: 'cv/skills/*.md',
+			sortBy: 'title',
+		},
+		tools: {
+			pattern: 'cv/tools/*.md',
+			sortBy: 'title',
 		},
 	}))
 	.use(
@@ -60,7 +73,7 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
 		} )
 	)
   .use(markdown())            // transpile all md into html
-	.ignore('layouts')
+	// .ignore('layouts')
 	.use(
 		layouts({
 			patterns: '**/*.njk',

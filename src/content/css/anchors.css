@@ -1,0 +1,7 @@
+ a, a:visited {
+		color: var(--text-color);
+ }
+
+ a {
+		text-decoration: none;
+ }

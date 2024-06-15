@@ -28,6 +28,7 @@ export class PageSingle extends LitElement {
   }
 
   updateTitle() {
+		console.info(`inside updateTitle`)
     this.dispatchEvent(new CustomEvent("update-title", { 
       bubbles: true,
       detail: {

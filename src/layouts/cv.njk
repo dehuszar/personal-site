@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    {% include "partials/head.njk" %}
+		<link rel="stylesheet" href="./css/cv.css" />
+		<link rel="stylesheet" href="./css/nav.css" />
+		<link rel="stylesheet" href="./css/headers.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/cv-sections.css" />
+    {% include "partials/head-scripts.njk" %}
+  </head>
+
+  <body class="{{ bodyClass }}">
+    
+    {% include "partials/site-header.njk" %}
+    
+    <main>
+			{% include "partials/page-header.njk" %}
+			{% block content %}
+			<div class="cv-section-wrapper">
+				<section class="cv-section experience">
+					<header>
+						<h3>Experience</h3>
+					</header>
+					<ul>
+						{% for post in collections.experience %}
+						<li><h1><a href="/cv/experience/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						{% endfor %}
+					</ul>
+				</section>
+				<section class="cv-section education">
+					<header>
+						<h3>Education</h3>
+					</header>
+					<ul>
+						{% for school in collections.education %}
+						<li>
+							<h1><a href="/cv/education/{{ school.slug }}">{{ school.title }}
+							<br>{{ school.location }} - {{ school.endYear }}</a></h1></a></li>
+						{% endfor %}
+					</ul>
+				</section>
+				<section class="cv-section skills">
+					<header>
+						<h3>Skills</h3>
+					</header>
+					<ul>
+						{% for post in collections.skills %}
+						<li><h1><a href="/cv/skills/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						{% endfor %}
+					</ul>
+				</section>
+				<section class="cv-section tools">
+					<header>
+						<h3>Tools</h3>
+					</header>
+					<ul>
+						{% for post in collections.tools %}
+						<li><h1><a href="/cv/tools/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						{% endfor %}
+					</ul>
+				</section>
+			{% endblock %}
+			</div>
+    </main>
+
+    {% include "partials/footer.njk" %}
+    
+  </body>
+  
+</html>

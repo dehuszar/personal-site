@@ -11,13 +11,6 @@
     
     <main>
 			{{ contents | safe }}
-			{% block content %}
-			<ul>
-				{% for post in collections.posts %}
-				<li><a href="/posts/{{ post.slug }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
-			{% endblock %}
     </main>
 
     {% include "partials/footer.njk" %}
