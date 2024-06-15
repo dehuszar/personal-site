@@ -1,5 +1,6 @@
 import { html } from "lit"
 import { unsafeHTML } from "lit/directives/unsafe-html.js"
+import { ImgSizer } from "./ImgSizer.js";
 export const articleSchool = ({
   contents,
   degree,
@@ -19,5 +20,7 @@ export const articleSchool = ({
     <h4>${location} - ${degree}${Boolean(degree) && Boolean(endYear) ? ` - ` : ``}Class of ${endYear}</h4>
     ${unsafeHTML(contents.toString())}
   </article>
-  <img class="${imageType}" src="${images[imageSrc]}" alt="${imageAlt}" />
+	<img-sizer>
+		<img class="${imageType}" src="${images[imageSrc]}" alt="${imageAlt}" />
+	</img-sizer>
 `;
