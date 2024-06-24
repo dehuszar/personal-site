@@ -6,10 +6,9 @@ imageType: "logo"
 slug: "skyspecs"
 startYear: "2016"
 tags: []
-title: SkySpecs
+title: "SkySpecs"
 type: "experience"
 ---
-
 SkySpecs delivers fleet management tools for owners and operators of wind farms.  I had the distinct pleasure of being their first web application developer on staff and got to build out the initial product offering; a data portal for delivering automated drone inspections of wind turbines to customers.
 
 As the company grew beyond the size where we could all fit around a single conference table, ownership of the core web application was handled by a very capable group of engineers, and I moved into the realm of cloud engineering, internal developer platforms, and infrastructure design.
