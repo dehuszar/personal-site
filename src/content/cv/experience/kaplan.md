@@ -3,7 +3,7 @@ endYear: "2014"
 imageAlt: "Kaplan Inc logo"
 imageSrc: "kaplan-logo.svg"
 imageType: "logo"
-slug: "kaplan-inc"
+slug: "kaplan"
 startYear: "2012"
 tags: []
 title: "Kaplan, Inc"

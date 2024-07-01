@@ -54,7 +54,7 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
 		},
 		experience: {
 			pattern: 'cv/experience/*.md',
-			sortBy: 'endYear',
+			sortBy: 'startYear',
 			reverse: true
 		},
 		skills: {
