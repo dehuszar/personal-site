@@ -25,7 +25,14 @@
 					</header>
 					<ul>
 						{% for post in collections.experience %}
-						<li><h1><a href="/cv/experience/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						<li>
+							<h1>
+								<a href="/cv/experience/{{ post.slug }}"
+									hx-boost="true"
+									hx-push-url="true"
+									hx-target="article">{{ post.title }}</a>
+							</h1>
+						</li>
 						{% endfor %}
 					</ul>
 				</section>
@@ -36,8 +43,14 @@
 					<ul>
 						{% for school in collections.education %}
 						<li>
-							<h1><a href="/cv/education/{{ school.slug }}">{{ school.title }}
-							<br>{{ school.location }} - {{ school.endYear }}</a></h1></a></li>
+							<h1>
+								<a href="/cv/education/{{ school.slug }}"
+									hx-boost="true"
+									hx-push-url="true"
+									hx-target="article">{{ school.title }}
+									<br>{{ school.location }} - {{ school.endYear }}</a>
+							</h1>
+						</li>
 						{% endfor %}
 					</ul>
 				</section>
@@ -47,7 +60,14 @@
 					</header>
 					<ul>
 						{% for post in collections.skills %}
-						<li><h1><a href="/cv/skills/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						<li>
+							<h1>
+								<a href="/cv/skills/{{ post.slug }}"
+									hx-boost="true"
+									hx-push-url="true"
+									hx-target="article">{{ post.title }}</a>
+							</h1>
+						</li>
 						{% endfor %}
 					</ul>
 				</section>
@@ -57,12 +77,20 @@
 					</header>
 					<ul>
 						{% for post in collections.tools %}
-						<li><h1><a href="/cv/tools/{{ post.slug }}">{{ post.title }}</a></h1></li>
+						<li>
+							<h1>
+								<a href="/cv/tools/{{ post.slug }}"
+									hx-boost="true"
+									hx-push-url="true"
+									hx-target="article">{{ post.title }}</a>
+							</h1>
+						</li>
 						{% endfor %}
 					</ul>
 				</section>
 			{% endblock %}
 			</div>
+			<article></article>
     </main>
 
     {% include "partials/footer.njk" %}
