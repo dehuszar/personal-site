@@ -85,7 +85,7 @@ button {
 	stroke-dashoffset: -64px;
 }
 
-nav ul {
+.site-header nav ul {
 	border-bottom: 0;
 	border-top: 0;
   height: 0;
@@ -108,30 +108,30 @@ nav ul {
 }
 
 @media (min-width: 1280px) {
-	nav {
+	.site-header nav {
 		grid-column: span 3;
 		grid-row: span 2;
 	}
 }
 
-nav ul {
+.site-header nav ul {
 	display: flex;
   justify-content: space-evenly;
 }
 
 @media (min-width: 1280px) {
-	nav ul {
+	.site-header nav ul {
 		height: auto;
 		justify-content: flex-end;
 		text-align: center;
 	}
 }
 
-nav li {
+.site-header nav li {
 	list-style: none;
 }
 
-nav a {
+.site-header nav a {
 	display: block;
 	font-family: var(--serif-font);
 	font-size: 1.4em;
@@ -140,11 +140,11 @@ nav a {
 }
 
 @media (min-width: 1280px) {
-	nav a {
+	.site-header nav a {
 		font-size: 1em;
 	}
 }
 
-nav li.active a {
+.site-header nav li.active a {
 	font-weight: bold;
 }
