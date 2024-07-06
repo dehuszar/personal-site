@@ -57,9 +57,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title h2 {
-	font-size: 2em;
+	font-size: 2.8em;
 	line-height: 2em;
 	margin: 0;
+}
+
+@media (min-width: 1280px) {
+	.page-title h2 {
+		font-size: 1.8em;
+	}
 }
 
 .page-title p {
@@ -79,6 +85,13 @@ h1, h2, h3, h4, h5, h6 {
 
 header h3 {
 	border-bottom: 1px solid black;
-	text-decoration: underline;
+	font-size: 2.4em;
+	margin: 0;
+}
+
+@media (min-width: 1280px) {
+	header h3 {
+		font-size: 1.4em;
+	}
 }
 
