@@ -31,7 +31,8 @@
 									<a href="/cv/experience/{{ post.slug }}"
 										hx-boost="true"
 										hx-push-url="true"
-										hx-target="article">{{ post.title }}</a>
+										hx-target="article"
+										onclick="cvExpNavSetActive(this)">{{ post.title }}</a>
 								</h1>
 							</li>
 							{% endfor %}
@@ -50,14 +51,14 @@
 									<a href="/cv/education/{{ school.slug }}"
 										hx-boost="true"
 										hx-push-url="true"
-										hx-target="article">{{ school.title }}
+										hx-target="article"
+										onclick="cvExpNavSetActive(this)">{{ school.title }}
 										<br>{{ school.location }} - {{ school.endYear }}</a>
 								</h1>
 							</li>
 							{% endfor %}
 						</ul>
 					</nav>
-					<article></article>
 				</section>
 				<section class="cv-section skills">
 					<header>
@@ -71,13 +72,13 @@
 									<a href="/cv/skills/{{ post.slug }}"
 										hx-boost="true"
 										hx-push-url="true"
-										hx-target="article">{{ post.title }}</a>
+										hx-target="article"
+										onclick="cvExpNavSetActive(this)">{{ post.title }}</a>
 								</h1>
 							</li>
 							{% endfor %}
 						</ul>
 					</nav>
-					<article></article>
 				</section>
 				<section class="cv-section tools">
 					<header>
@@ -91,16 +92,17 @@
 									<a href="/cv/tools/{{ post.slug }}"
 										hx-boost="true"
 										hx-push-url="true"
-										hx-target="article">{{ post.title }}</a>
+										hx-target="article"
+										onclick="cvExpNavSetActive(this)">{{ post.title }}</a>
 								</h1>
 							</li>
 							{% endfor %}
 						</ul>
 					</nav>
-					<article></article>
 				</section>
 			{% endblock %}
 			</div>
+			<article></article>
     </main>
 
     {% include "partials/footer.njk" %}
