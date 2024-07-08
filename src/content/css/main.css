@@ -1,8 +1,7 @@
 body {
 	/* this should get moved to a place where it can be animated between values on page change */
 	background: rgba(100, 149, 237, 0.75); /* cornflower blue */
-	
-	padding: 1em 2em;
+	padding: 1em 4em;
 	margin: 0;
 }
 
