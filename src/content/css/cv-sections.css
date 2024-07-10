@@ -74,7 +74,7 @@
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
-		grid-column: span 12;
+		grid-column: 2 / span 12;
 		grid-row: span 12;
 	}
 
@@ -92,16 +92,19 @@
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
+		position: relative;
 	}
 
 	.cv-section.education,
 	.cv-section.experience {
 		grid-row: span 4;
+		grid-template-rows: subgrid;
 	}
 
 	.cv-section.skills,
 	.cv-section.tools {
 		grid-row: span 9;
+		grid-template-rows: subgrid;
 	}
 	 
 	.cv-section.skills {
@@ -121,7 +124,6 @@
 		grid-column: span 4;
 		grid-row: span 8;
 	}
-
 	.cv-section.education {
 		grid-row-start: 6;
 		grid-row-end: 8;
@@ -164,6 +166,12 @@
 
 	.cv-section ul li:nth-child(n+4):nth-child(-n+6) {
 		grid-row-start: 2;
+	}
+
+	/* active section layout adjustments */
+	body.cv.experience .cv-section.skills,
+	body.cv.experience .cv-section.tools {
+		grid-column: span 0;
 	}
 }
 

@@ -19,16 +19,17 @@ main {
 	body {
 		display: grid;
 		gap: 1em 3em;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(12, 3em);
+		grid-template-columns: repeat(14, 1fr);
+		grid-template-rows: repeat(14, 3em);
 		height: 100vh;
-		width: calc(100vw - 4em);
+		padding: 0;
+		width: calc(100vw);
 	}
 
 	main {
 		display: grid;
 		gap: 1em 3em;
-		grid-column: span 12;
+		grid-column: span 14;
 		grid-row: span 11;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
