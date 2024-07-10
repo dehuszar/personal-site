@@ -10,7 +10,7 @@ button {
 	padding: 0;
 	position: absolute;
 	right: 0;
-  top: 3.5em;
+  top: 2.5em;
 }
 
 @media (min-width: 1280px) {
@@ -109,8 +109,9 @@ button {
 
 @media (min-width: 1280px) {
 	.site-header nav {
+		display: grid;
 		grid-column: span 3;
-		grid-row: span 2;
+    grid-template-columns: subgrid;
 	}
 }
 
@@ -122,13 +123,16 @@ button {
 @media (min-width: 1280px) {
 	.site-header nav ul {
 		height: auto;
-		justify-content: flex-end;
-		text-align: center;
+		grid-column: span 3;
+		display: grid;
+		grid-template-columns: subgrid;
 	}
 }
 
 .site-header nav li {
+  align-self: center;
 	list-style: none;
+	text-align: center;
 }
 
 .site-header nav a {
@@ -142,6 +146,7 @@ button {
 @media (min-width: 1280px) {
 	.site-header nav a {
 		font-size: 1em;
+		padding: 0;
 	}
 }
 
