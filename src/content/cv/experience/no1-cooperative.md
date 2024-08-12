@@ -3,6 +3,7 @@ endYear: "2011"
 imageAlt: "No1 Cooperative logo"
 imageSrc: "no1-logo.png"
 imageType: "logo"
+layout: "cv/post.njk"
 slug: "no1-cooperative"
 startYear: "2007"
 tags: []

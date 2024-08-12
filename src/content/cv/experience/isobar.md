@@ -3,6 +3,7 @@ endYear: "2016"
 imageAlt: "Dentsu Isobar logo"
 imageSrc: "isobar.png"
 imageType: "logo"
+layout: "cv/post.njk"
 slug: "isobar"
 startYear: "2014"
 tags: []
