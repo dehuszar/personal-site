@@ -3,10 +3,13 @@ endYear: "2023"
 imageSrc: "skyspecs-logo-horizontal-black.svg"
 imageAlt: "SkySpecs logo"
 imageType: "logo"
+layout: "cv/post.njk"
 slug: "skyspecs"
 startYear: "2016"
 tags: []
+skills: ['application-development', 'css', 'front-end', 'html', 'javascript', 'linux', 'network', 'platform-engineering', 'security', 'service-orchestration', 'zero-trust']
 title: "SkySpecs"
+tools: ['aws', 'cloudflare', 'ember', 'hashicorp', 'confluent', 'redpanda', 'grafana', 'gitlab']
 type: "experience"
 ---
 SkySpecs delivers fleet management tools for owners and operators of wind farms.  I had the distinct pleasure of being their first web application developer on staff and got to build out the initial product offering; a data portal for delivering automated drone inspections of wind turbines to customers.
