@@ -1,4 +1,45 @@
+.education .cv-section-wrapper,
+.experience .cv-section-wrapper,
+.skills .cv-section-wrapper,
+.tools .cv-section-wrapper {
+	left: -130vw;
+	position: absolute;
+}
+
+.education article,
+.experience article,
+.skills article,
+.tools article {
+	height: 100vh;
+	position: absolute;
+	top: 18.2em;
+	width: 100vw;
+}
+
+article header {
+	display: flex;
+  flex: inherit;
+  align-items: baseline;
+  justify-content: space-between;
+	line-height: 1;
+	padding: 2em 0;
+}
+
+article h1 {
+	margin: 0;
+}
+
+article figure {
+	margin: 0;
+}
+
+article figure img {
+	display: block;
+	margin: 0 auto;
+}
+
 article p {
 	font-size: 2.2em;
 	line-height: 1.5;
+	margin: 1em 0 0 0;
 }
