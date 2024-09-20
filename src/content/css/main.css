@@ -19,8 +19,8 @@ main {
 	body {
 		display: grid;
 		gap: 1em 3em;
-		grid-template-columns: repeat(14, 1fr);
-		grid-template-rows: repeat(14, 3em);
+		grid-template-columns: repeat(13, minmax(0, 1fr));
+		grid-template-rows: repeat(18, 3em);
 		height: 100vh;
 		padding: 0;
 		width: calc(100vw);
@@ -29,8 +29,8 @@ main {
 	main {
 		display: grid;
 		gap: 1em 3em;
-		grid-column: span 14;
-		grid-row: span 11;
+		grid-column: span 13;
+		grid-row: 4 / span 15;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
 	}

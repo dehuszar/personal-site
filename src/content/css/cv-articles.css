@@ -1,28 +1,45 @@
-.education .cv-section-wrapper,
-.experience .cv-section-wrapper,
-.skills .cv-section-wrapper,
-.tools .cv-section-wrapper {
-	left: -130vw;
-	position: absolute;
+@media (max-width: 1279px) {
+	.education .cv-section-wrapper,
+	.experience .cv-section-wrapper,
+	.skills .cv-section-wrapper,
+	.tools .cv-section-wrapper {
+		left: -130vw;
+		position: absolute;
+	}
+
+	.education article,
+	.experience article,
+	.skills article,
+	.tools article {
+		height: 100vh;
+		position: absolute;
+		top: 18.2em;
+		width: 100vw;
+	}
+
+	article header {
+		display: flex;
+		flex: inherit;
+		align-items: baseline;
+		justify-content: space-between;
+		line-height: 1;
+		padding: 2em 0;
+	}
 }
 
-.education article,
-.experience article,
-.skills article,
-.tools article {
-	height: 100vh;
-	position: absolute;
-	top: 18.2em;
-	width: 100vw;
-}
+@media (min-width: 1280px) {
+  article:not(:empty),
+	article:not(:empty) header {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 12;
+  }
 
-article header {
-	display: flex;
-  flex: inherit;
-  align-items: baseline;
-  justify-content: space-between;
-	line-height: 1;
-	padding: 2em 0;
+	article:not(:empty) header {
+    grid-row: 1 / span 1;
+	}
 }
 
 article h1 {

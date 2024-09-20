@@ -1,21 +1,9 @@
 .cv-section {
 	display: grid;
 	gap: 1em 3em;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	grid-template-rows: repeat(4, 6em);
 	margin-bottom: 6em;
-}
-
-.cv-section.education {
-	grid-template-rows: repeat(1, 6em);
-}
-
-.cv-section.skills {
-	grid-template-rows: repeat(7, 6em);
-}
-
-.cv-section.tools {
-	grid-template-rows: repeat(9, 6em);
 }
 
 .cv-section.skills nav,
@@ -74,76 +62,60 @@
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
-		grid-column: 2 / span 12;
-		grid-row: span 12;
+		grid-column: span 13;
+		grid-row: 3 / span 13;
 	}
 
 	.cv-section-wrapper article:not(:empty) {
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
-		grid-column: 5 / span 8;
+		grid-column: 2 / span 8;
 		grid-row: 1 / span 12;
 	}
 
 	.cv-section {
-		gap: inherit;
-		grid-column: span 3;
 		display: grid;
+		gap: inherit;
+		grid-column-end: span 3;
+		grid-column-start: 2;
+		grid-row-end: span 13;
+		grid-row-start: 1;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
+		margin: 0;
 		position: relative;
-	}
-
-	.cv-section.education,
-	.cv-section.experience {
-		grid-row: span 4;
-		grid-template-rows: subgrid;
-	}
-
-	.cv-section.skills,
-	.cv-section.tools {
-		grid-row: span 9;
-		grid-template-rows: subgrid;
-	}
-	 
-	.cv-section.skills {
-		grid-column-start: 5;
-		grid-column-end: span 3;
-	}
-	 
-	.cv-section.tools {
-		grid-column-end: span 4;
-		grid-column-start: 9;
-	}
-
-	.cv-section.skills nav,
-	.cv-section.tools nav,
-	.cv-section.skills ul,
-	.cv-section.tools ul {
-		grid-column: span 4;
-		grid-row: span 8;
-	}
-	.cv-section.education {
-		grid-row-start: 6;
-		grid-row-end: 8;
-	}
-
-	.cv-section.education ul li {
-		grid-column: span 3;
+		opacity: 100%;
 	}
 
 	.cv-section header {
+		display: grid;
 		grid-column: span 3;
-		grid-row: span 1;
+		grid-row: 1 / span 1;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
 	}
 
 	.cv-section header h3 {
 		border-bottom: 1px solid black;
+		grid-column: span 3;
 	}
 
-	.cv-section.tools header {
-		grid-column: span 4;
+	.cv-section.education,
+	.cv-section.experience {
+		grid-row-end: span 4;
+	}
+
+	.cv-section.education {
+		grid-row-start: 6;
+	}
+
+	.cv-section.skills {
+		grid-column-start: 6;
+	}
+	 
+	.cv-section.tools {
+		grid-column-start: 10;
 	}
 
 	.cv-section nav,
@@ -156,7 +128,7 @@
 		margin: 0;
 		padding: 0;
 		grid-column: span 3;
-		grid-row: span 3;
+		grid-row: span 8;
 	}
 
 	.cv-section ul li {
@@ -168,10 +140,26 @@
 		grid-row-start: 2;
 	}
 
+	.cv-section.education nav,
+	.cv-section.education ul {
+		grid-row: span 1;
+	}
+
+	.cv-section.education ul li {
+		grid-column: span 3;
+	}
+
+	/* active section layout adjustments */
+	body.cv.experience .cv-section.education,
+	body.cv.experience .cv-section.experience {
+		grid-column: 10 / span 3;
+	}
+
 	/* active section layout adjustments */
 	body.cv.experience .cv-section.skills,
 	body.cv.experience .cv-section.tools {
-		grid-column: span 0;
+		grid-column: 13 / span 1;
+		opacity: 0;
 	}
 }
 
