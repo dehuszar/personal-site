@@ -13,8 +13,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1280px) {
 	.site-header {
 		display: grid;
-		grid-column: span 14;
-		grid-row: 2 / span 2;
+		grid-column: span 13;
+		grid-row: 2 / span 1;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
 	}
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1280px) {
 	.site-title {
-		grid-column: 2 / span 9;
+		grid-column: 2 / span 8;
 		grid-row: span 2;
 	}
 }
@@ -52,8 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1280px) {
 	.page-title {
 		display: grid;
-		grid-column: span 14;
-		grid-row: span 2;
+		grid-column: span 13;
+		grid-row: span 1;
 		grid-template-columns: subgrid;
 		grid-template-rows: subgrid;
 	}
