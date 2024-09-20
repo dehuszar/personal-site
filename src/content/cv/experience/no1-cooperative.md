@@ -1,7 +1,7 @@
 ---
 endYear: "2011"
 imageAlt: "No1 Cooperative logo"
-imageSrc: "no1-logo.png"
+imageSrc: "no1-logo.svg"
 imageType: "logo"
 layout: "cv/post.njk"
 slug: "no1-cooperative"
