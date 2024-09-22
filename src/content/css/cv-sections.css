@@ -163,5 +163,38 @@
 		grid-column: 13 / span 1;
 		opacity: 0;
 	}
+
+	/* active section layout adjustments */
+	body.cv.skills .cv-section.education,
+	body.cv.skills .cv-section.experience {
+		grid-column: 1 / span 1;
+		opacity: 0;
+	}
+
+	body.cv.skills .cv-section.skills {
+		grid-column: 2 / span 3;
+		opacity: 100%;
+	}
+
+	body.cv.skills .cv-section.tools {
+		grid-column: 13 / span 1;
+		opacity: 0;
+	}
+
+	body.cv.tools .cv-section.education,
+	body.cv.tools .cv-section.experience,
+	body.cv.tools .cv-section.skills {
+		grid-column: 1 / span 1;
+		opacity: 0;
+	}
+
+	body.cv.tools .cv-section.tools {
+		grid-column: 2 / span 3;
+		opacity: 100%;
+	}
+
+	body.cv.tools article:not(:empty) {
+		grid-column: 5 / span 8;
+	}
 }
 

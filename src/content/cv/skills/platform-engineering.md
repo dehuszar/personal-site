@@ -1,5 +1,6 @@
 ---
 experience: ['skyspecs']
+layout: 'cv/post-skill.njk'
 slug: 'platform-engineering'
 title: 'Platform Engineering'
 tools: []

@@ -1,4 +1,5 @@
 ---
+layout: 'cv/post-tool.njk'
 slug: 'ec2'
 skills: ['AWS', 'Virtual Machines', 'Servers', 'Services', 'Back End']
 title: 'EC2'

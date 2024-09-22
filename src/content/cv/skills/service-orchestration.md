@@ -1,5 +1,6 @@
 ---
 experience: ['skyspecs']
+layout: 'cv/post-skill.njk'
 slug: 'service-orchestration'
 title: 'Service Orchestration'
 tools: ['ansible']
