@@ -3,7 +3,7 @@ endYear: "2023"
 imageSrc: "skyspecs-logo-horizontal-black.svg"
 imageAlt: "SkySpecs logo"
 imageType: "logo"
-layout: "cv/post.njk"
+layout: "cv/post-exp.njk"
 slug: "skyspecs"
 startYear: "2016"
 tags: []

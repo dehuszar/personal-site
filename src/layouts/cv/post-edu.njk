@@ -6,12 +6,28 @@
 		{% include "partials/cv-styles.njk" %}
     {% include "partials/head-scripts.njk" %}
   </head>
+
   <body class="{{ bodyClass }}">
+    
     {% include "partials/site-header.njk" %}
+    
     <main>
 			{% include "partials/page-header.njk" %}
 			<div class="cv-section-wrapper">
-				<article></article>
+				<article>
+					<header>
+						<h1>{{ title }}</h1>
+						<a class="back-to"
+							hx-boost="true"
+							hx-push-url="true"
+							href="/cv.html">&#x2190; Back to CV</a>
+					</header>
+					<figure><img src="/assets/images/{{ imageSrc }}" alt=" {{ imageAlt }} " /></figure>
+					<div class="content">{{ contents | safe }}</div>
+					<footer>
+
+					</footer>
+				</article>
 				{% block content %}
 				{% include "cv/section-wrapper.njk" %}
 				{% endblock %}

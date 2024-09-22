@@ -2,7 +2,7 @@
 imageSrc: ""
 imageAlt: ""
 imageType: ""
-layout: "cv/post.njk"
+layout: "cv/post-exp.njk"
 slug: "simpl"
 startYear: "2023"
 tags: []

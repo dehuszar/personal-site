@@ -6,7 +6,7 @@ export const mainStyles = css`
 		background: rgba(100, 149, 237, 0.75); /* cornflower blue */
     display: grid;
     gap: 1em 3em;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: repeat(12, 3em);
 		height: 100vh;
     padding: 1em 2em;
@@ -18,7 +18,7 @@ export const mainStyles = css`
     gap: 1em 3em;
     grid-column: span 12;
     grid-row: span 11;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-template-rows: repeat(11, 3em);
   }
 

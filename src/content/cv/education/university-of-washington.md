@@ -4,6 +4,7 @@ endYear: "2002"
 imageAlt: "Picture of the University of Washington quad, with cherry-blossom trees in bloom"
 imageSrc: "university-of-washington-seattle-campus.webp"
 imageType: "photo"
+layout: "cv/post-edu.njk"
 location: "Seattle, WA"
 slug: "university-of-washington"
 tags: []

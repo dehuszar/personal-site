@@ -156,6 +156,8 @@
 	}
 
 	/* active section layout adjustments */
+	body.cv.education .cv-section.skills,
+	body.cv.education .cv-section.tools,
 	body.cv.experience .cv-section.skills,
 	body.cv.experience .cv-section.tools {
 		grid-column: 13 / span 1;

@@ -3,7 +3,7 @@ endYear: "2014"
 imageAlt: "Essential Forms logo"
 imageSrc: "essential-forms.png"
 imageType: "logo"
-layout: "cv/post.njk"
+layout: "cv/post-exp.njk"
 slug: "essential-forms"
 startYear: "2004"
 tags: []
