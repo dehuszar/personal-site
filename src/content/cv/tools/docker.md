@@ -1,4 +1,5 @@
 ---
+layout: 'cv/post-tool.njk'
 slug: 'docker'
 skills: ['Containers', 'Services', 'Containers', 'Back End']
 title: 'Docker'

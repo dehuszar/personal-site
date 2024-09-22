@@ -1,20 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="">
-
   <head>
     {% include "partials/head.njk" %}
-		<link rel="stylesheet" href="./css/cv.css" />
-		<link rel="stylesheet" href="./css/nav.css" />
-		<link rel="stylesheet" href="./css/headers.css" />
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/cv-sections.css" />
+		{% include "partials/base-styles.njk" %}
+		{% include "partials/cv-styles.njk" %}
     {% include "partials/head-scripts.njk" %}
   </head>
-
   <body class="{{ bodyClass }}">
-    
     {% include "partials/site-header.njk" %}
-    
     <main>
 			{{ contents | safe }}
 			{% block content %}
@@ -25,9 +18,6 @@
 			</ul>
 			{% endblock %}
     </main>
-
     {% include "partials/footer.njk" %}
-    
   </body>
-  
 </html>
