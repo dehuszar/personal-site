@@ -5,9 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npx parcel src/index.html",
-    "build": "node build.js",
-    "serve": "npm run build && cd build && npx http-server -o ./posts.html",
+    "start": "cd build && pm2 start http-server --name personal-site --watch --ignore-watch='build' -f -- -o ./posts.html",
+		"stop": "pm2 stop personal-site ",
+    "build": "pm2 start --name update-site-contents build.js --watch --ignore-watch='build' -f",
+    "serve": "cd build && http-server -o ./posts.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

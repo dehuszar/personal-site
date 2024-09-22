@@ -41,6 +41,7 @@ const cvExpNavSetActive = current => {
 	current.classList.add('active');
 }
 
+htmx.config.scrollBehavior = false;
 htmx.onLoad(() => {
 	bodySetURLClasses();
 });
