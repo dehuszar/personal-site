@@ -9,12 +9,14 @@
   <body class="{{ bodyClass }}">
     {% include "partials/site-header.njk" %}
     <main>
-			{% include "partials/page-header.njk" %}
+			<header class="page-title">
+				<h2>CV</h2>
+			</header>
 			<div class="cv-section-wrapper">
-				<article></article>
 				{% block content %}
-				{% include "cv/section-wrapper.njk" %}
+				<article></article>
 				{% endblock %}
+				{% include "cv/section-wrapper.njk" %}
 			</div>
     </main>
     {% include "partials/footer.njk" %}
