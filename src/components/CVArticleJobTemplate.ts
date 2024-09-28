@@ -18,5 +18,5 @@ export const articleJob = ({
     <h4>${startYear} - ${endYear}</h4>
     ${unsafeHTML(contents.toString())}
   </article>
-  <img class="${imageType}" src="${images[imageSrc]}" alt="${imageAlt}" />
+  <figure><img class="${imageType}" src="${images[imageSrc]}" alt="${imageAlt}" /></figure>
 `;
