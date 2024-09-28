@@ -1,29 +1,25 @@
 <!doctype html>
 <html class="no-js" lang="">
-
   <head>
     {% include "partials/head.njk" %}
-		<link rel="stylesheet" href="./css/cv.css" />
-		<link rel="stylesheet" href="./css/nav.css" />
-		<link rel="stylesheet" href="./css/headers.css" />
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/cv-sections.css" />
+		{% include "partials/css.njk" %}
     {% include "partials/head-scripts.njk" %}
   </head>
-
   <body class="{{ bodyClass }}">
-    
     {% include "partials/site-header.njk" %}
-    
     <main>
-			<header>
-				<h1>{{ title }}</h1>
-			</header>
-			{{ contents | safe }}
+			<article>
+				<header class="page-title">
+					<h2>{{ title }}</h2>
+				</header>
+				<div class="content">{{ contents | safe }}</div>
+				<aside>
+					<header>
+						<h3>Categories</h3>
+				</aside>
+			</article>
     </main>
-
     {% include "partials/footer.njk" %}
-    
   </body>
-  
 </html>
+

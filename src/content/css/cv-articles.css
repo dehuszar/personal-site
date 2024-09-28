@@ -17,7 +17,7 @@
 		width: 100vw;
 	}
 
-	article header {
+	.cv-section-wrapper article header {
 		display: flex;
 		flex: inherit;
 		align-items: baseline;
@@ -27,75 +27,75 @@
 	}
 }
 
-article h1 {
+.cv-section-wrapper article h1 {
 	margin: 0;
 }
 
-article figure {
+.cv-section-wrapper article figure {
 	margin: 0;
 }
 
-article figure img {
+.cv-section-wrapper article figure img {
 	display: block;
 	margin: 0 auto;
 }
 
-article p {
+.cv-section-wrapper article p {
 	font-size: 2.2em;
 	line-height: 1.5;
 	margin: 0;
 }
 
-article p + p {
+.cv-section-wrapper article p + p {
 	margin-top: 1em;
 }
 
 @media (min-width: 1280px) {
-  article:not(:empty),
-	article header {
+  .cv-section-wrapper article:not(:empty),
+	.cv-section-wrapper article header {
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
   }
 
-  article:not(:empty) {
+  .cv-section-wrapper article:not(:empty) {
     grid-column: 5 / span 8;
     grid-row: 1 / span 12;
 	}
 
-	article header {
+	.cv-section-wrapper article header {
 		grid-column: 1 / span 5;
     grid-row: 1 / span 1;
 	}
 
-	article header h1 {
+	.cv-section-wrapper article header h1 {
 		grid-column: 1 / span 4;
     grid-row: 1 / span 1;
 	}
 
-	article header a {
+	.cv-section-wrapper article header a {
 		align-self: center;
 		grid-column: 5 / span 1;
     grid-row: 1 / span 1;
 	}
 
-	article figure {
+	.cv-section-wrapper article figure {
 		grid-column: 6 / span 3;
 		grid-row: 1 / span 6;
 	}
 	
-	article figure img {
+	.cv-section-wrapper article figure img {
     width: 100%; /* or any custom size */
     height: 100%; 
     object-fit: contain;
 	}
 
-	article .content {
+	.cv-section-wrapper article .content {
 		grid-column: 1 / span 5;
 		grid-row: 2 / span 10;
 	}
 
-	article p {
+	.cv-section-wrapper article p {
 		font-size: 1.4em;
 		line-height: 2.85;
 	}

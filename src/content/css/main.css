@@ -9,6 +9,7 @@ body {
  * #3B733B - rgba(59, 115, 59, 0.75) forest green */
 	padding: 1em 4em;
 	margin: 0;
+	width: calc(100vw - 8em);
 }
 
 body > * {
