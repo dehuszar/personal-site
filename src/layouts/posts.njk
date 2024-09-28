@@ -4,19 +4,31 @@
     {% include "partials/head.njk" %}
 		{% include "partials/base-styles.njk" %}
 		{% include "partials/cv-styles.njk" %}
+		{% include "partials/post-styles.njk" %}
     {% include "partials/head-scripts.njk" %}
   </head>
   <body class="{{ bodyClass }}">
     {% include "partials/site-header.njk" %}
     <main>
-			{{ contents | safe }}
+			<header class="page-title">
+				<h2>Posts</h2>
+			</header>
 			{% block content %}
-			<ul>
+			<ul class="post-list">
 				{% for post in collections.posts %}
-				<li><a href="/posts/{{ post.slug }}">{{ post.title }}</a></li>
+				<li class="post">
+					<a href="/posts/{{ post.slug }}">
+						<img class="{{ post.imageType }}" src="{{ post.imageSrc }}" alt="{{ post.imageAlt }}">
+						<h3>{{ post.title }}</h3>
+						<date>{{ post.date }}</date>
+						<p>{{ post.summary }}</p>
+					</a>
+				</li>
 				{% endfor %}
 			</ul>
 			{% endblock %}
+			<aside>
+			</aside>
     </main>
     {% include "partials/footer.njk" %}
   </body>
