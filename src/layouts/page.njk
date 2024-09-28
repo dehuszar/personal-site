@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    {% include "partials/head.njk" %}
+		{% include "partials/css.njk" %}
+    {% include "partials/head-scripts.njk" %}
+  </head>
+  <body class="{{ bodyClass }}">
+    {% include "partials/site-header.njk" %}
+    <main>
+			<article>
+				<header class="page-title">
+					<h2>{{ title }}</h2>
+				</header>
+				<div class="content">{{ contents | safe }}</div>
+				<aside>
+					<header>
+						<h3>Categories</h3>
+				</aside>
+			</article>
+    </main>
+    {% include "partials/footer.njk" %}
+  </body>
+</html>
+

@@ -67,14 +67,11 @@ export class CVArticle extends LitElement {
           grid-column: 4 / span 4;
         }
 
-        img {
-          border-radius: 0;
-          grid-column: 9 / span 4;
-          max-width: 100%;
-        }
-
-        img.photo {
+        figure {
           border-radius: 50%;
+          /* grid-row: 1 / span 7; */
+					margin: 0;
+					overflow: auto;
         }
 
         p {

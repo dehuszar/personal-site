@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    {% include "partials/head.njk" %}
+		{% include "partials/base-styles.njk" %}
+		{% include "partials/cv-styles.njk" %}
+		{% include "partials/post-styles.njk" %}
+    {% include "partials/head-scripts.njk" %}
+  </head>
+  <body class="{{ bodyClass }}">
+    {% include "partials/site-header.njk" %}
+    <main>
+			<header class="page-title">
+				<h2>CV</h2>
+			</header>
+			<div class="cv-section-wrapper">
+				{% block content %}
+				<article></article>
+				{% endblock %}
+				{% include "cv/section-wrapper.njk" %}
+			</div>
+    </main>
+    {% include "partials/footer.njk" %}
+  </body>
+</html>
