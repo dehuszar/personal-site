@@ -8,7 +8,6 @@ import layouts from '@metalsmith/layouts';
 import assets from 'metalsmith-static-files';
 import postcss from '@metalsmith/postcss';
 import permalinks from '@metalsmith/permalinks';
-import tojson from 'metalsmith-to-json';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +15,6 @@ const prod = process.env.NODE_ENV === 'production';
     
 Metalsmith(__dirname)         // __dirname defined by node.js:
   .source('./src/content')            // source directory
-  // .destination('./dist/data')     // destination directory
 	.destination('./build/')
   .clean(true)                // clean destination before
 	.metadata({                 // add any variable you want & use them in layout-files
@@ -72,21 +70,14 @@ Metalsmith(__dirname)         // __dirname defined by node.js:
 			destination: 'assets/'
 		} )
 	)
+	// .use() 
   .use(markdown())            // transpile all md into html
-	// .ignore('layouts')
 	.use(
 		layouts({
 			patterns: '**/*.njk',
 			directory: 'src/layouts',
 		})
 	)
-	
-  // .use(tojson({
-  //   outputPath : '',
-  //   createIndexes : true,
-  //   indexPaths : ['posts', 'music', 'cv', 'pages'],
-  //   onlyOutputIndex : true
-  // }))
   .build(function(err) {      // build process
     if (err) throw err;       // error handling is required
   });

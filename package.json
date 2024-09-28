@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "cd build && pm2 start http-server --name personal-site --watch --ignore-watch='build' -f -- -o ./posts.html",
-		"stop": "pm2 stop personal-site ",
-    "build": "pm2 start --name update-site-contents build.js --watch --ignore-watch='build' -f",
-    "serve": "cd build && http-server -o ./posts.html",
+    "start": "npm run build && npm run serve",
+    "stop": "pm2 stop all",
+    "build": "pm2 start build.js --name update-site-contents --watch --ignore-watch='build' -f",
+    "serve": "pm2 start server.js --name personal-site --watch --ignore-watch='src' -f",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "@parcel/resolver-glob": "^2.9.3",
     "@parcel/transformer-typescript-tsc": "^2.3.2",
     "autoprefixer": "^10.4.19",
+    "express": "^4.21.0",
     "metalsmith": "^2.6.3",
     "parcel": "^2.10.2",
     "postcss": "^8.4.7",
@@ -48,7 +49,9 @@
     "live-directory": "^3.0.3",
     "metalsmith-sitemap": "^1.2.2",
     "metalsmith-static-files": "^0.4.0",
+    "metalsmith-tags": "^2.1.0",
     "metalsmith-to-json": "^1.0.2",
+    "nunjucks-date": "^1.5.0",
     "universal-router": "^9.1.0",
     "urlpattern-polyfill": "^9.0.0"
   },
