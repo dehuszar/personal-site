@@ -1,0 +1,14 @@
+{{ define "main" }}
+<header class="page-title">
+	<h2>{{ .Page.Title }}</h2>
+</header>
+{{ .Content }}
+<aside>
+	<header>
+		<h3>Categories</h3>
+		{{ if .Site.Params.showCategories }}
+		{{/* partial "categories" . */}}
+		{{ end }}
+	</header>
+</aside>
+{{ end }}
