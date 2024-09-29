@@ -1,0 +1,16 @@
+<article>
+	<header>
+		<h1>{{ .Title }}</h1>
+		<a class="back-to"
+			hx-boost="true"
+			hx-push-url="true"
+			href="/cv.html">&#x2190; Back to CV</a>
+	</header>
+	{{ with .Resources.Get "image" }}
+	<figure><img src="{{ .RelPermalink }}" alt="{{ .Params.alt }}"></figure>
+	{{ end }}
+	<div class="content">{{ .Content }}</div>
+	<footer>
+
+	</footer>
+</article>

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="page-title">
+	<h2>Posts</h2>
+</header>
+<ul class="post-list">
+	{{ $pages := where site.RegularPages "Type" "dispatch" }}
+	{{ $paginator := .Paginate $pages }}
+
+	{{ range $paginator.Pages }}
+	<li class="{{ .Type }}">
+		<a href="{{ .RelPermalink }}">
+			<date>{{ .Date }}</date>
+			{{ $path := "images/primary.jpg" }}
+			{{ with .Resources.Get $path }}
+			<figure><img src="{{ .RelPermalink }}" alt="{{ .Params.Alt }}"></figure>
+			{{ else }}
+				{{ errorf "Unable to get page resource %q" $path }}
+			{{ end }}
+			<h3>{{ .Title }}</h3>
+			<p>{{ .Summary }}</p>
+		</a>
+	</li>
+	{{ end }}
+</ul>
+<aside>
+	<header>
+		<h3>Categories</h3>
+	</header>
+</aside>
+{{ end }}

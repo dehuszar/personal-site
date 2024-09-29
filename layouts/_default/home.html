@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="page-title">
+	<h2>{{ .Title }}</h2>
+</header>
+{{ $pages := where site.RegularPages "Type" "dispatch" }}
+<ul class="{{ .Page.Params.type }}-list">
+	{{ $paginator := .Paginate $pages }}
+
+	{{ range $paginator.Pages }}
+	<li class="{{ .Type }}">
+		<a href="{{ .RelPermalink }}">
+			<date>{{ .Date | time.Format ":date_long" }}</date>
+			{{ $path := .Params.image }}
+			{{ $image := .Resources.Get $path }}
+			<img class="{{ $image.Params.class }}" src="{{ $image.RelPermalink }}" alt="{{ $image.Params.alt }}">
+			<h3>{{ .Title }}</h3>
+			<p>{{ .Summary }}</p>
+		</a>
+	</li>
+	{{ end }}
+</ul>
+<aside>
+	<header>
+		<h3>Categories</h3>
+		{{ if .Site.Params.showCategories }}
+		{{/* partial "categories" . */}}
+		{{ end }}
+	</header>
+</aside>
+{{ end }}

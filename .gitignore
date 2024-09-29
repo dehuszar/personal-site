@@ -36,5 +36,6 @@ override.tf.json
 **/.cache/
 **/.parcel-cache
 **/build/
+**/public/
 **/dist/
 **/node_modules

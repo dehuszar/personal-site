@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="{{ .Type }}-wrapper">
+	<article>
+		<header>
+			<h1>{{ .Title }}</h1>
+			<date>{{ .Date | time.Format ":date_long" }}</date>
+		</header>
+		<div class="content">{{ .Content }}</div>
+		<footer>
+			<a class="back-to"
+				hx-boost="true"
+				hx-push-url="true"
+				href="/posts.html"><< Back to Posts</a>
+		</footer>
+	</article>
+</section>
+{{ end }}
