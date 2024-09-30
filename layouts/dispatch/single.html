@@ -1,4 +1,7 @@
 {{ define "main" }}
+<header class="page-title">
+	<h2>Dispatches</h2>
+</header>
 <section class="{{ .Type }}-wrapper">
 	<article>
 		<header>
@@ -10,8 +13,16 @@
 			<a class="back-to"
 				hx-boost="true"
 				hx-push-url="true"
-				href="/posts.html"><< Back to Posts</a>
+				href="/"><< Back to Dispatches</a>
 		</footer>
 	</article>
 </section>
+<aside>
+	<header>
+		<h3>Categories</h3>
+		{{ if .Site.Params.showCategories }}
+		{{/* partial "categories" . */}}
+		{{ end }}
+	</header>
+</aside>
 {{ end }}

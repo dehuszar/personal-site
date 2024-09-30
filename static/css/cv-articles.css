@@ -1,16 +1,16 @@
 @media (max-width: 1279px) {
 	.education .cv-section-wrapper,
 	.experience .cv-section-wrapper,
-	.skills .cv-section-wrapper,
-	.tools .cv-section-wrapper {
+	.skill .cv-section-wrapper,
+	.tool .cv-section-wrapper {
 		left: -130vw;
 		position: absolute;
 	}
 
 	.education article,
 	.experience article,
-	.skills article,
-	.tools article {
+	.skill article,
+	.tool article {
 		height: 100vh;
 		position: absolute;
 		top: 18.2em;
@@ -50,6 +50,11 @@
 	margin-top: 1em;
 }
 
+.cv-section-wrapper article .meta {
+	font-size: 0.85em;
+	line-height: 1;
+}
+
 @media (min-width: 1280px) {
   .cv-section-wrapper article:not(:empty),
 	.cv-section-wrapper article header {
@@ -75,8 +80,9 @@
 
 	.cv-section-wrapper article header a {
 		align-self: center;
-		grid-column: 5 / span 1;
+		grid-column: 4 / span 2;
     grid-row: 1 / span 1;
+    text-align: right;
 	}
 
 	.cv-section-wrapper article figure {
@@ -85,8 +91,8 @@
 	}
 	
 	.cv-section-wrapper article figure img {
-    width: 100%; /* or any custom size */
-    height: 100%; 
+    max-width: 100%; /* or any custom size */
+    max-height: 100%; 
     object-fit: contain;
 	}
 

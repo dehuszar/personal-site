@@ -1,3 +1,20 @@
 baseURL = 'https://samuel-allen.com/'
 languageCode = 'en-us'
 title = 'Samuel Allen'
+
+cleanDestinationDir = true
+
+[menus]
+  [[menus.main]]
+    name = 'dispatches'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'cv'
+    pageRef = '/cv'
+    weight = 20
+  [[menus.main]]
+    name = 'about'
+    pageRef = '/about'
+    weight = 30
+
