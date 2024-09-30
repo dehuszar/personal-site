@@ -1,6 +1,6 @@
 {{ define "main" }}
 <header class="page-title">
-	<h2>{{ .Title }}</h2>
+	<h2>{{ .Type | title }}</h2>
 </header>
 {{ $pages := where site.RegularPages "Type" "dispatch" }}
 <ul class="{{ .Page.Params.type }}-list">

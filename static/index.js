@@ -11,8 +11,10 @@ const bodySetURLClasses = () => {
 	// trim out the https://domain/[...].html parts of the url
 	const htmlTrimmedURLParts = urlParts
 		.slice(3,urlParts.length)
+		.filter(part => Boolean( part ))
 		.map(part => part.replace('.html',''));
 
+	console.log(...htmlTrimmedURLParts);
 	body.classList.remove(...bodyClasses);
 	body.classList.add(...htmlTrimmedURLParts);
 
@@ -42,6 +44,6 @@ const cvExpNavSetActive = current => {
 }
 
 htmx.config.scrollBehavior = false;
-// htmx.onLoad(() => {
-// 	bodySetURLClasses();
-// });
+htmx.onLoad(() => {
+	bodySetURLClasses();
+});

@@ -1,7 +1,5 @@
----
-slug: cv
-tags: []
-title: CV
-type: page
----
++++
+title = "CV"
+type = "cv"
++++
 Stuff that I've done and can do
