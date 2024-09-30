@@ -1,0 +1,27 @@
+{{ define "main" }}
+<header class="page-title">
+	<h2>{{ replace .Type "cv/" "CV | " | title }}</h2>
+</header>
+<div class="cv-section-wrapper">
+	<article>
+		<header>
+			<h1>{{ .Title }}</h1>
+			<a class="back-to"
+				hx-boost="true"
+				hx-push-url="true"
+				href="/cv">Back to CV</a>
+		</header>
+		{{ $path := .Params.image }}
+		<figure><img src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>
+		
+		<div class="content">
+			<p class="meta">{{ .Params.degree }} | {{ .Params.endYear }}</p>
+			{{ .Content }}
+		</div>
+		<footer>
+
+		</footer>
+	</article>
+	{{ partial "cv-sections" . }}
+</div>
+{{ end }}
