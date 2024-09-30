@@ -1,0 +1,93 @@
+<section class="cv-section experience">
+		<header>
+			<h3>Experience</h3>
+		</header>
+		<nav>
+			<ul>
+				{{ $pages := where site.RegularPages "Type" "cv/experience" }}
+				{{ range sort $pages "Params.endYear" "desc" }}
+				<li>
+					<h1>
+						<a href="{{ .RelPermalink }}"
+							hx-boost="true"
+							hx-push-url="true"
+							hx-select="article"
+							hx-swap="outerHTML focus-scroll:false"
+							hx-target="article"
+							onclick="cvExpNavSetActive(this)">{{ .Title }}</a>
+					</h1>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</section>
+	<section class="cv-section education">
+		<header>
+			<h3>Education</h3>
+		</header>
+		<nav>
+			<ul>
+				{{ $pages := where site.RegularPages "Type" "cv/education" }}
+				{{ range $pages }}
+				<li>
+					<h1>
+						<a href="{{ .RelPermalink }}"
+							hx-boost="true"
+							hx-push-url="true"
+							hx-select="article"
+							hx-swap="outerHTML focus-scroll:false"
+							hx-target="article"
+							onclick="cvExpNavSetActive(this)">{{ .Title }}
+							<br>{{ .Params.location }} - {{ .Params.endYear }}</a>
+					</h1>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</section>
+	<section class="cv-section skills">
+		<header>
+			<h3>Skills</h3>
+		</header>
+		<nav>
+			<ul>
+				{{ $pages := where site.RegularPages "Type" "cv/skill" }}
+				{{ range $pages }}
+				<li>
+					<h1>
+						<a href="{{ .RelPermalink }}"
+							hx-boost="true"
+							hx-push-url="true"
+							hx-select="article"
+							hx-swap="outerHTML focus-scroll:false"
+							hx-target="article"
+							onclick="cvExpNavSetActive(this)">{{ .Title }}</a>
+					</h1>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</section>
+	<section class="cv-section tools">
+		<header>
+			<h3>Tools</h3>
+		</header>
+		<nav>
+			<ul>
+				{{ $pages := where site.RegularPages "Type" "cv/tool" }}
+				{{ range $pages }}
+				<li>
+					<h1>
+						<a href="{{ .RelPermalink }}"
+							hx-boost="true"
+							hx-push-url="true"
+							hx-select="article"
+							hx-swap="outerHTML focus-scroll:false"
+							hx-target="article"
+							onclick="cvExpNavSetActive(this)">{{ .Title }}</a>
+					</h1>
+				</li>
+        {{ end }}
+			</ul>
+		</nav>
+	</section>
