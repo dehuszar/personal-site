@@ -1,5 +1,5 @@
-const button = document.querySelector('.hamb')
-button.addEventListener('click',()=>{button.classList.toggle('active')})
+const menuButton = document.querySelector('.hamb')
+menuButton.addEventListener('click',()=>{menuButton.classList.toggle('active')})
 
 const bodySetURLClasses = () => {
 	const body = document.querySelector('body');
@@ -14,9 +14,16 @@ const bodySetURLClasses = () => {
 		.filter(part => Boolean( part ))
 		.map(part => part.replace('.html',''));
 
-	console.log(...htmlTrimmedURLParts);
 	body.classList.remove(...bodyClasses);
 	body.classList.add(...htmlTrimmedURLParts);
+
+  if (htmlTrimmedURLParts.length === 0) {
+    body.classList.add('dispatch');
+  }
+
+  if (htmlTrimmedURLParts[0] === 'about') {
+    body.classList.add('page');
+  }
 
 	navItems.forEach(navItem => {
 		navItem.classList.remove('active')

@@ -52,11 +52,6 @@
 	}
 }
 
-.cv-section ul li a {
-	color: var(--text-color);
-	text-decoration: none;
-}
-
 @media (min-width: 1280px) {
 	.cv-section-wrapper {
 		display: grid;

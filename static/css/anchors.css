@@ -1,7 +1,26 @@
- a, a:visited {
-		color: var(--text-color);
- }
+a, a:visited {
+  color: var(--text-color);
+}
 
- a {
-		text-decoration: none;
- }
+a {
+  text-decoration: none;
+}
+
+body.dispatch,
+body.dispatch a,
+body.dispatch a:visited {
+	color: var(--dispatch-orange-foreground);
+}
+
+body.cv,
+body.cv a,
+body.cv a:visited {
+	color: var(--cv-blue-foreground);
+}
+
+body.page,
+body.page a,
+body.page a:visited {
+	color: var(--page-green-foreground);
+}
+

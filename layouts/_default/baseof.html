@@ -8,7 +8,7 @@
 		{{- end }}
     {{ partial "head-scripts" }}
   </head>
-	<body{{ with .Params.Type }} class="{{ replace . "/" " " }}"{{ end }}>
+  <body class="{{ .Type }} {{ with .Params.Type }}{{ replace . "/" " " }}{{ end }}">
     {{ partial "site-header" }}
 		<main>
 			{{ block "main" . }}{{ end }}

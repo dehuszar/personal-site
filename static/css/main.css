@@ -1,6 +1,27 @@
+:root {
+  --primary-black: rgba(33, 33, 33, 1);
+  --dispatch-orange-background: rgba(172, 107, 56, 0.75);
+  --dispatch-orange-foreground: rgba(138, 61, 0, 1);
+  --page-green-background: rgba(78, 157, 123, 0.75);
+  --page-green-foreground: rgba(0, 58, 33, 1);
+  --cv-blue-background: rgba(100, 149, 237, 0.75);
+  --cv-blue-foreground: rgba(34, 62, 113, 1);
+  --text-color: var(--primary-black);
+  --sans-serif-font: 'Lato', sans-serif;
+  --serif-font: 'Lora', serif;
+}
+
+html,
+body {
+	height: 100vh;
+	margin: 0;
+  padding: 0;
+	width: 100vw;
+}
+
 body {
 	/* this should get moved to a place where it can be animated between values on page change */
-	background: rgba(100, 149, 237, 0.75); /* cv page - #8aaff1; */ /* cornflower blue */
+	/* background: rgba(100, 149, 237, 0.75); /* cv page - #8aaff1; */ /* cornflower blue */ 
 /* Other background colors for each main page 
  * #F26B02 - rgba(242, 107, 2, 0.75) - orange 
  * #F22502 - rgba(242, 37, 2, 0.75) red
@@ -9,12 +30,39 @@ body {
  * #3B733B - rgba(59, 115, 59, 0.75) forest green */
 	padding: 1em 4em;
 	margin: 0;
+  transition: 
+    background 0.5s,
+    color 0.5s;
 	width: calc(100vw - 8em);
 }
 
 body > * {
 	margin: 0;
 	padding: 0;
+}
+
+body.dispatch {
+  background: var(--dispatch-orange-background);
+  border-color: var(--dispatch-orange-foreground);
+}
+
+body.cv {
+  background: var(--cv-blue-background);
+  border-color: var(--cv-blue-foreground);
+}
+
+body.page {
+  background: var(--page-green-background);
+  border-color: var(--page-green-foreground);
+}
+
+body.dispatch header h3 {
+}
+
+body.cv header h3 {
+}
+
+body.page header h3 {
 }
 
 main {
