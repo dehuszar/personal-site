@@ -2,6 +2,34 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lora', serif;
 }
 
+body.dispatch h1,
+body.dispatch h2,
+body.dispatch h3,
+body.dispatch h4,
+body.dispatch h5,
+body.dispatch h6 {
+  color: var(--dispatch-orange-foreground);
+}
+
+body.cv h1,
+body.cv h2,
+body.cv h3,
+body.cv h4,
+body.cv h5,
+body.cv h6 {
+  color: var(--cv-blue-foreground);
+}
+
+body.page h1,
+body.page h2,
+body.page h3,
+body.page h4,
+body.page h5,
+body.page h6 {
+  color: var(--page-green-foreground);
+}
+
+
 .site-header {
 	display: block;
 	margin: 0;
@@ -22,10 +50,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header a {
 	text-decoration: none;
-}
-
-.site-header a, .site-header a:visited {
-	color: var(--text-color);
 }
 
 .site-title {
@@ -88,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header h3 {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid;
 	font-size: 2.4em;
 	margin: 0;
 }

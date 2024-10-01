@@ -1,10 +1,12 @@
 +++
 title = 'Grafana'
-type = "tool"
+type = "cv/tool"
 
-imageAlt = "Grafana logo"
-imageSrc = "Grafana_icon.svg"
-imageType = "logo"
+[params]
+  image = "images/Grafana_icon.svg"
+  imageAlt = "Grafana logo"
+  imageType = "logo"
+
 skills = ['observability', 'infrastructure']
 +++
 Grafana is cool

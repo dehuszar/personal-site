@@ -1,29 +1,26 @@
 {{ define "main" }}
 <header class="page-title">
-	<h2>Dispatches</h2>
+  <h2>About Me</h2>
 </header>
 <section class="{{ .Type }}-wrapper">
 	<article>
     <header>
 			<h1>{{ .Title }}</h1>
-			<date>{{ .Date | time.Format ":date_long" }}</date>
 		</header>
+		{{ $path := .Params.image }}
+		<figure><img class="logo" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.alt }}"></figure>
 		<div class="content">{{ .Content }}</div>
 		<footer>
-			<a class="back-to"
-				hx-boost="true"
-				hx-push-url="true"
-				href="/posts.html"><< Back to Posts</a>
 		</footer>
 	</article>
 </section>
 
 <aside>
+{{ if .Site.Params.showCategories }}
 	<header>
 		<h3>Categories</h3>
-		{{ if .Site.Params.showCategories }}
-		{{/* partial "categories" . */}}
-		{{ end }}
+		<!-- {{/* partial "categories" . */}} -->
 	</header>
+{{ end }}
 </aside>
 {{ end }}

@@ -50,6 +50,7 @@
 	}
 
 	.dispatches-list li img {
+    border-radius: 5%/10%;
 		grid-column: 6 / span 3;
 		grid-row: 1 / span 4;
 		max-height: 100%;
