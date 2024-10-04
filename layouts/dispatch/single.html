@@ -1,0 +1,28 @@
+{{ define "main" }}
+<header class="page-title">
+	<h2>Dispatches</h2>
+</header>
+<section class="{{ .Type }}-wrapper">
+	<article>
+		<header>
+			<h1>{{ .Title }}</h1>
+			<date>{{ .Date | time.Format ":date_long" }}</date>
+		</header>
+		<div class="content">{{ .Content }}</div>
+		<footer>
+			<a class="back-to"
+				hx-boost="true"
+				hx-push-url="true"
+				href="/"><< Back to Dispatches</a>
+		</footer>
+	</article>
+</section>
+<aside>
+	<header>
+		<h3>Categories</h3>
+		{{ if .Site.Params.showCategories }}
+		{{/* partial "categories" . */}}
+		{{ end }}
+	</header>
+</aside>
+{{ end }}

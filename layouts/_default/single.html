@@ -1,0 +1,26 @@
+{{ define "main" }}
+<header class="page-title">
+  <h2>About Me</h2>
+</header>
+<section class="{{ .Type }}-wrapper">
+	<article>
+    <header>
+			<h1>{{ .Title }}</h1>
+		</header>
+		{{ $path := .Params.image }}
+		<figure><img class="logo" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.alt }}"></figure>
+		<div class="content">{{ .Content }}</div>
+		<footer>
+		</footer>
+	</article>
+</section>
+
+<aside>
+{{ if .Site.Params.showCategories }}
+	<header>
+		<h3>Categories</h3>
+		<!-- {{/* partial "categories" . */}} -->
+	</header>
+{{ end }}
+</aside>
+{{ end }}
