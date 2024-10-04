@@ -1,0 +1,55 @@
+.dispatch-wrapper {
+	font-size: 2.2em;
+}
+
+.dispatch-wrapper p {
+	line-height: 1.5;
+	margin: 0 0 1em 0;
+}
+
+.dispatch-wrapper p img {
+	max-width: 100%;
+}
+
+.dispatch-wrapper date {
+	display: block;
+	font-size: 0.75em;
+	margin: 0 0 .5em 0;
+}
+
+@media (min-width: 1280px) {
+  .dispatch-wrapper {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-column: span 13;
+  }
+
+  .dispatch-wrapper {
+		font-size: 1.4em;
+    grid-row: 3 / span 13;
+	}
+
+  .dispatch-wrapper article {
+		grid-column: 1 / span 6;
+		grid-row: 1 / span 10;
+	}
+
+	.dispatch-wrapper article header {
+	}
+
+	.dispatch-wrapper article header h1 {
+		margin: 0;
+	}
+
+	.dispatch-wrapper article header date {
+	}
+
+	.dispatch-wrapper article .content {
+	}
+
+	.dispatch-wrapper ~ aside {
+		grid-column: 2 / span 3;
+		grid-row: 3 / span 4;
+	}
+}
