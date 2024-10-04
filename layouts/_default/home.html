@@ -12,7 +12,7 @@
 			<date>{{ .Date | time.Format ":date_long" }}</date>
 			{{ $path := .Params.image }}
 			{{ $image := .Resources.Get $path }}
-			<img class="{{ $image.Params.class }}" src="{{ $image.RelPermalink }}" alt="{{ $image.Params.alt }}">
+      <figure><img class="{{ $image.Params.class }}" src="{{ $image.RelPermalink }}" alt="{{ $image.Params.alt }}"></figure>
 			<h3>{{ .Title }}</h3>
 			<p>{{ .Summary }}</p>
 		</a>
