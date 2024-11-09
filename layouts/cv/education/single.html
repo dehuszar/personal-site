@@ -9,7 +9,7 @@
 			<a class="back-to"
 				hx-boost="true"
 				hx-push-url="true"
-				href="/cv">Back to CV</a>
+				href="/cv"><< Back to CV</a>
 		</header>
 		{{ $path := .Params.image }}
 		<figure><img src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>

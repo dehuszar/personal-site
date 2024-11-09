@@ -11,4 +11,4 @@ type = "cv/experience"
 
 tags = []
 +++
-Dentsu Isobar is a creative agency in Chicago, IL.  Here, I wrote cutting-edge cross-browser HTML5, CSS3, and JS for Isobar's various clients; including Motorola, Sotheby's and more.
+Dentsu Creative (Isobar) is a creative digital marketing agency in Chicago, IL.  Here, I worked as a front-end developer for Isobar's various clients; including Motorola, Sotheby's and more.
