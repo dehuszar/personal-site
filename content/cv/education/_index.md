@@ -3,4 +3,4 @@ title: "Education"
 type: "cv/education"
 tags: []
 ---
-I can learn
+If you know how to learn, you can learn how to do anything else.

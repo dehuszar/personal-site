@@ -1,5 +1,5 @@
 +++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title = 'Application Design'
 type = 'cv/skill'
 
 [params]

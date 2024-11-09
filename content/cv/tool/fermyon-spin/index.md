@@ -1,5 +1,5 @@
 +++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title = 'Fermyon Spin'
 type = 'cv/tool'
 
 [params]
