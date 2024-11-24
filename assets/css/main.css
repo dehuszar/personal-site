@@ -6,7 +6,7 @@
   --page-green-foreground: rgba(0, 58, 33, 1);
   --cv-blue-background: rgba(100, 149, 237, 0.75);
   --cv-blue-background-rgb: 100, 149, 237;
-  --cv-blue-foreground: rgba(34, 62, 113, 1);
+  --cv-blue-foreground: rgba(34, 62, 113, 1); /* #223E71 */
   --text-color: var(--primary-black);
   --sans-serif-font: 'Lato', sans-serif;
   --serif-font: 'Lora', serif;
