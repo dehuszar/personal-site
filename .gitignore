@@ -39,3 +39,6 @@ override.tf.json
 **/public/
 **/dist/
 **/node_modules
+
+### Hugo ###
+**/_gen
