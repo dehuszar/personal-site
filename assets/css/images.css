@@ -1,0 +1,12 @@
+img.photo {
+  opacity: 0.95;
+}
+
+.cv img.photo {
+  filter: drop-shadow(0 0 0.75rem var(--cv-blue-foreground));
+}
+
+img.photo.round-tl-br {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
