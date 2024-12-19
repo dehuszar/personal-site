@@ -13,6 +13,9 @@
 {{ with resources.Get "css/pages.css" | postCSS }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}
+{{ with resources.Get "css/images.css" | postCSS }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
 {{ with resources.Get "css/cv-sections.css" | postCSS }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}

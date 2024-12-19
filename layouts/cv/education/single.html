@@ -12,7 +12,7 @@
 				href="/cv"><< Back to CV</a>
 		</header>
 		{{ $path := .Params.image }}
-		<figure><img src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>
+    <figure><img class="{{ .Params.imageType }} {{ .Params.imageClass }}" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>
 		
 		<div class="content">
 			<p class="meta">{{ .Params.degree }} | {{ .Params.endYear }}</p>
