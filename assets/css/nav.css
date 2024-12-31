@@ -150,6 +150,6 @@ button {
 	}
 }
 
-.site-header nav li.active a {
-	font-weight: bold;
+.site-header nav li a.active {
+	font-weight: 700;
 }

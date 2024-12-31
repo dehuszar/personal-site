@@ -1,5 +1,6 @@
 a, a:visited {
   color: var(--text-color);
+  font-weight: 400;
 }
 
 :not(.content a) {

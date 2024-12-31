@@ -3,7 +3,7 @@ img.photo {
 }
 
 .cv img.photo {
-  filter: drop-shadow(0 0 0.75rem var(--cv-blue-foreground));
+  filter: drop-shadow(0 0 0.25rem var(--cv-blue-foreground));
 }
 
 img.photo.round-tl-br {
