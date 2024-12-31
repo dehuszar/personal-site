@@ -59,6 +59,10 @@ body.page h6 {
 	padding: 0;
 }
 
+.site-title a {
+  font-weight: 700;
+}
+
 @media (min-width: 1280px) {
 	.site-title {
 		font-size: 2.5em;

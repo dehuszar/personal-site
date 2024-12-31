@@ -1,12 +1,12 @@
-const menuButton = document.querySelector('.hamb')
+var menuButton = document.querySelector('.hamb')
 menuButton.addEventListener('click',()=>{menuButton.classList.toggle('active')})
 
-const bodySetURLClasses = () => {
+var bodySetURLClasses = () => {
 	const body = document.querySelector('body');
 	const bodyClasses = body.classList;
 	const url = window.location.href;
 	const urlParts = url.split('/');
-	const navItems = document.querySelectorAll('.site-header nav a');
+  const currentUrlPath = urlParts.slice(3,-1).join('/');
 	
 	// trim out the https://domain/[...].html parts of the url
 	const htmlTrimmedURLParts = urlParts
@@ -25,29 +25,32 @@ const bodySetURLClasses = () => {
     body.classList.add('page');
   }
 
-	navItems.forEach(navItem => {
-		navItem.classList.remove('active')
-		if (navItem.href === url) {
-			navItem.classList.add("active")
-		}
-	});
+  primaryNavSetActive(currentUrlPath);
+  cvExpNavSetActive(currentUrlPath);
 }
 
-const primaryNavSetActive = current => {
+var primaryNavSetActive = current => {
+  const currentPrimaryPathSegment = current.split('/')[0];
 	const navItems = document.querySelectorAll('.site-header nav a');
 	navItems.forEach(navItem => {
 		navItem.classList.remove('active')
-		if (navItem.href === current) navItem.classList.add("active")
+    const primaryNavItem = navItem.href.split('/').slice(3)[0];
+		if (primaryNavItem === currentPrimaryPathSegment) {
+      navItem.classList.add("active");
+    }
 	});
 }
 
-const cvExpNavSetActive = current => {
+var cvExpNavSetActive = current => {
 	const navItems = document.querySelectorAll('.cv-section nav a');
 	navItems.forEach(navItem => {
-		navItem.classList.remove('active')
+		navItem.classList.remove('active');
+    const cvNavItem = navItem.href.split('/').slice(3,-1).join('/');
+    console.log(current);
+    if (cvNavItem === current) {
+      navItem.classList.add("active");
+    }
 	});
-
-	current.classList.add('active');
 }
 
 htmx.config.scrollBehavior = false;
