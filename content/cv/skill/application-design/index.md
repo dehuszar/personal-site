@@ -9,7 +9,7 @@ type = 'cv/skill'
 
 experience = []
 +++
-While building an application is always fun, I really love the process of designing an application.  Not visually, mind you.  I make no claims at being good at visual design.  But its structural design... What problem(s) are we trying to solve?  What are the core events and user flows that the application is attempting to concern itself with?  What are the best tools and abstractions to handle these events and flows?  How do they all fit together? 
+While building an application is always fun, I really love the process of designing it.  Not visually, mind you.  I make no claims at being good at visual design.  But its structural design... What problem(s) are we trying to solve?  What are the core events and user flows that the application is attempting to concern itself with?  What are the best tools and abstractions to handle these events and flows?  How do they all fit together? 
 
 This is catnip to me.
 
