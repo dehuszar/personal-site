@@ -9,62 +9,62 @@
 }
 
 @media (max-width: 1279px) {
-	.education .cv-section-wrapper,
-	.experience .cv-section-wrapper,
-	.skill .cv-section-wrapper,
-	.tool .cv-section-wrapper {
-		left: -130vw;
-		position: absolute;
-	}
+  .education .cv-section-wrapper,
+  .experience .cv-section-wrapper,
+  .skill .cv-section-wrapper,
+  .tool .cv-section-wrapper {
+    left: -130vw;
+    position: absolute;
+  }
 
-	.education article,
-	.experience article,
-	.skill article,
-	.tool article {
-		height: 100vh;
-		position: absolute;
-		top: 18.2em;
-		width: 100vw;
-	}
+  .education article,
+  .experience article,
+  .skill article,
+  .tool article {
+    height: 100vh;
+    position: absolute;
+    top: 18.2em;
+    width: 100vw;
+  }
 
-	.cv-section-wrapper article header {
-		display: flex;
-		flex: inherit;
-		align-items: baseline;
-		justify-content: space-between;
-		line-height: 1;
-		padding: 2em 0;
-	}
+  .cv-section-wrapper article header {
+    display: flex;
+    flex: inherit;
+    align-items: baseline;
+    justify-content: space-between;
+    line-height: 1;
+    padding: 2em 0;
+  }
 }
 
 .cv-section-wrapper article h1 {
-	margin: 0;
+  margin: 0;
 }
 
 .cv-section-wrapper article figure {
-	margin: 0;
+  margin: 0;
 }
 
 .cv-section-wrapper article figure img {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .cv-section-wrapper article p {
-	font-size: 2.2em;
-	line-height: 1.5;
-	margin: 0;
+  font-size: 2.2em;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .cv-section-wrapper article p + p {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 .cv-section-wrapper article .meta {
-	font-size: 0.85em;
-	line-height: 1;
+  font-size: 0.85em;
+  line-height: 1;
 }
-	
+
 .cv-section-wrapper article ol {
   margin: 0;
 }
@@ -79,7 +79,7 @@
 
 @media (min-width: 1280px) {
   .cv-section-wrapper article:not(:empty),
-	.cv-section-wrapper article header {
+  .cv-section-wrapper article header {
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
@@ -88,54 +88,53 @@
   .cv-section-wrapper article:not(:empty) {
     grid-column: 5 / span 8;
     grid-row: 1 / span 13;
-	}
+  }
 
-	.cv-section-wrapper article header {
-		grid-column: 1 / span 5;
+  .cv-section-wrapper article header {
+    grid-column: 1 / span 5;
     grid-row: 1 / span 1;
-	}
+  }
 
-	.cv-section-wrapper article header h1 {
-		grid-column: 1 / span 4;
+  .cv-section-wrapper article header h1 {
+    grid-column: 1 / span 4;
     grid-row: 1 / span 1;
-	}
+  }
 
-	.cv-section-wrapper article header a {
-		align-self: center;
-		grid-column: 4 / span 2;
+  .cv-section-wrapper article header a {
+    align-self: center;
+    grid-column: 4 / span 2;
     grid-row: 1 / span 1;
     text-align: right;
-	}
+  }
 
-	.cv-section-wrapper article figure {
-		grid-column: 6 / span 3;
-		grid-row: 1 / span 8;
-	}
-	
-	.cv-section-wrapper article figure img {
+  .cv-section-wrapper article figure {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 13;
+  }
+
+  .cv-section-wrapper article figure img {
     max-width: 100%; /* or any custom size */
-    max-height: 100%; 
+    max-height: 100%;
     object-fit: contain;
-	}
+  }
 
-	.cv-section-wrapper article .content {
-		grid-column: 1 / span 5;
-		grid-row: 2 / span 12;
+  .cv-section-wrapper article .content {
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 12;
     overflow-y: scroll;
     padding-right: 1em;
-    scrollbar-color:
-      var(--cv-blue-foreground)
+    scrollbar-color: var(--cv-blue-foreground)
       rgba(var(--cv-blue-background-rgb), 0.15);
-	}
+  }
 
-	.cv-section-wrapper article ol,
-	.cv-section-wrapper article p {
-		font-size: 1.4em;
-		line-height: 2.5;
-	}
+  .cv-section-wrapper article ol,
+  .cv-section-wrapper article p {
+    font-size: 1.4em;
+    line-height: 2.5;
+  }
 
   .cv-section-wrapper article ol ol {
     font-size: 1em;
-		line-height: 2;
+    line-height: 2;
   }
 }
