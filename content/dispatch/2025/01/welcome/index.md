@@ -3,7 +3,8 @@ title = "Welcome!"
 date = "2025-01-11"
 summary = "Is this thing on?"
 
-tags = [""]
+categories = [ "essay" ]
+tags = []
 
 [params]
   image = "images/welcome.jpg"
