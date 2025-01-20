@@ -1,30 +1,45 @@
-{{ define "main" }}
+{{ define "main" }} {{ `<!-- _default/home.html -->` | safeHTML }}
 <header class="page-title">
-	<h2>{{ .Type | title }}</h2>
+  <h2>{{ .Type | title }}</h2>
 </header>
 {{ $pages := where site.RegularPages "Type" "dispatch" }}
 <ul class="{{ .Page.Params.type }}-list">
-	{{ $paginator := .Paginate $pages }}
-
-	{{ range $paginator.Pages }}
-	<li class="{{ .Type }}">
-		<a href="{{ .RelPermalink }}">
-			<date>{{ .Date | time.Format ":date_long" }}</date>
-			{{ $path := .Params.image }}
-			{{ $image := .Resources.Get $path }}
-      <figure><img class="{{ $image.Params.class }}" src="{{ $image.RelPermalink }}" alt="{{ $image.Params.alt }}"></figure>
-			<h3>{{ .Title }}</h3>
-			<p>{{ .Summary }}</p>
-		</a>
-	</li>
-	{{ end }}
+  {{ $paginator := .Paginate $pages }} {{ range $paginator.Pages }}
+  <li class="{{ .Type }} {{ index .Page.Params.categories 0 }}">
+    <a href="{{ .RelPermalink }}">
+      <date>{{ .Date | time.Format ":date_long" }}</date>
+      {{ $path := .Params.image }} {{ $image := .Resources.Get $path }} {{ if
+      $image }}
+      <figure>
+        <img
+          class="{{ $image.Params.class }}"
+          src="{{ $image.RelPermalink }}"
+          alt="{{ $image.Params.alt }}"
+        />
+      </figure>
+      {{ end }} {{ if .Title }}
+      <h3>{{ .Title }}</h3>
+      {{ end }} {{ if eq (index .Page.Params.categories 0) "observation" }}
+      <blockquote class="summary">{{ .Summary }}</blockquote>
+      {{ else }}
+      <p class="summary">{{ .Summary }}</p>
+      {{ end }}
+    </a>
+  </li>
+  {{ end }}
 </ul>
 <aside>
-	<header>
-		<h3>Categories</h3>
-		{{ if .Site.Params.showCategories }}
-		{{/* partial "categories" . */}}
-		{{ end }}
-	</header>
+  <section>
+    <header>
+      <h3>By Category</h3>
+    </header>
+    {{ partial "site-categories" . }}
+  </section>
+  <section>
+    <header>
+      <h3>By Tag</h3>
+    </header>
+    {{ partial "site-tags" . }}
+  </section>
 </aside>
 {{ end }}

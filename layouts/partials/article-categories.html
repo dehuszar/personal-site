@@ -1,0 +1,11 @@
+{{ `<!-- partials/categories.html -->` | safeHTML }}
+<ul>
+  {{ with .GetTerms "categories" }}
+  <p>Categories</p>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</ul>

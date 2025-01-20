@@ -8,38 +8,40 @@
   --cv-blue-background-rgb: 100, 149, 237;
   --cv-blue-foreground: rgba(34, 62, 113, 1); /* #223E71 */
   --text-color: var(--primary-black);
-  --sans-serif-font: 'Lato', sans-serif;
-  --serif-font: 'Lora', serif;
+  --sans-serif-font: "Lato", sans-serif;
+  --serif-font: "Lora", serif;
+  --meta-font-size: 0.7em;
+  --meta-line-height: 2.4em;
 }
 
 html,
 body {
-	height: 100vh;
-	margin: 0;
+  height: 100vh;
+  margin: 0;
   padding: 0;
-	width: 100vw;
+  width: 100vw;
 }
 
 body {
-	/* this should get moved to a place where it can be animated between values on page change */
-	/* background: rgba(100, 149, 237, 0.75); /* cv page - #8aaff1; */ /* cornflower blue */ 
-/* Other background colors for each main page 
+  /* this should get moved to a place where it can be animated between values on page change */
+  /* background: rgba(100, 149, 237, 0.75); /* cv page - #8aaff1; */ /* cornflower blue */
+  /* Other background colors for each main page 
  * #F26B02 - rgba(242, 107, 2, 0.75) - orange 
  * #F22502 - rgba(242, 37, 2, 0.75) red
  * #02F28A - rgba(2, 242, 138, 0.75) - lime green
  * #369D70 - rgba(54, 157, 112, 62, 0.75) - army green 
  * #3B733B - rgba(59, 115, 59, 0.75) forest green */
-	padding: 1em 4em;
-	margin: 0;
-  transition: 
+  padding: 1em 4em;
+  margin: 0;
+  transition:
     background 0.5s,
     color 0.5s;
-	width: calc(100vw - 8em);
+  width: calc(100vw - 8em);
 }
 
 body > * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body.dispatch {
@@ -67,36 +69,44 @@ body.page header h3 {
 }
 
 main {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lora', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
 }
-
-header h3 {
-	border-bottom: 1px solid black;
-}
-
 
 @media (min-width: 1280px) {
-	body {
-		display: grid;
-		gap: 1em 3em;
-		grid-template-columns: repeat(13, minmax(0, 1fr));
-		grid-template-rows: repeat(18, 3em);
-		height: 100vh;
-		padding: 0;
-		width: calc(100vw);
-	}
+  body {
+    display: grid;
+    gap: 1em 3em;
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+    grid-template-rows: repeat(18, 3em);
+    height: 100vh;
+    padding: 0;
+    width: calc(100vw);
+  }
 
-	main {
-		display: grid;
-		gap: 1em 3em;
-		grid-column: span 13;
-		grid-row: 4 / span 14;
-		grid-template-columns: subgrid;
-		grid-template-rows: subgrid;
-	}
+  main {
+    display: grid;
+    gap: 1em 3em;
+    grid-column: span 13;
+    grid-row: 4 / span 14;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+  }
+}
+
+pre.debug {
+  bottom: 0;
+  font-size: 0.75em;
+  font-weight: bold;
+  position: fixed;
+  visibility: hidden;
 }

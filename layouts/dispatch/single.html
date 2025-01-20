@@ -1,28 +1,51 @@
-{{ define "main" }}
+{{ define "main" }} {{ `<!-- dispatch/single.html -->` | safeHTML }}
 <header class="page-title">
-	<h2>Dispatches</h2>
+  <h2>Dispatches</h2>
 </header>
 <section class="{{ .Type }}-wrapper">
-	<article>
-		<header>
-			<h1>{{ .Title }}</h1>
-			<date>{{ .Date | time.Format ":date_long" }}</date>
-		</header>
-		<div class="content">{{ .Content }}</div>
-		<footer>
-			<a class="back-to"
-				hx-boost="true"
-				hx-push-url="true"
-				href="/"><< Back to Dispatches</a>
-		</footer>
-	</article>
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="content">{{ .Content }}</div>
+    <footer>
+      <a class="back-to" hx-boost="true" hx-push-url="true" href="/"
+        ><< Back to Dispatches</a
+      >
+    </footer>
+  </article>
+  <aside class="article-meta">
+    <section>
+      <a class="back-to" hx-boost="true" hx-push-url="true" href="/">
+        << Back to Dispatches
+      </a>
+    </section>
+    <section>
+      <header>
+        <h2>Published</h2>
+      </header>
+      <date>{{ .Date | time.Format ":date_long" }}</date>
+    </section>
+    <section>
+      <header>
+        <h2>Last updated</h2>
+      </header>
+      <date>{{ .Lastmod | time.Format ":date_long" }}</date>
+    </section>
+    <section>
+      <header>
+        <h3>Tags</h3>
+      </header>
+      {{ partial "article-tags" .}}
+    </section>
+  </aside>
 </section>
-<aside>
-	<header>
-		<h3>Categories</h3>
-		{{ if .Site.Params.showCategories }}
-		{{/* partial "categories" . */}}
-		{{ end }}
-	</header>
+<aside class="page-meta">
+  <section>
+    <header>
+      <h3>By Category</h3>
+    </header>
+    {{ partial "site-categories" . }}
+  </section>
 </aside>
 {{ end }}

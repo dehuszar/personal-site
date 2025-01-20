@@ -4,6 +4,12 @@ title = 'Samuel Allen'
 
 cleanDestinationDir = true
 
+enableGitInfo = true
+enableRobotsTXT = true
+
+publishDate = ['publishdate', 'pubdate', 'published', 'date']
+lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+
 [menus]
   [[menus.main]]
     name = 'dispatches'

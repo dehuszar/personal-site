@@ -1,26 +1,39 @@
-{{ define "main" }}
+{{ define "main" }} {{ `<!-- dispatch/single.html -->` | safeHTML }}
 <header class="page-title">
   <h2>About Me</h2>
 </header>
 <section class="{{ .Type }}-wrapper">
-	<article>
+  <article>
     <header>
-			<h1>{{ .Title }}</h1>
-		</header>
-		{{ $path := .Params.image }}
-		<figure><img class="logo" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.alt }}"></figure>
-		<div class="content">{{ .Content }}</div>
-		<footer>
-		</footer>
-	</article>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ $path := .Params.image }}
+    <figure>
+      <img
+        class="logo"
+        src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}"
+        alt="{{ .Params.alt }}"
+      />
+    </figure>
+    <div class="content">{{ .Content }}</div>
+    <footer></footer>
+  </article>
 </section>
 
 <aside>
-{{ if .Site.Params.showCategories }}
-	<header>
-		<h3>Categories</h3>
-		<!-- {{/* partial "categories" . */}} -->
-	</header>
-{{ end }}
+  <!-- {{ if .Site.Params.showCategories }} -->
+  <section>
+    <header>
+      <h3>By Category</h3>
+      {{ partial "site-categories" . }}
+    </header>
+  </section>
+  <section>
+    <header>
+      <h3>By Tag</h3>
+    </header>
+    {{ partial "article-tags" .}}
+  </section>
+  <!-- {{ end }} -->
 </aside>
 {{ end }}

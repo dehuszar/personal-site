@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="">
+  {{ `<!-- _default/baseof.html -->` | safeHTML }}
   <head>
     {{ partial "head" }}
 		{{ partial "css" }}
@@ -14,7 +15,9 @@
 			{{ block "main" . }}{{ end }}
 		</main>
     {{ partial "footer" }}
-		<!-- <pre>{{ debug.Dump .Params }}</pre> -->
+    {{ if hugo.IsDevelopment }}
+      <pre class="debug">{{ debug.Dump .Params }}</pre>
+    {{ end }}
   </body>
 </html>
 
