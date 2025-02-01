@@ -10,7 +10,6 @@ type = "cv/education"
   imageType = "photo"
   location = "Seattle, WA"
 
-tags = []
 +++
 
 After a long journey trying to figure out what kind of community and culture I most belonged to, I made my way to Seattle Washington. It was, and is the most beautiful campus I've ever set foot on, a beautiful city overall, and I thrived here. The state of Washington has just about every natural environment known to man beside jungle and tundra, and many of my fondest pre-family memories are of hiking, camping, and exploring the state.

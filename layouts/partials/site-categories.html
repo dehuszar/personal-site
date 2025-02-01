@@ -1,5 +1,5 @@
 {{ `<!-- partials/categories.html -->` | safeHTML }}
-<ul>
+<ul class="categories">
   {{ range .Site.Taxonomies.categories }}
   <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
   {{ end }}

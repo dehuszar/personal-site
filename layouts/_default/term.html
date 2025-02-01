@@ -3,9 +3,12 @@
   <h2>{{ .Type | title }}</h2>
 </header>
 {{ $pages := where site.RegularPages "Type" "dispatch" }}
-<ul class="{{ .Page.Params.type }}-list">
-  {{ $paginator := .Paginate $pages }} {{ range $paginator.Pages }} {{ partial
-  "dispatch-list-item" . }} {{ end }}
+<ul class="dispatches-list">
+  {{ $paginator := .Paginate $pages }} {{ range where $paginator.Pages
+  ".Params.categories" "intersect" (slice .Data.Term) }} {{ partial
+  "dispatch-list-item" . }} {{ end }} {{ $paginator := .Paginate $pages }} {{
+  range where $paginator.Pages ".Params.tags" "intersect" (slice .Data.Term) }}
+  {{ partial "dispatch-list-item" . }} {{ end }}
 </ul>
 <aside>
   <section>

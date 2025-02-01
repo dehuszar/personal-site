@@ -11,7 +11,6 @@ yearsExp = 5
 
 experience = ['personal', 'skyspecs']
 skills = ['networking', 'platform-engineering', 'zero-trust', 'service-discovery', 'service-mesh']
-tags = ['HashiCorp']
 +++
 
 Having had the pleasure of manually configuring services to only talk to each other and wire up the connection securely Consul's service mesh, especially when integrated with Nomad and Vault, makes quick work of it. Similarly, the service discovery and health checking features are a pretty massive improvement over docker-compose and the like.
