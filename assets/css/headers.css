@@ -134,3 +134,8 @@ header h3 {
     font-size: 1.4em;
   }
 }
+
+.content h2,
+.content h3 {
+  margin-top: 1.2em;
+}
