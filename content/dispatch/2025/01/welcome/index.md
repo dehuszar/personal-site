@@ -7,15 +7,15 @@ categories = [ "essay" ]
 tags = []
 
 [params]
-  image = "images/welcome.jpg"
+  image = "images/welcome.svg"
 [[resources]]
-  title = "Fight Club hotel video still"
+  title = "Welcome mat vector"
   [resources.params]
-    alt = "Fight Club hotel video still"
-    class = "image"
+    alt = "Welcome mat vector"
+    class = "vector"
 +++
 
-![Fight Club hotel video still](images/welcome.jpg)
+![Welcome mat vector](images/welcome.svg)
 
 Hello! So nice of you to drop by. I wasn't expecting any visitors, but I'm glad you're here.
 

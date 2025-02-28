@@ -1,6 +1,7 @@
 {{ define "main" }} {{ `<!-- _default/home.html -->` | safeHTML }}
 <header class="page-title">
   <h2>{{ .Type | title }}</h2>
+  <a class="rss-feed" href="/index.xml">{{ partial "icon-feed" }}</a>
 </header>
 {{ $pages := where site.RegularPages "Type" "dispatch" }}
 <ul class="{{ .Page.Params.type }}-list">
@@ -8,13 +9,13 @@
   "dispatch-list-item" . }} {{ end }}
 </ul>
 <aside>
-  <section>
+  <section class="taxonomy-links">
     <header>
       <h3>By Category</h3>
     </header>
     {{ partial "site-categories" . }}
   </section>
-  <section>
+  <section class="taxonomy-links">
     <header>
       <h3>By Tag</h3>
     </header>

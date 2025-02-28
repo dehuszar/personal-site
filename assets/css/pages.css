@@ -2,20 +2,23 @@
 .page-wrapper figure {
   margin: 0;
 }
+.page-wrapper {
+  font-size: var(--text-size-paragraph);
+}
 
 @media (min-width: 1280px) {
   .page-wrapper {
     display: grid;
     font-size: 1.4em;
     grid-column: span 13;
-    grid-row: 3 / span 13;
+    grid-row: 3 / span 8;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
   }
 
   .page-wrapper article {
     display: grid;
-    grid-column: 5 / span 8;
+    grid-column: 1 / span 8;
     grid-row: 1 / span 12;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
@@ -30,10 +33,10 @@
     grid-row: 2 / span 10;
   }
 
-	.page-wrapper article figure {
-		grid-column: 6 / span 3;
-		grid-row: 1 / span 6;
-	}
+  .page-wrapper article figure {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 6;
+  }
 
   .page-wrapper figure img {
     max-width: 100%;

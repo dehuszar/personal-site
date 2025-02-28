@@ -1,30 +1,23 @@
 {{ with resources.Get "css/main.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/headers.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/anchors.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/nav.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/pages.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/images.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/cv-sections.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/cv-articles.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/dispatch-list.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-{{ end }}
-{{ with resources.Get "css/dispatch-article.css" | postCSS }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/headers.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/anchors.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/nav.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/pages.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/images.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/cv-sections.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/cv-articles.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/dispatch-list.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/dispatch-article.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/asides.css" | postCSS }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }}

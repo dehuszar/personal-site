@@ -1,0 +1,21 @@
+.personal-links ul {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.personal-links li {
+  list-style: none;
+}
+
+.personal-links li + li {
+  margin-left: 1em;
+}
+
+.personal-links svg {
+  display: block;
+  max-height: 4rem;
+  max-width: 4rem;
+  overflow: hidden;
+}

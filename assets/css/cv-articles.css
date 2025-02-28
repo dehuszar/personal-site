@@ -9,10 +9,10 @@
 }
 
 @media (max-width: 1279px) {
-  .education .cv-section-wrapper,
-  .experience .cv-section-wrapper,
-  .skill .cv-section-wrapper,
-  .tool .cv-section-wrapper {
+  .education .cv-section-wrapper .cv-section,
+  .experience .cv-section-wrapper .cv-section,
+  .skill .cv-section-wrapper .cv-section,
+  .tool .cv-section-wrapper .cv-section {
     left: -130vw;
     position: absolute;
   }
@@ -22,6 +22,7 @@
   .skill article,
   .tool article {
     height: 100vh;
+    bottom: 6rem;
     position: absolute;
     top: 18.2em;
     width: 100vw;
@@ -34,6 +35,11 @@
     justify-content: space-between;
     line-height: 1;
     padding: 2em 0;
+  }
+
+  .cv-section-wrapper article footer {
+    padding-bottom: var(--single-column-padding-top);
+    padding-top: var(--single-column-padding-top);
   }
 }
 
@@ -51,7 +57,7 @@
 }
 
 .cv-section-wrapper article p {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -101,7 +107,7 @@
   }
 
   .cv-section-wrapper article header a {
-    align-self: center;
+    align-self: end;
     grid-column: 4 / span 2;
     grid-row: 1 / span 1;
     text-align: right;

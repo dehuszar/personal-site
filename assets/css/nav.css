@@ -1,155 +1,156 @@
 /* Hamburger button and animation */
 button {
-  color:black;
+  color: black;
 }
 
 .hamb {
-	background-color: transparent;
-	border-width: 0px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	right: 0;
+  background-color: transparent;
+  border-width: 0px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
   top: 2.5em;
 }
 
 @media (min-width: 1280px) {
-	.hamb {
-		display: none;
-	}
+  .hamb {
+    display: none;
+  }
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	white-space: nowrap;
-	border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .hamb .ham {
-	-webkit-tap-highlight-color: transparent;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .hamb .ham {
-	height: 60px;
-	width: 60px;
-	cursor: pointer;
-	transition-duration: .3s;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .hamb .ham .top {
-	stroke-dasharray: 40 160;
+  stroke-dasharray: 40 160;
 }
 
 .hamb .ham .middle {
-	transform-origin: 50%;
-	stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  stroke-dasharray: 40 142;
 }
 
 .hamb .ham .bottom {
-	transform-origin: 50%;
-	stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  stroke-dasharray: 40 85;
 }
 
 .hamb .line {
-	fill: none;
-	stroke: black;
-	stroke-width: 5;
-	transition-duration: .3s;
-	stroke-linecap: round;
+  fill: none;
+  stroke: black;
+  stroke-width: 5;
+  transition-duration: 0.3s;
+  stroke-linecap: round;
 }
 
 .hamb.active svg {
-	--tw-rotate: 45deg;
-	transform: rotate(var(--tw-rotate));
+  --tw-rotate: 45deg;
+  transform: rotate(var(--tw-rotate));
 }
 
 .hamb.active svg .top {
-	stroke-dashoffset: -64px;
+  stroke-dashoffset: -64px;
 }
 
 .hamb.active svg .middle {
-	--tw-rotate: 90deg;
-	transform: rotate(var(--tw-rotate));
+  --tw-rotate: 90deg;
+  transform: rotate(var(--tw-rotate));
 }
 
 .hamb.active svg .bottom {
-	stroke-dashoffset: -64px;
+  stroke-dashoffset: -64px;
 }
 
 .site-header nav ul {
-	border-bottom: 0;
-	border-top: 0;
+  border-bottom: 0;
+  border-top: 0;
   height: 0;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	transition: border-bottom ease 0.45s,
-							border-top ease 0.45s,
-							height ease-in-out 0.5s,
-							margin-bottom ease 0.45s;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transition:
+    border-bottom ease 0.45s,
+    border-top ease 0.45s,
+    height ease-in-out 0.5s,
+    margin-bottom ease 0.45s;
   width: 100%;
   z-index: 1;
 }
 
 .hamb.active + nav ul {
-	border-bottom: 3px solid black;
-	border-top: 2px solid black;
-	height: 5em;
-	margin-bottom: 3em;
+  border-bottom: 3px solid black;
+  border-top: 2px solid black;
+  height: 5em;
+  margin-bottom: 3em;
 }
 
 @media (min-width: 1280px) {
-	.site-header nav {
-		display: grid;
-		grid-column: span 3;
+  .site-header nav {
+    display: grid;
+    grid-column: span 3;
     grid-template-columns: subgrid;
-	}
+  }
 }
 
 .site-header nav ul {
-	display: flex;
+  display: flex;
   justify-content: space-evenly;
 }
 
 @media (min-width: 1280px) {
-	.site-header nav ul {
-		height: auto;
-		grid-column: span 3;
-		display: grid;
-		grid-template-columns: subgrid;
-	}
+  .site-header nav ul {
+    height: auto;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
 }
 
 .site-header nav li {
   align-self: center;
-	list-style: none;
-	text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 .site-header nav a {
-	display: block;
-	font-family: var(--serif-font);
-	font-size: 1.4em;
-	font-weight: light;
-	padding: 1em 2em;
+  display: block;
+  font-family: var(--serif-font);
+  font-size: 1.4em;
+  font-weight: light;
+  padding: 1em 2em;
 }
 
 @media (min-width: 1280px) {
-	.site-header nav a {
-		font-size: 1em;
-		padding: 0;
-	}
+  .site-header nav a {
+    font-size: 1em;
+    padding: 0;
+  }
 }
 
 .site-header nav li a.active {
-	font-weight: 700;
+  font-weight: 700;
 }

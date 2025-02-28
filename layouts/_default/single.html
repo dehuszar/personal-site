@@ -1,4 +1,4 @@
-{{ define "main" }} {{ `<!-- dispatch/single.html -->` | safeHTML }}
+{{ define "main" }} {{ `<!-- _default/single.html -->` | safeHTML }}
 <header class="page-title">
   <h2>About Me</h2>
 </header>
@@ -21,19 +21,22 @@
 </section>
 
 <aside>
-  <!-- {{ if .Site.Params.showCategories }} -->
-  <section>
+  <section class="personal-links">
     <header>
-      <h3>By Category</h3>
-      {{ partial "site-categories" . }}
+      <h3>Links</h3>
     </header>
+    <ul>
+      <li>
+        <a href="https://github.com/dehuszar"
+          >{{ partial "icon-github-mark" }}</a
+        >
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/dehuszar/"
+          >{{ partial "icon-linkedin" }}</a
+        >
+      </li>
+    </ul>
   </section>
-  <section>
-    <header>
-      <h3>By Tag</h3>
-    </header>
-    {{ partial "dispatch-tags" .}}
-  </section>
-  <!-- {{ end }} -->
 </aside>
 {{ end }}
