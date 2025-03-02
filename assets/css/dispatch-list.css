@@ -22,17 +22,18 @@
 
 .dispatches-list li date {
   display: block;
-  font-size: 1.4em;
+  font-size: 2.4em;
   margin: 0 0 0.5em 0;
 }
 
 .dispatches-list h3 {
-  font-size: 3rem;
-  margin: 0.5em 0;
+  font-size: 3.8rem;
+  margin: 0 0 0.5em 0;
 }
 
 .dispatches-list p {
-  font-size: 1.8em;
+  font-size: var(--text-size-paragraph-mobile);
+  line-height: 1.6;
 }
 
 /* Observation styling */
