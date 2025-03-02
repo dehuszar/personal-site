@@ -57,7 +57,7 @@
 }
 
 .cv-section-wrapper article p {
-  font-size: 2.2rem;
+  font-size: var(--text-size-paragraph-mobile);
   line-height: 1.5;
   margin: 0;
 }
@@ -72,7 +72,9 @@
 }
 
 .cv-section-wrapper article ol {
-  margin: 0;
+  font-size: var(--text-size-paragraph-mobile);
+  line-height: 1.5;
+  margin: 0.5em 0 0 0.5em;
 }
 
 .cv-section-wrapper article ol ol {

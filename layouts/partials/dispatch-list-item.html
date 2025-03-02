@@ -3,7 +3,7 @@
     {{ if .Title }}
     <h3>{{ .Title }}</h3>
     {{ end }}
-    <date>{{ .Date | time.Format ":date_long" }}</date>
+    <date>{{ .Lastmod | time.Format ":date_long" }}</date>
     {{ if eq (index .Page.Params.categories 0) "observation" }}
     <blockquote class="summary">{{ .Summary }}</blockquote>
     {{ else }}

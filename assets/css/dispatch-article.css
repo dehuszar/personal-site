@@ -1,5 +1,5 @@
 .dispatch-wrapper {
-  font-size: var(--text-size-paragraph);
+  font-size: var(--text-size-paragraph-mobile);
 }
 
 .dispatch-wrapper p {
