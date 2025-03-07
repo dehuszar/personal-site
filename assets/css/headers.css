@@ -91,7 +91,15 @@ body.page h6 {
   margin: 0;
 }
 
+@media (min-width: 1280px) {
+  .page-title h2 {
+    line-height: 1;
+    margin: 0;
+  }
+}
+
 .page-title .rss-feed {
+  display: inline-block;
   font-size: 1.5rem;
   margin: 0 0 0 1.5em;
 }
@@ -99,6 +107,17 @@ body.page h6 {
 .page-title .rss-feed svg {
   height: 3rem;
   width: 3rem;
+}
+
+@media (min-width: 1280px) {
+  .page-title .rss-feed {
+    margin: 0;
+  }
+  .page-title .rss-feed svg {
+    height: 1.5rem;
+    margin: 0.5rem 0 0;
+    width: 1.5rem;
+  }
 }
 
 .page-title p {
