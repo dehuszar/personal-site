@@ -1,6 +1,9 @@
 {{ define "main" }} {{ `<!-- dispatch/single.html -->` | safeHTML }}
 <header class="page-title">
   <h2>Dispatches</h2>
+  <a class="back-to" hx-boost="true" hx-push-url="true" href="/"
+    ><< Back to Dispatches</a
+  >
 </header>
 <section class="{{ .Type }}-wrapper">
   <article>

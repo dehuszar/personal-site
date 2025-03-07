@@ -1,23 +1,26 @@
 {{ define "main" }}
 <header class="page-title">
-	<h2>{{ replace .Type "cv/" "CV | " | title }}</h2>
+  <h2>{{ replace .Type "cv/" "CV | " | title }}</h2>
+  <a class="back-to" hx-boost="true" hx-push-url="true" href="/cv"
+    ><< Back to CV</a
+  >
 </header>
 <div class="cv-section-wrapper">
   <article>
     <header>
       <h1>{{ .Title }}</h1>
-      <a class="back-to"
-        hx-boost="true"
-        hx-push-url="true"
-        href="/cv"><< Back to CV</a>
     </header>
-		{{ $path := .Params.image }}
-    <figure><img class="{{.Params.imageType}} {{.Params.imageClass}}" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>
+    {{ $path := .Params.image }}
+    <figure>
+      <img
+        class="{{.Params.imageType}} {{.Params.imageClass}}"
+        src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}"
+        alt="{{ .Params.imageAlt }}"
+      />
+    </figure>
     <div class="content">{{ .Content }}</div>
-    <footer>
-
-    </footer>
+    <footer></footer>
   </article>
-	{{ partial "cv-sections" . }}
+  {{ partial "cv-sections" . }}
 </div>
 {{ end }}

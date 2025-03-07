@@ -12,6 +12,10 @@
   --text-color: var(--primary-charcoal);
   --text-size-paragraph: 2.2rem;
   --text-size-paragraph-mobile: 3.2rem;
+  --text-size-sub-heading: 1.4rem;
+  --text-size-sub-sub-heading: 1.2rem;
+  --text-size-sub-heading-mobile: 3.4rem;
+  --text-size-sub-sub-heading-mobile: 2.6rem;
   --sans-serif-font: "Lato", sans-serif;
   --serif-font: "Lora", serif;
   --meta-font-size: 2rem;
