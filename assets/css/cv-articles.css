@@ -1,11 +1,17 @@
 .cv article ul {
-  font-size: 1.4rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 0 0 1.5em 0;
 }
 
 .cv article ul li {
+  font-size: var(--text-size-paragraph-mobile);
   margin-top: 0.75em;
+}
+
+@media (min-width: 1280px) {
+  .cv article ul li {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -62,12 +68,18 @@
   margin: 0;
 }
 
+@media (min-width: 1280px) {
+  .cv-section-wrapper article p {
+    font-size: var(--text-size-paragraph);
+  }
+}
+
 .cv-section-wrapper article p + p {
   margin-top: 1em;
 }
 
 .cv-section-wrapper article .meta {
-  font-size: 0.85em;
+  font-size: 0.85rem;
   line-height: 1;
 }
 
@@ -137,7 +149,7 @@
 
   .cv-section-wrapper article ol,
   .cv-section-wrapper article p {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 2.5;
   }
 
