@@ -1,27 +1,30 @@
 {{ define "main" }}
 <header class="page-title">
-	<h2>{{ replace .Type "cv/" "CV | " | title }}</h2>
+  <h2>{{ replace .Type "cv/" "CV | " | title }}</h2>
+  <a class="back-to" hx-boost="true" hx-push-url="true" href="/cv"
+    ><< Back to CV</a
+  >
 </header>
 <div class="cv-section-wrapper">
-	<article>
-		<header>
-			<h1>{{ .Title }}</h1>
-			<a class="back-to"
-				hx-boost="true"
-				hx-push-url="true"
-				href="/cv"><< Back to CV</a>
-		</header>
-		{{ $path := .Params.image }}
-    <figure><img class="{{ .Params.imageType }} {{ .Params.imageClass }}" src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.imageAlt }}"></figure>
-		
-		<div class="content">
-			<p class="meta">{{ .Params.degree }} | {{ .Params.endYear }}</p>
-			{{ .Content }}
-		</div>
-		<footer>
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ $path := .Params.image }}
+    <figure>
+      <img
+        class="{{ .Params.imageType }} {{ .Params.imageClass }}"
+        src="{{ with .Resources.Get $path }}{{ .RelPermalink }}{{ end }}"
+        alt="{{ .Params.imageAlt }}"
+      />
+    </figure>
 
-		</footer>
-	</article>
-	{{ partial "cv-sections" . }}
+    <div class="content">
+      <p class="meta">{{ .Params.degree }} | {{ .Params.endYear }}</p>
+      {{ .Content }}
+    </div>
+    <footer></footer>
+  </article>
+  {{ partial "cv-sections" . }}
 </div>
 {{ end }}
