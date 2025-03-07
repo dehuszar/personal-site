@@ -24,12 +24,14 @@
       </header>
       <date>{{ .Date | time.Format ":date_long" }}</date>
     </section>
+    {{ if gt .Lastmod .Date }}
     <section>
       <header>
         <h2>Last updated</h2>
       </header>
       <date>{{ .Lastmod | time.Format ":date_long" }}</date>
     </section>
+    {{ end }}
     <section>
       <header>
         <h3>Tags</h3>
