@@ -22,8 +22,20 @@
 
 .dispatches-list li date {
   display: block;
-  font-size: 2.4em;
+  font-size: 2.4rem;
   margin: 0 0 0.5em 0;
+}
+
+.dispatches-list li date .updated {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0 0 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .dispatches-list li date {
+    font-size: 1.4em;
+  }
 }
 
 .dispatches-list h3 {
