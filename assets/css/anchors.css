@@ -35,13 +35,3 @@ body.page a:visited {
     font-size: 1.2rem;
   }
 }
-
-.rss-feed {
-  display: inline-block;
-}
-
-.rss-feed svg {
-  height: 1.5rem;
-  margin-left: 1.5rem;
-  width: 1.5rem;
-}
