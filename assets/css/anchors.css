@@ -27,7 +27,9 @@ body.page a:visited {
 }
 
 .back-to {
+  display: block;
   font-size: 2rem;
+  text-align: right;
 }
 
 @media (min-width: 1280px) {

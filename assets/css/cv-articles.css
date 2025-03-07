@@ -42,11 +42,6 @@
     line-height: 1;
     padding: 2em 0;
   }
-
-  .cv-section-wrapper article footer {
-    padding-bottom: var(--single-column-padding-top);
-    padding-top: var(--single-column-padding-top);
-  }
 }
 
 .cv-section-wrapper article h1 {
@@ -95,6 +90,11 @@
 
 .cv-section-wrapper article ol ol ol {
   list-style-type: lower-roman;
+}
+
+.cv-section-wrapper article footer {
+  margin: 2rem 0;
+  padding: var(--single-column-padding-top) 0;
 }
 
 @media (min-width: 1280px) {
