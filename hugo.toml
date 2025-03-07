@@ -8,7 +8,7 @@ enableGitInfo = true
 enableRobotsTXT = true
 
 publishDate = ['publishdate', 'pubdate', 'published', 'date']
-lastmod = [':fileModTime', ':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+lastmod = ['lastmod', ':fileModTime', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
 
 [menus]
   [[menus.main]]

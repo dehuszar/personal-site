@@ -9,6 +9,10 @@
   padding: 2em 0 1em;
 }
 
+.dispatches-list li:first-of-type {
+  padding-top: 0;
+}
+
 .dispatches-list li + li {
   border-top: var(--border-width) solid var(--dispatch-charcoal-foreground);
   margin-top: 1em;
@@ -81,6 +85,7 @@
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     grid-gap: subgrid;
+    padding-top: 0;
   }
 
   .dispatches-list li,
