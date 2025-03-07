@@ -106,10 +106,6 @@
     grid-row: 3 / span 4;
   }
 
-  .dispatch-wrapper article footer .back-to {
-    display: none;
-  }
-
   .dispatch-wrapper .article-meta {
     display: grid;
     grid-column: 6 / span 3;

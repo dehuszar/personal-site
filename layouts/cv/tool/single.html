@@ -19,7 +19,11 @@
       />
     </figure>
     <div class="content">{{ .Content }}</div>
-    <footer></footer>
+    <footer>
+      <a class="back-to" hx-boost="true" hx-push-url="true" href="/cv"
+        ><< Back to CV</a
+      >
+    </footer>
   </article>
   {{ partial "cv-sections" . }}
 </div>
