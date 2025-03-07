@@ -5,6 +5,12 @@ img {
   padding: 2rem 0;
 }
 
+@media (min-width: 1280px) {
+  img {
+    padding: 0;
+  }
+}
+
 img.photo {
   opacity: 0.95;
 }
