@@ -55,7 +55,6 @@ var cvExpNavSetActive = (current) => {
   navItems.forEach((navItem) => {
     navItem.classList.remove("active");
     const cvNavItem = navItem.href.split("/").slice(3, -1).join("/");
-    console.log(current);
     if (cvNavItem === current) {
       navItem.classList.add("active");
     }
@@ -63,7 +62,6 @@ var cvExpNavSetActive = (current) => {
 };
 
 document.addEventListener("htmx:load", function () {
-  htmx.config.scrollBehavior = false;
   htmx.onLoad(() => {
     bodySetURLClasses();
   });
