@@ -1,23 +1,25 @@
-{{ with resources.Get "css/main.css" | postCSS }}
+{{ with resources.Get "css/normalize.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/headers.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/main.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/anchors.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/headers.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/nav.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/anchors.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/pages.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/nav.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/images.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/pages.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/cv-sections.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/images.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/cv-articles.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/cv-sections.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/dispatch-list.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/cv-articles.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/dispatch-article.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/dispatch-list.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
-{{ end }} {{ with resources.Get "css/asides.css" | postCSS }}
+{{ end }} {{ with resources.Get "css/dispatch-article.css" | postCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/asides.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }}

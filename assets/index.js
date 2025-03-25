@@ -62,7 +62,9 @@ var cvExpNavSetActive = (current) => {
   });
 };
 
-htmx.config.scrollBehavior = false;
-htmx.onLoad(() => {
-  bodySetURLClasses();
+document.addEventListener("htmx:load", function () {
+  htmx.config.scrollBehavior = false;
+  htmx.onLoad(() => {
+    bodySetURLClasses();
+  });
 });
