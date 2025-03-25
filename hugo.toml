@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Samuel Allen'
 
 cleanDestinationDir = true
-
 enableGitInfo = true
 enableRobotsTXT = true
 
