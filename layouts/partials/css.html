@@ -1,5 +1,7 @@
 {{ with resources.Get "css/normalize.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/fonts.css" | postCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/main.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/headers.css" | postCSS | minify }}
