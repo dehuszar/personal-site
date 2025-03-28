@@ -1,6 +1,7 @@
 .cv article ul {
   line-height: 1.5;
   margin: 0 0 1.5em 0;
+  padding: 0 0 0 1.4rem;
 }
 
 .cv article ul li {
@@ -30,8 +31,13 @@
     height: 100vh;
     bottom: 6rem;
     position: absolute;
-    top: 18.2em;
-    width: 100vw;
+    top: 6rem;
+    transition: top ease-in-out 0.5s;
+    width: calc(100vw - 2.8em);
+  }
+
+  body.cv:has(.hamb.active) main .cv-section-wrapper article {
+    top: 10rem;
   }
 
   .cv-section-wrapper article header {
@@ -55,6 +61,12 @@
 .cv-section-wrapper article figure img {
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 1279px) {
+  .cv-section-wrapper article figure img {
+    max-width: 67%;
+  }
 }
 
 .cv-section-wrapper article p {

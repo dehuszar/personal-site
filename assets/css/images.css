@@ -2,13 +2,7 @@ img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  padding: 2rem 0;
-}
-
-@media (min-width: 1280px) {
-  img {
-    padding: 0;
-  }
+  padding: 0;
 }
 
 img.photo {
@@ -26,7 +20,13 @@ img.photo.round-tl-br {
 
 figure {
   margin: 0;
-  padding: 1em 0;
+  padding: 2em 0;
+}
+
+@media (min-width: 1280px) {
+  figure {
+    padding: 1em 0;
+  }
 }
 
 .dispatch svg {
