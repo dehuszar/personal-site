@@ -23,6 +23,14 @@
   padding: var(--scrollable-container-padding);
 }
 
+.dispatch-wrapper .article-meta {
+  font-size: var(--meta-font-size);
+}
+
+.dispatch-wrapper .article-meta li + li {
+  margin-top: 0.75em;
+}
+
 .dispatch-wrapper .article-meta,
 .page-meta {
   padding-top: var(--single-column-padding-top);
@@ -138,7 +146,7 @@
     padding: 0;
   }
 
-  .dispatch-wrapper .article-meta .tags li {
+  .dispatch-wrapper .tags li {
     display: inline;
     font-size: 1.2rem;
     line-height: var(--meta-line-height);
