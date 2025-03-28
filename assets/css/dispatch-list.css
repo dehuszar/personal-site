@@ -1,5 +1,6 @@
 .dispatches-list {
-  margin: 0 0 3em 0;
+  border-top: var(--border-width) solid var(--dispatch-charcoal-foreground);
+  margin: 0;
   overflow-y: scroll;
   padding: var(--scrollable-container-padding);
 }
@@ -26,7 +27,7 @@
 
 .dispatches-list li date {
   display: block;
-  font-size: 2.4rem;
+  font-size: 1.1rem;
   margin: 0 0 0.5em 0;
 }
 
@@ -43,7 +44,8 @@
 }
 
 .dispatches-list h3 {
-  font-size: 3.8rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
   margin: 0 0 0.5em 0;
 }
 
@@ -80,6 +82,7 @@
 
 @media (min-width: 1280px) {
   .dispatches-list {
+    border-top: none;
     grid-column: 5 / span 8;
     grid-row: 3 / span 15;
     grid-template-columns: subgrid;
@@ -116,6 +119,7 @@
   .dispatches-list li h3 {
     grid-column: 1 / span 5;
     grid-row: 1 / span 1;
+    line-height: 2;
     margin: 0;
     font-size: 2em;
   }

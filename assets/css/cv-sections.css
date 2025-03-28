@@ -1,33 +1,33 @@
 .cv-section {
   display: grid;
-  gap: 1em 3em;
+  gap: 1em 1em;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(4, 6em);
-  margin-bottom: 6em;
+  grid-template-rows: repeat(4, 3em);
+  margin-bottom: 3em;
 }
 
 .cv-section.skills nav,
 .cv-section.skills ul {
-  grid-row: span 7;
+  grid-row: span 3;
 }
 
 @media (max-width: 1279px) {
   .cv-section.education {
-    grid-template-rows: repeat(1, 6em);
+    grid-template-rows: repeat(1, 3em);
   }
 
   .cv-section.skills {
-    grid-template-rows: repeat(3, 6em);
+    grid-template-rows: repeat(3, 3em);
   }
 
   .cv-section.tools {
-    grid-template-rows: repeat(5, 6em);
+    grid-template-rows: repeat(5, 3em);
   }
 }
 
 .cv-section.tools nav,
 .cv-section.tools ul {
-  grid-row: span 9;
+  grid-row: span 6;
 }
 
 .cv-section header {
@@ -54,7 +54,7 @@
 }
 
 .cv-section ul li h1 {
-  font-size: 2.4rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.2;
   margin: 0;
