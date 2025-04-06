@@ -128,7 +128,7 @@
   }
 
   .cv-section header h3 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--cv-blue-foreground);
     grid-column: span 3;
   }
 

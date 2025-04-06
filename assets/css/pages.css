@@ -7,6 +7,10 @@
   font-size: var(--text-size-paragraph-mobile);
 }
 
+aside header {
+  border-color: var(--page-green-foreground);
+}
+
 @media (min-width: 1280px) {
   .page-wrapper {
     display: grid;

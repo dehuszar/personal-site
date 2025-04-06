@@ -150,6 +150,7 @@ button {
   }
 }
 
+.site-header nav li a:hover,
 .site-header nav li a.active {
   font-weight: 700;
 }
