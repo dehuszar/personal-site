@@ -4,7 +4,10 @@
     {{ .Type | title | singularize }}:<span> {{ title .Data.Term }}</span>
   </h2>
 
-  <a class="rss-feed" href="{{ .Page.Permalink }}index.xml"
+  <a
+    class="rss-feed"
+    href="{{ .Page.Permalink }}index.xml"
+    aria-label="Link to RSS feed for {{ .Data.Term }}"
     >{{ partial "icon-feed" }}</a
   >
 </header>
