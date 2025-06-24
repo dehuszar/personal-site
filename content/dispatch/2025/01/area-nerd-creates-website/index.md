@@ -1,13 +1,14 @@
 +++
 title = 'Area Nerd Creates Website'
 date = 2025-01-11T22:54:37-04:00
+lastmod = 2025-04-05T22:48:37-04:00
 summary = "A quick stroll through the why and how of this website"
 
 categories = [ "essay" ]
 tags = ["web-dev", "javascript", "industry"]
 
 [params]
-  image = "images/painting-with-code.svg"
+  image = "images/painting-with-code-min.svg"
 [[resources]]
   title = "Area Nerd"
   [resources.params]
@@ -15,13 +16,13 @@ tags = ["web-dev", "javascript", "industry"]
     alt = "self-portrait sketch of the author painting a website"
 +++
 
-![Area Nerd](images/painting-with-code.svg)
+![Area Nerd](images/painting-with-code-min.svg)
 
 I have been developing websites in some form or another since 2005. This being 2025 means I've been at this for 20 years. On the one hand it reminds me of my age, but on the other I still am filled with exuberant excitement when I think about the internet. This is not as common of a sentiment as it was 20 years ago, and there are various aspects of that shifting of enthusiasm that I will probably write about in the months and years ahead. For today though I want to talk--not about the internet at large--but a single website.
 
 You happen to be looking at it right now.
 
-It's not much. Not yet. ...the perfect being the enemy of the good, and all that. What I am most pleased with though is it's relative simplicity. I've tried to keep the interface fairly minimal, sure, but the actual nuts and bolts of the website couldn't be simpler; in some ways even simpler than those first websites that I built. In the old days, hand-rolling artisanal html and css files for every page which needed to exist was a fairly arduous task; one made more difficult by Internet Explorer and its insistence on not cooperating with any efforts to standardize, or even align on how the browser rendered a page. This led to a seemingly endless amount of tweaking and testing, getting it just right, uploading it to an FTP server and calling it done, only to discover that it was now broken in some other important context, or a different set of pages.
+It's not much. Not yet. ...the perfect being the enemy of the good, and all that. What I am most pleased with though is it's relative simplicity. I've tried to keep the interface fairly minimal, sure, but the actual nuts and bolts of the website couldn't be simpler; in some ways even simpler than those first websites that I built. In the old days, hand-rolling artisanal HTML and CSS files for every page which needed to exist was a fairly arduous task; one made more difficult by Internet Explorer and its insistence on not cooperating with any efforts to standardize, or even align on how the browser rendered a page. This led to a seemingly endless amount of tweaking and testing, getting it just right, uploading it to an FTP server and calling it done, only to discover that it was now broken in some other important context, or a different set of pages.
 
 Over the years of browser standards coalescing, semantic markup improvements, and new CSS superpowers made the craft progressively easier... enhanced you might even say.
 
