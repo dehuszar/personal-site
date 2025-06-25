@@ -132,7 +132,7 @@ button {
 .site-header nav li {
   align-self: center;
   list-style: none;
-  text-align: center;
+  text-align: right;
 }
 
 .site-header nav a {
