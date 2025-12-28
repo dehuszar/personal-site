@@ -103,7 +103,7 @@ main [class$="-wrapper"] {
     display: grid;
     gap: 1em 3em;
     grid-column: span 13;
-    grid-row: 4 / span 14;
+    grid-row: 4 / span 15;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
   }
