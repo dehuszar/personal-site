@@ -39,17 +39,14 @@ But positive and negative, these are all the outer layers of the onion. In borin
 
 Okay. So what of it? "That and $1.75 will get you on the subway," as the saying goes.
 
----
-
-> What would you say... _you do_ here?
-
-        -- The Bobs
+> What would you say... _you do_ here? \
+> -- The Bobs
 
 These layers are important to peel back, examine, and disambiguate, because when a word or idea can mean so many things all at once we can often talk past each other, nodding our head at the same words but walk away with different understandings. Much of the discourse I have followed over the past few years, as it pertains to the internet, social media, AI, and so on, seems very intent to focus on technologies as a having agency.
 
-> "Is social media making us unhappy?"
-> "Will AI take over our jobs?"
-> "Was the internet's promise of liberation a lie?"
+- "Is social media making us unhappy?"
+- "Will AI take over our jobs?"
+- "Was the internet's promise of liberation a lie?"
 
 There's a curious hue to all these sentiments. By itself, no technology has any implicit valence. All intent, whether noble or malicious, is imparted to a given tool or technology by whomever wields it.
 

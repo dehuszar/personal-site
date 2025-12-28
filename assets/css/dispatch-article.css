@@ -23,6 +23,10 @@
   padding: var(--scrollable-container-padding);
 }
 
+.dispatch-wrapper article .content li + li {
+  margin-top: 1rem;
+}
+
 .dispatch-wrapper .article-meta {
   font-size: var(--meta-font-size);
 }
@@ -101,6 +105,20 @@
   .dispatch-wrapper date,
   .dispatch-wrapper .back-to {
     font-size: 1.2rem;
+  }
+
+  .dispatch-wrapper article .content blockquote {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: right;
+  }
+
+  .dispatch-wrapper article .content blockquote p {
+    font-size: 1.2em;
+    margin: 0;
+    font-style: italic;
   }
 
   .dispatch-wrapper article .content {
