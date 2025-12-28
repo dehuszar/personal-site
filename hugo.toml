@@ -3,23 +3,31 @@ languageCode = 'en-us'
 title = 'Samuel Allen'
 
 cleanDestinationDir = true
-enableGitInfo = true
+enableGitInfo = false
 enableRobotsTXT = true
 
 publishDate = ['publishdate', 'pubdate', 'published', 'date']
-lastmod = ['lastmod', ':fileModTime', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+lastmod = [
+  'lastmod',
+  ':fileModTime',
+  ':git',
+  'modified',
+  'date',
+  'publishdate',
+  'pubdate',
+  'published',
+]
 
 [menus]
-  [[menus.main]]
-    name = 'dispatches'
-    pageRef = '/'
-    weight = 10
-  [[menus.main]]
-    name = 'cv'
-    pageRef = '/cv'
-    weight = 20
-  [[menus.main]]
-    name = 'about'
-    pageRef = '/about'
-    weight = 30
-
+[[menus.main]]
+name = 'dispatches'
+pageRef = '/'
+weight = 10
+[[menus.main]]
+name = 'cv'
+pageRef = '/cv'
+weight = 20
+[[menus.main]]
+name = 'about'
+pageRef = '/about'
+weight = 30
