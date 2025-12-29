@@ -4,19 +4,19 @@ date = 2025-12-28T13:49:00.000Z
 summary = "The internet is far more than the sum of the largest products and services which are built on it"
 
 categories = ["essay"]
-tags = ["web-dev", "javascript", "industry"]
+tags = ["industry", "philosophizing"]
 
 [params]
 image = "./images/yeeeeeeeeaaaaaahhhhhh-min.svg"
 
 [[resources]]
-  title = "I almost forgot ahh, I'm also gonna need you to go ahead and come in on Sunday too, kay?"
 [resources.params]
+  title = "I almost forgot ahh, I'm also gonna need you to go ahead and replace yourself with AI, kay?"
   class = "vector"
   alt = "line drawing of the character Lumbergh from Office Space with a paper mask over his face that bears an OpenAI logo"
 +++
 
-![yeeeeeeeeaaaaaahhhhhh](images/yeeeeeeeeaaaaaahhhhhh-min.svg)
+![line drawing of the character Lumbergh from Office Space with a paper mask over his face that bears an OpenAI logo](images/yeeeeeeeeaaaaaahhhhhh-min.svg)
 
 What is the internet?
 
@@ -50,7 +50,7 @@ These layers are important to peel back, examine, and disambiguate, because when
 
 There's a curious hue to all these sentiments. By itself, no technology has any implicit valence. All intent, whether noble or malicious, is imparted to a given tool or technology by whomever wields it.
 
-A knife and fork can be used to feed ourselves or each other. A sword and trident can both be used to inflict violence, or repel it. The same underlying technologies underpin each implementation, but whether they are used for good or ill is "omakase." [^1]
+A knife and fork can be used to feed ourselves or each other. A sword and trident can both be used to inflict violence, or repel it. The same underlying technologies underpin each implementation, but whether they are used for good or ill is "[omakase](https://www.merriam-webster.com/dictionary/omakase)."
 
 Like a knife or fork, "Social Media" doesn't _do_ anything. Each social media platform is a curated space designed by people, and the decisions made by those people inform how it should be used. Like a public park, the policy decisions that went into the park's design and creation will govern whether it encourages social connection and engagement, or is hostile to certain populations or purposes. The site formerly known as Twitter, under its new leadership, has been heavily refactored to implement [hostile architectural patterns](https://en.wikipedia.org/wiki/Hostile_architecture); boosting specific voices, and encouraging abuse to dissenting communities; not to mention a seemingly bottomless amount of grifting.
 
