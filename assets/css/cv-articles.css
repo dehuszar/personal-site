@@ -20,7 +20,7 @@
   .experience .cv-section-wrapper .cv-section,
   .skill .cv-section-wrapper .cv-section,
   .tool .cv-section-wrapper .cv-section {
-    left: -130vw;
+    left: -200vw;
     position: absolute;
   }
 
