@@ -27,8 +27,8 @@
 }
 
 html {
-  height: 100vh;
   margin: 0;
+  min-height: 100vh;
   padding: 0;
   width: 100vw;
 }
@@ -94,7 +94,7 @@ main [class$="-wrapper"] {
     gap: 1em 3em;
     grid-template-columns: repeat(13, minmax(0, 1fr));
     grid-template-rows: repeat(18, 3em);
-    height: 100vh;
+    min-height: 100vh;
     padding: 0;
     width: calc(100vw);
   }
