@@ -4,10 +4,10 @@ type = 'cv/skill'
 yearsExp = 7
 
 [params]
-  image = "images/disaster-girl-meme.jpg"
-  imageAlt = "meme of girl smiling in front of burning house with joke about rotating passwords that are also kept in plain text on local machines"
-  imageType = "photo"
-  imageClass = "round-tl-br"
+  image = "images/safe.svg"
+  imageAlt = "illustration of a safe"
+  imageType = "svg"
+  imageClass = ""
 
 experience = ['discovery-education', 'essential-forms', 'isobar', 'no1-cooperative', 'skyspecs']
 +++

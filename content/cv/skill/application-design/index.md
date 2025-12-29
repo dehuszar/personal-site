@@ -4,11 +4,11 @@ type = 'cv/skill'
 yearsExp = 15
 
 [params]
-  image = ""
-  imageAlt = ""
-  imageType = "logo"
+  image = "images/protractor-and-compass.svg"
+  imageAlt = "a protractor and compass"
+  imageType = "svg"
 
-experience = []
+experience = ["simpl"]
 +++
 
 While building an application is always fun, I really love the process of designing it. Not visually, mind you. I make no claims at being good at visual design. But its structural design... What problem(s) are we trying to solve? What are the core events and user flows that the application is attempting to concern itself with? What are the best tools and abstractions to handle these events and flows? How do they all fit together?

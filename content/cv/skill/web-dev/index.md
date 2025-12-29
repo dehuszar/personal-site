@@ -4,8 +4,8 @@ type = 'cv/skill'
 yearsExp = 20
 
 [params]
-  image = 'images/html-css-logo.svg'
-  imageAlt = 'Official HTML and CSS Logo'
+  image = 'images/web-development.svg'
+  imageAlt = 'Illustration of a computer monitor with markup and a settings icon on it'
   imageType = 'svg'
 
 experience = ['discovery-education', 'essential-forms', 'isobar', 'no1-cooperative', 'skyspecs']
