@@ -58,7 +58,7 @@ So, _AI_ is not going to "take your job," but your _boss_ might try to replace y
 
 This kind of conflation and obfuscation long predates our current era. We do similar linguistic dances in our more traditional forms of media when speaking about uncomfortable topics like war or state violence. We use terms like "collateral damage" instead of "killing of civilians," or "thousands dead from explosion" rather than detailing who actually launched missiles, and who was killed as a result. I think we are more accustomed to spotting this kind of softening of violent conflict with passive-language, than we are when consuming information about technology and commerce, but it is similarly pernicious in the way that it deflects attention away from actors and incentives and towards... well, it's kinda hard to say, isn't it? Somebody... The internet? AI?
 
-...and what are we then to do, try to apply pressure to "the internet" to do better? ¯\_(ツ)/¯
+...and what are we then to do, try to apply pressure to "the internet" to do better? ¯\\\_(ツ)\_/¯
 
 Which is the point. If the actors aren't clear, if intent has been conferred to an abstraction with a multitude of meanings and moving parts, then that saves all the actors from having to answer a lot of uncomfortable questions about what they are doing and why.
 
