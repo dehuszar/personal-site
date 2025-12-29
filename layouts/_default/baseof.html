@@ -18,6 +18,7 @@
     {{ if hugo.IsDevelopment }}
       <pre class="debug">{{ debug.Dump .Params }}</pre>
     {{ end }}
+    {{ partial "end-of-body-scripts" }}
   </body>
 </html>
 

@@ -60,7 +60,3 @@ var cvExpNavSetActive = (current) => {
     }
   });
 };
-
-document.addEventListener("htmx:load", function () {
-  bodySetURLClasses();
-});

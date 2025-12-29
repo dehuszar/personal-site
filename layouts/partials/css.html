@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/pages.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/view-transitions.css" | postCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/images.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/cv-sections.css" | postCSS | minify }}
