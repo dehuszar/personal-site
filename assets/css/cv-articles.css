@@ -154,6 +154,10 @@
     grid-row: 2 / span 12;
     overflow-y: scroll;
     padding-right: 1em;
+  }
+
+  .cv-section-wrapper article .content,
+  .cv-section-wrapper article .content::-webkit-scrollbar-thumb:hover {
     scrollbar-color: var(--cv-blue-foreground)
       rgba(var(--cv-blue-background-rgb), 0.15);
   }

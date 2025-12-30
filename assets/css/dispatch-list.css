@@ -5,6 +5,11 @@
   padding: var(--scrollable-container-padding);
 }
 
+.dispatches-list,
+.dispatches-list:hover {
+  scrollbar-color: var(--dispatch-charcoal-foreground) transparent;
+}
+
 .dispatches-list li {
   list-style: none;
   padding: 2em 0 1em;
