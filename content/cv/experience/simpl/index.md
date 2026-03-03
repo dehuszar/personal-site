@@ -18,18 +18,15 @@ SIMPL is a non-profit which offers attending and training surgeons a tool for se
 
 ### Engineering Manager / AWS Cloud Engineer
 
-- Led the engineering team through development of
-  several major product features and initiatives,
-  - tech-debt repayment, and
-  - architectural improvements
-- Migrated AWS Amplify/AppSync/DynamoDB backend stack to Terraform/API Gateway v2/Turso SQLite
-- Reduced most expensive response latencies from over 10 seconds on some queries down to as low as ~500ms
-- Improved data quality by introducing constraints not available to the previous architecture
-- Vastly improved developer workflows and feature delivery timelines by reducing complexity across the stack
-- Consolidated metrics, logs, and alerts into Grafana for improved observability strategy
-- Moved management of core AWS infrastructure into Infrastructure As Code (IaC) workflows with Terraform
-- Implemented Google Workspaces directory as Single-Sign-On identity for AWS to
-  - improve security,
-  - reduce the need to manage / rotate credentials for privileged users / accounts
-- Spearheaded documentation project of the org’s complex data model
-- Mentored and taught the team how to use and develop with the above tools
+- Mentoring engineers (5 at the team’s peak size, majority women, 2 ESL speakers) over the course of 130 1-on-1s; helping to unblock them from day-to-day challenges, identify their strengths, and follow their curiosity
+- Collaborating with product owners, analytics, and support teams to identify, design, and implement architectural improvements, reducing AWS infrastructure costs by over 20%, as well as complexity for developers
+- Scoped the technical implementations, and oversaw delivery of over thirty major features and refactors to our platform in 2025
+- Identified performance and scalability bottlenecks hindering the current backend and database
+  - Researched and evaluated replacement SaaS tools; managed vendor relationships
+  - Reduced most expensive response latencies by up to 98%
+  - Vastly improved developer productivity by reducing complexity across the stack, replacing a black-box, managed, application delivery framework with a custom platform
+- Optimizing our Jira board to more closely adhere to our development and review workflows
+- Writing and organizing extensive documentation in Confluence to cover RFC’s for internal improvements, runbooks for repetitive, but difficult to automate tasks, formal documentation of features, incident reports, group troubleshooting calls, and sprint retrospectives
+- Instrumenting Open-Telemetry in Lambdas to ship logs and traces to Grafana for improved observability strategy, monitoring application health
+- Moved management of core AWS infrastructure into version-controlled Infrastructure As Code (IaC) workflows with Terraform
+- Implemented Google Workspace as Single-Sign-On identity provider (SAML) for AWS to improve security, eliminating developer usage of long-running programmatic credentials

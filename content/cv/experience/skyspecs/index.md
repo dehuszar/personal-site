@@ -25,29 +25,24 @@ I had the opportunity to learn all about AWS and its myriad products, eventually
 ### Staff Software Engineer
 
 - Established security and monitoring best practices, earning our product ISO 27001 certification
-- Led migration of all Kafka-enabled services, with zero production downtime or data loss, to Redpanda managed cloud offering
-- Researched and identified replacement product / vendor
-- Managed vendor selection and relationship
+- Researched, designed, and implemented cross-microservice event messaging with Kafka/Redpanda; implementation reached >100k messages/day under my tenure
+  - Developed tools for writing and testing event-driven workflows in local development environments
+  - Ran “event storming” sessions with members of the product and engineering teams to help design new, and enhance existing, event-driven and GraphQL services
+- Maintained APIs with >99.95% success rate across >2M queries/day
+- Mentored and trained developers; wrote extensive internal documentation around design goals and best practices
+- Created and led weekly developer-focused touchpoint meetings where engineers shared ideas, demos, coordinated tasks and built cohesion across teams
 
 ### Senior Software Engineer / Growth Leader
 
-- Led Platforms team of three engineers which:
-- Designed and delivered a user-management application, a new authentication and authorization layer used by web application, ~5 backend services, and ~12 Lambda functions
-- Transitioned between old and new auth service within a 2 hr maintenance window
-- Implemented Grafana for observability of all services, databases, and applications
-- Identified, prototyped, and implemented Consul Service Mesh to enable Zero-Trust, dynamic routing to entire service catalog of ECS Fargate containers
-- Identified, prototyped, and implemented dynamic database credentials for Zero-Trust developer workflows with Vault
-- Identified, prototyped, and implemented Cloudflare for DNS, firewall, and threat detection
-- Designed and implemented Kafka-based event-driven architecture, using Confluent Cloud
+Identified, prototyped, and integrated HashiCorp Cloud’s Consul Service Mesh SaaS product to enable Zero-Trust, dynamic routing to entire service catalog of ECS Fargate and EKS (Kubernetes) containers
+
+- Identified, prototyped, and integrated dynamic database credentials for Zero-Trust developer workflows with HashiCorp Cloud’s Vault SaaS offering
 
 ### Senior Web Application Developer
 
-- Spearheaded expansion of AWS cloud services to enhance security and scaling capabilities
 - Migrated entirety of existing cloud infrastructure (100s of AWS resources) to Terraform
-- Implemented VPC private subnets for secure networking
-- Implemented AWS multi/cross-account role-assumption capabilities to remove all IAM users from service accounts
-- Identified and selected vendor for 3rd-party architectural review and managed the review process with vendor
+- Implemented AWS multi/cross-account role-assumption capabilities to remove all IAM users from service accounts and VPC private subnets for secure networking
 
 ### Web Application Developer
 
-- As the first on-staff web developer, developed 1st-gen data portal for reviewing turbine inspection data which supported delivery of nearly 30,000 inspection reports to our customers during it’s 2+ year lifespan
+- As the first on-staff web developer, developed “greenfield” data portal for reviewing turbine inspection data which supported delivery of nearly 30,000 inspection reports to our customers during its 2+ year lifespan
