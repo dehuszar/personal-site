@@ -20,5 +20,5 @@ Some of the more fun workflows I've automated with Bash include:
 - [Dynamically retrieving secrets](https://gist.github.com/dehuszar/57ca1f8a0a933d0b9983262702a4f2e3) and env values from secure KV stores like AWS Secrets Manager / Parameter Store, Consul, or Vault all from inside of a script's scoped process so the parent session doesn't have access to them
 - [Automating the setup](https://github.com/dehuszar/hashistack-config) of new servers and workstations in concert with tools like Terraform, Ansible, and Consul Template
 - Instrumenting CI/CD pipelines with custom scripts to manage deployments, testing, and monitoring
-- Instrumenting and bootstrapping certificate-based authentication and cert-renewal workflows for services like Consul, Vault, and Kubernetes
+- [Instrumenting and bootstrapping certificate-based authentication and cert-renewal workflows](https://github.com/dehuszar/hashistack-config/tree/master) for services like Consul, Vault, and Kubernetes
 - Setting up automated backup routines
