@@ -13,7 +13,7 @@ experience = ['essential-forms', 'no1-cooperative', 'skyspecs']
 skills = ['linux', 'scripting']
 +++
 
-Being a fan of Linux, and having had the opportunity to learn how to manage headless servers, shell-scripting with Bash is indispensable. While many programming languages have tooling for CLI work I regularly reach for Bash when writing little helper scripts, often for work that needs to be portable, with minimal dependency setup.
+Being a fan of Linux, and having had the opportunity to learn how to manage headless servers, shell-scripting with Bash is indispensable. While many programming languages have tooling for CLI work, I regularly reach for Bash when writing little helper scripts, often for work that needs to be portable, with minimal dependency setup.
 
 Some of the more fun workflows I've automated with Bash include:
 
