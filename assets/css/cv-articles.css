@@ -29,10 +29,10 @@
     display: none;
   }
 
-  .education article,
-  .experience article,
-  .skill article,
-  .tool article {
+  .education > article,
+  .experience > article,
+  .skill > article,
+  .tool > article {
     height: 100vh;
     bottom: 6rem;
     position: absolute;

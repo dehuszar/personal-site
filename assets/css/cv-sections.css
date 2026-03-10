@@ -224,7 +224,7 @@
     opacity: 100%;
   }
 
-  body.cv.tool article:not(:empty) {
+  body.cv.tool > article:not(:empty) {
     grid-column: 5 / span 8;
   }
 }
