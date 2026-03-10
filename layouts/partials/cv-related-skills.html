@@ -1,11 +1,12 @@
-{{ `<!-- partials/cv-skills.html -->` | safeHTML }}
+{{ `<!-- partials/cv-skills.html -->` | safeHTML }} {{ with .Params.skills }}
 <article class="cv-related-skills">
   <header><h3>Related Skills</h3></header>
   <ul>
-    {{ with .Params.skills }} {{ range . }}
+    {{ range . }}
     <li>
       <a href="/cv/skill/{{ . }}">{{ replace . "-" " " | title }}</a>
     </li>
-    {{ end }} {{ end }}
+    {{ end }}
   </ul>
 </article>
+{{ end }}
