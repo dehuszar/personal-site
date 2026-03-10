@@ -163,7 +163,7 @@ body.page h6 {
 
 @media (min-width: 1280px) {
   .page-title .back-to {
-    align-self: self-end;
+    align-self: center;
     grid-column: 5 / span 5;
     line-height: 1;
     text-align: right;
@@ -182,6 +182,8 @@ article header h1 {
   article footer {
     grid-column: 1 / span 5;
     padding: 0.5em 0;
+    align-self: end;
+    grid-row: 12 / span 1;
   }
 }
 

@@ -1,0 +1,32 @@
+.cv-related-links {
+  grid-column: 6 / span 3;
+  grid-row: 9 / span 4; /* start at row 1 alongside the figure */
+
+  > article {
+    ul {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: start;
+      margin: 0 0 1em 0;
+      padding: 0;
+
+      li {
+        font-size: 0.85em;
+        list-style-type: none;
+        margin: 0;
+        padding: 0 5px 0 0;
+
+        a:after {
+          content: ", ";
+        }
+
+        &:last-child {
+          padding: 0;
+          a:after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}

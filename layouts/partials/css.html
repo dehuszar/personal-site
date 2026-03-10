@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/cv-articles.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.Get "css/cv-related-links.css" | postCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/dispatch-list.css" | postCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{ end }} {{ with resources.Get "css/dispatch-article.css" | postCSS | minify }}
