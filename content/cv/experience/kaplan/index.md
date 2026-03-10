@@ -1,6 +1,8 @@
 +++
 title = "Kaplan, Inc"
 type = "cv/experience"
+skills = ['linux', 'networking', 'web-dev']
+tools = ['aws', 'ember'] # add page for 'gitlab'
 
 [params]
   endYear = "2014"

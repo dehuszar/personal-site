@@ -9,7 +9,7 @@ yearsExp = 1
   imageAlt = "htmx logo"
   imageType = "logo"
 
-experience = ['personal']
+experience = [] # 'personal'
 skills = ['web-dev']
 +++
 

@@ -9,8 +9,8 @@ yearsExp = 4
   imageAlt = 'Cloudflare logo'
   imageType = 'logo'
 
-experience = ['personal-projects', 'skyspecs']
-skills = ['network', 'security', 'platform-engineering']
+experience = ['skyspecs'] # make doc 'personal', 
+skills = ['network', 'security', 'infrastructure']
 +++
 
 While AWS has many great tools which overlap, I'm a big fan of Cloudflare's network and security features and find it all a little easier to wire up than competing services. I've used it for my personal projects and spearheaded the implementation of a robust WAF in an enterprise environment as well.

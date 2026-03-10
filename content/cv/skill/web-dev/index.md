@@ -8,8 +8,8 @@ yearsExp = 20
   imageAlt = 'Illustration of a computer monitor with markup and a settings icon on it'
   imageType = 'svg'
 
-experience = ['discovery-education', 'essential-forms', 'isobar', 'no1-cooperative', 'skyspecs', 'simpl']
-tools = []
+experience = ['discovery-education', 'essential-forms', 'kaplan', 'isobar', 'no1-cooperative', 'skyspecs', 'simpl']
+tools = ['htmx', 'hugo', 'postcss', 'turso']
 +++
 
 Even though the day-to-day of my career has taken me pretty far away from the front-end, drawing boxes on the screen and making them purdy is still one of my favorite things to do. While I'm not a visual designer, I still enjoy the immediacy and satisfaction of being able to build a thing that I can look at and interact with.

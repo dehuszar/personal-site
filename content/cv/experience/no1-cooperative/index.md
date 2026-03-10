@@ -1,6 +1,8 @@
 +++
 title = "No1 Cooperative"
 type = "cv/experience"
+skills = ['application-design', 'infrastructure', 'linux', 'networking', 'security', 'shell', 'web-dev']
+tools = []
 
 [params]
   endYear = "2011"

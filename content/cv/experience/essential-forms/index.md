@@ -1,6 +1,8 @@
 +++
 title = "Essential Forms"
 type = "cv/experience"
+skills = ['application-design', 'infrastructure', 'linux', 'networking', 'security', 'shell', 'web-dev']
+tools = ['aws', 'ember', 'grafana']
 
 [params]
   endYear = "2014"

@@ -9,7 +9,7 @@ yearsExp = 1
   imageAlt = "Hugo logo"
   imageType = "logo"
 
-experience = ['personal']
+experience = [] # 'personal'
 skills = ['web-dev']
 +++
 

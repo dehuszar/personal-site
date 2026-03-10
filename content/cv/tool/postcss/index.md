@@ -10,8 +10,8 @@ yearsExp = 10
   imageType = 'logo'
 
 homepage = 'https://postcss.org/'
-experience = ['personal', 'skyspecs', 'isobar']
-skills = ['css', 'post-processing', 'application-development', 'front-end']
+experience = ['skyspecs', 'isobar'] # 'personal', 
+skills = ['application-design', 'web-dev']
 +++
 
 PostCSS is a fantastic little post-processing CSS tool which allows a developer to decorate, optimize, expand, clean, shake out, and otherwise alter their stylesheet rules. There are a bajillion little plugins to do this and that. I have even written [one of my own](https://github.com/dehuszar/postcss-reference) which brings the [@import/reference](https://lesscss.org/features/#import-atrules-feature-reference) syntax from the LESS CSS pre-processor to PostCSS. Tailwind offers a similar [@apply method](https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply), but carries with it a pretty gigantic library built around utility classes, which is [not my cup of tea](https://medium.com/@dehuszar/semantic-remapping-with-css-pre-processors-906ba1a9910c).

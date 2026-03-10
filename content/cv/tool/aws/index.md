@@ -9,7 +9,7 @@ yearsExp = 13
   imageAlt = 'Amazon AWS logo'
   imageType = 'logo'
 
-experience = ['kaplan', 'isobar', 'skyspecs', 'simpl']
+experience = ['essential-forms', 'kaplan', 'isobar', 'skyspecs', 'simpl']
 skills = ['infrastructure', 'security', 'shell', 'web-dev', 'application-design', 'linux', 'networking', 'service-orchestration']
 +++
 

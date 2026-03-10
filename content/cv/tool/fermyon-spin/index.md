@@ -9,7 +9,7 @@ yearsExp = 2
   imageAlt = 'Fermyon logo'
   imageType = 'logo'
 
-experience = ['personal']
+experience = [] # 'personal'
 skills = ['web-dev', 'application-design', 'service-orchestration']
 +++
 

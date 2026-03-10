@@ -2,13 +2,14 @@
 title = 'Event Sourcing'
 type = 'cv/skill'
 yearsExp = 3
+experience = ["skyspecs"]
+tools = ["redpanda"]
 
 [params]
   image = "images/event-sourcing.svg"
   imageAlt = "diagram of event topics populating multiple databases"
   imageType = "svg"
 
-experience = ["skyspecs"]
 +++
 
 Event-sourcing changed how I think about software architecture, particularly in scenarios where you have multiple clients consuming the same data for different purposes, or consuming data from multiple services and sewing it together. In traditional CRUD-style apps, the database is your source of truth, and everything that wants that data, needs to talk to that one database. This can present several challenges as your suite of services grow.

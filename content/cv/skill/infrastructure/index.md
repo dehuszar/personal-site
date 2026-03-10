@@ -8,8 +8,8 @@ yearsExp = 7
   imageAlt = "illustration of a bulldozer"
   imageType = "vector"
 
-experience = ['simpl','skyspecs']
-tools = ['aws', 'terraform', 'vault', 'consul', 'nomad', 'ansible', 'docker', 'grafana-cloud', 'redpanda']
+experience = ['essential-forms', 'no1-cooperative', 'simpl','skyspecs']
+tools = ['aws', 'terraform', 'vault', 'consul', 'nomad', 'ansible', 'grafana-cloud', 'redpanda']
 +++
 
 Whereas my career in software development began in the front-end, and evolved into full-stack development, this most recent chapter of my career has been largely focused on infrastructure, automation, developer-platforms, and observability. I have always enjoyed building the application itself, but infrastructure is a different kind of fun because you get to zoom out and think about systems. How the various layers interact. How to scale the application. How to most effectively develop and deploy it. How to make it secure and resilient. How to understand its performance at all levels of the stack, before and after changes, and under a variety of different conditions.

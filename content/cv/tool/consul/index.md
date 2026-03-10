@@ -9,8 +9,8 @@ yearsExp = 5
   imageAlt = 'Consul logo'
   imageType = 'logo'
 
-experience = ['personal', 'skyspecs']
-skills = ['networking', 'platform-engineering', 'zero-trust', 'service-discovery', 'service-mesh']
+experience = ['skyspecs'] # 'personal', 
+skills = ['infrastructure', 'networking', 'security', 'service-orchestration']
 +++
 
 Having had the pleasure of manually configuring services to only talk to each other and wire up the connection securely, Consul's service mesh, especially when integrated with Nomad and Vault, makes quick work of it. Similarly, the service discovery and health checking features are a pretty massive improvement over the stock cloud offerings.

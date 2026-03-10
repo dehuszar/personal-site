@@ -9,7 +9,7 @@ yearsExp = 4
   imageAlt = "Vault logo"
   imageType = "logo"
 
-experience = ['personal', 'skyspecs']
+experience = ['skyspecs'] # 'personal', 
 skills = ['security', 'infrastructure']
 +++
 
