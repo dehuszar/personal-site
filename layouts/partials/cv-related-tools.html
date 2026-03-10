@@ -1,0 +1,13 @@
+{{ `<!-- partials/cv-tools.html -->` | safeHTML }}
+<article class="cv-related-tools">
+  <header>
+    <h3>Related Tools</h3>
+  </header>
+  <ul>
+    {{ with .Params.tools }} {{ range . }}
+    <li>
+      <a href="/cv/tool/{{ . }}">{{ replace . "-" " " | title }}</a>
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+</article>

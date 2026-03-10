@@ -168,9 +168,17 @@
     display: inline;
     font-size: 1.2rem;
     line-height: var(--meta-line-height);
-  }
+    padding: 0 5px 0 0;
 
-  .dispatch-wrapper .article-meta .tags li + li::before {
-    content: ", ";
+    a::after {
+      content: ", ";
+    }
+
+    &:last-child {
+      padding: 0;
+      a:after {
+        content: "";
+      }
+    }
   }
 }

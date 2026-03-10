@@ -1,6 +1,9 @@
 +++
 title = "SkySpecs"
 type = "cv/experience"
+skills = ['application-development', 'css', 'front-end', 'html', 'javascript', 'linux', 'network', 'platform-engineering', 'security', 'service-orchestration', 'zero-trust']
+tools = ['aws', 'cloudflare', 'ember', 'hashicorp', 'confluent', 'redpanda', 'grafana', 'gitlab']
+tags = []
 
 [params]
   endYear = "2023"
@@ -9,9 +12,6 @@ type = "cv/experience"
   imageType = "logo"
   startYear = "2016"
 
-tags = []
-skills = ['application-development', 'css', 'front-end', 'html', 'javascript', 'linux', 'network', 'platform-engineering', 'security', 'service-orchestration', 'zero-trust']
-tools = ['aws', 'cloudflare', 'ember', 'hashicorp', 'confluent', 'redpanda', 'grafana', 'gitlab']
 +++
 
 SkySpecs delivers fleet management tools for owners and operators of wind farms. I had the distinct pleasure of being their first web application developer on staff and got to build out the initial product offering; a data portal for delivering automated drone inspections of wind turbines to customers.

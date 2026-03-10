@@ -20,6 +20,9 @@
       />
     </figure>
     <div class="content">{{ .Content }}</div>
+    <section class="cv-related-links">
+      {{ partial "cv-related-skills" . }} {{ partial "cv-related-tools" . }}
+    </section>
     <footer>
       <a class="back-to" hx-boost="true" hx-push-url="true" href="/cv"
         ><< Back to CV</a

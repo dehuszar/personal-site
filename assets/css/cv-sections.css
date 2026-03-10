@@ -97,12 +97,12 @@
     grid-row: 3 / span 13;
   }
 
-  .cv-section-wrapper article:not(:empty) {
+  .cv-section-wrapper > article:not(:empty) {
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     grid-column: 5 / span 8;
-    grid-row: 1 / span 12;
+    grid-row: 1 / span 13;
   }
 
   .cv-section {
