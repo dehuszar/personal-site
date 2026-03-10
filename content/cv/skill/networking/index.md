@@ -8,7 +8,8 @@ yearsExp = 20
   imageAlt = "vector illustration of a ring of nodes connected to a central node"
   imageType = "vector"
 
-experience = ['essential-forms', 'no1-cooperative', 'personal', 'skyspecs', 'simpl']
+experience = ['essential-forms', 'no1-cooperative', 'skyspecs', 'simpl'] # add doc for 'personal'
+tools = ["aws", "cloudflare", "consul"]
 +++
 
 When all you have is a few computers with ip addresses that don't often change, networking is not so bad. When you have microservices with multiple instances spinning up and down as services scale, new versions are being deployed, and everything has to know how to talk to each other--securely at that--it gets a bit more complicated. VPCs, subnets, security groups, load balancers, routing tables, CIDR blocks... It is a lot to learn, and not super intuitive at first.

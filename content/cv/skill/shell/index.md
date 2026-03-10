@@ -9,7 +9,7 @@ yearsExp = 15
   imageType = "vector"
 
 
-experience = ['essential-forms', 'no1-cooperative', 'skyspecs']
+experience = ['essential-forms', 'no1-cooperative', 'skyspecs', 'simpl']
 skills = ['linux', 'scripting']
 +++
 

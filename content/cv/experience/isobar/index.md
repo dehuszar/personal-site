@@ -1,6 +1,8 @@
 +++
 title = "Isobar"
 type = "cv/experience"
+skills = ['application-design', 'infrastructure', 'linux', 'networking', 'web-dev']
+tools = ['aws', 'ember', 'postcss']
 
 [params]
   endYear = "2016"
@@ -11,4 +13,5 @@ type = "cv/experience"
 
 tags = []
 +++
-Dentsu Creative (Isobar) is a creative digital marketing agency in Chicago, IL.  Here, I worked as a front-end developer for Isobar's various clients; including Motorola, Sotheby's and more.
+
+Dentsu Creative (Isobar) is a creative digital marketing agency in Chicago, IL. Here, I worked as a front-end developer for Isobar's various clients; including Motorola, Sotheby's and more.

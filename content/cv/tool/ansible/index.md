@@ -9,8 +9,8 @@ yearsExp = 3
   imageAlt = 'Ansible logo'
   imageType = 'logo'
 
-experience = ['personal-projects']
-skills = ['platform-engineering', 'service-orchestration']
+experience = [] # make doc 'personal'
+skills = ['infrastructure', 'service-orchestration']
 +++
 
 While I tend to prefer the workflow capabilities of Terraform, it can only interact with systems that have an exposed API. So if you need to automate the configuration and maintenance of an instance at the OS level, you need a tool like Ansible. You can, of course, manually write scripts to do all the same thing, and I have, but Ansible is a much more elegant solution, and can be executed from a bash script or using a structured yaml configuration.

@@ -9,7 +9,7 @@ yearsExp = 7
   imageType = "logo"
 
 experience = ['personal', 'skyspecs', 'simpl']
-skills = ['observability', 'infrastructure']
+skills = ['application-design', 'infrastructure', 'service-orchestration', 'web-dev']
 +++
 
 Almost as important as being able to design and build elegent applications is the ability to see what it's actually doing. Thought that new refactor was super clever and efficient? Turns out it is 400ms slower than the code it replaced. Each major cloud offering has their own internal logging and metrics system, but if your code is not running in a major cloud, you don't like the stock options of your cloud provider, or it's running across many clouds, having a good external observability platform is critical.

@@ -9,7 +9,7 @@ yearsExp = 5
   imageAlt = 'Nomad logo'
   imageType = 'logo'
 
-experience = ['personal']
+experience = [] # 'personal'
 skills = ['containers', 'service-orchestration', 'infrastructure']
 +++
 

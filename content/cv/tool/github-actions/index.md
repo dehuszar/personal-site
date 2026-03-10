@@ -10,7 +10,7 @@ yearsExp = 1
   imageType = 'logo'
 
 experience = ['simpl']
-skills = ['web-dev', 'service-orchestration', 'application-design']
+skills = ['application-design', 'infrastructure', 'service-orchestration', 'web-dev' ]
 +++
 
 I've spent the last year leveling up on Github Actions. I've built a few CI/CD pipelines for my personal projects and for my employer. Having a few years maintaining a Gitlab CI workflow for several repos, GitHub Actions takes a lot of the instance configuration, and workload isolation concerns of your typical CI/CD pipeline and simmers them down into cleaner abstractions, and a fairly straight-forward set of yaml configurations.

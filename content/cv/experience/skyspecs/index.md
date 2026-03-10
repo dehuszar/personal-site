@@ -1,8 +1,8 @@
 +++
 title = "SkySpecs"
 type = "cv/experience"
-skills = ['application-development', 'css', 'front-end', 'html', 'javascript', 'linux', 'network', 'platform-engineering', 'security', 'service-orchestration', 'zero-trust']
-tools = ['aws', 'cloudflare', 'ember', 'hashicorp', 'confluent', 'redpanda', 'grafana', 'gitlab']
+skills = ['application-design', 'event-sourcing', 'infrastructure', 'linux', 'networking', 'security', 'service-orchestration', 'shell', 'web-dev']
+tools = ['aws', 'cloudflare', 'ember', 'consul', 'grafana', 'postcss', 'redpanda', 'terraform', 'vault'] # add page for 'gitlab'
 tags = []
 
 [params]

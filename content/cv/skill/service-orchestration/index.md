@@ -8,7 +8,7 @@ yearsExp = 6
   imageAlt = "icon of conductor"
   imageType = "vector"
 
-experience = ["skyspecs"]
+experience = ["skyspecs", "simpl"]
 tools = ["ansible", "aws", "nomad", "consul", "vault", "fermyon-spin"]
 +++
 

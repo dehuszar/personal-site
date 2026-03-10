@@ -10,7 +10,7 @@ yearsExp = 1
   imageType = "logo"
 
 experience = ['simpl']
-skills = ['application-design', 'event-sourcing']
+skills = ['application-design', 'web-dev']
 +++
 
 For most, PostgreSQL is the "boring is good" database the most people reach for first, but Turso is quickly becoming my go-to.

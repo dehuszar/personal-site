@@ -9,7 +9,7 @@ yearsExp = 7
   imageAlt = "Terraform Logo"
   imageType = "logo"
 
-experience = ['skyspecs', 'simpl', 'personal']
+experience = ['skyspecs', 'simpl'] # , 'personal'
 skills = ['application-design', 'infrastructure', 'networking', 'security', 'service-orchestration']
 +++
 

@@ -9,7 +9,8 @@ yearsExp = 7
   imageType = "svg"
   imageClass = ""
 
-experience = ['discovery-education', 'essential-forms', 'isobar', 'no1-cooperative', 'skyspecs']
+experience = ['essential-forms', 'no1-cooperative', 'skyspecs', 'simpl']
+tools = ["aws", "vault"]
 +++
 
 I wouldn't put myself out there as some kind of pro hacker, but I have had the opportunity to set up user management and admin portals, navigate the configuration, lifecycles, and validation of JWT tokens, as well as set up dynamic credentials systems, and Zero Trust security models.

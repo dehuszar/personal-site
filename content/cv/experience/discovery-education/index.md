@@ -1,6 +1,9 @@
 +++
 title = "Discovery Education"
 type = "cv/experience"
+skills = ['application-design', 'web-dev']
+tools = []
+tags = []
 
 [params]
   endYear = "2014"
@@ -9,7 +12,6 @@ type = "cv/experience"
   imageType = "logo"
   startYear = "2014"
 
-tags = []
 +++
 
 Like Shark Week, but for schools.
