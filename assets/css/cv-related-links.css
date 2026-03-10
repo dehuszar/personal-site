@@ -1,6 +1,9 @@
 .cv-related-links {
+  display: flex;
+  flex-flow: column;
   grid-column: 6 / span 3;
   grid-row: 9 / span 4; /* start at row 1 alongside the figure */
+  justify-content: flex-end;
 
   > article {
     ul {

@@ -1,13 +1,15 @@
-{{ `<!-- partials/cv-experience.html -->` | safeHTML }}
+{{ `<!-- partials/cv-experience.html -->` | safeHTML }} {{ with
+.Params.experience }}
 <article class="cv-related-experience">
   <header>
     <h3>Related Experience</h3>
   </header>
   <ul>
-    {{ with .Params.experience }} {{ range . }}
+    {{ range . }}
     <li>
       <a href="/cv/experience/{{ . }}">{{ replace . "-" " " | title }}</a>
     </li>
-    {{ end }} {{ end }}
+    {{ end }}
   </ul>
 </article>
+{{ end }}
