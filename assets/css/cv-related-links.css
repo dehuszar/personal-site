@@ -4,13 +4,18 @@
   grid-column: 6 / span 3;
   grid-row: 9 / span 4; /* start at row 1 alongside the figure */
   justify-content: flex-end;
+  margin: 1em 0 0 0;
 
   > article {
+    header {
+      border-bottom: 1px solid;
+    }
+
     ul {
       display: flex;
       flex-flow: wrap;
       justify-content: start;
-      margin: 0 0 1em 0;
+      margin: 1em 0 0;
       padding: 0;
 
       li {
@@ -30,6 +35,10 @@
           }
         }
       }
+    }
+
+    & + article {
+      margin-top: 1em;
     }
   }
 }

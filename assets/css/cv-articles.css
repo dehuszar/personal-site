@@ -45,7 +45,7 @@
     top: 10rem;
   }
 
-  .cv-section-wrapper article header {
+  .cv-section-wrapper > article > header {
     display: flex;
     flex: inherit;
     align-items: baseline;
