@@ -9,6 +9,10 @@
   <article>
     <header>
       <h1>{{ .Title }}</h1>
+      <date
+        >{{ .Params.startYear }} - {{ if eq .Params.endYear "9999" }}present{{
+        else }}{{ .Params.endYear }}{{end}}</date
+      >
     </header>
     {{ $path := .Params.image }}
     <figure>
