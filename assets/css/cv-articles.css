@@ -157,10 +157,15 @@
     padding-right: 1em;
   }
 
-  .cv-section-wrapper > article .content,
-  .cv-section-wrapper > article .content::-webkit-scrollbar-thumb:hover {
+  .cv-section-wrapper > article .content {
     scrollbar-color: var(--cv-blue-foreground)
       rgba(var(--cv-blue-background-rgb), 0.15);
+  }
+  .cv-section-wrapper > article .content::-webkit-scrollbar-thumb {
+    background-color: var(--cv-blue-foreground);
+  }
+  .cv-section-wrapper > article .content::-webkit-scrollbar-track {
+    background-color: rgba(var(--cv-blue-background-rgb), 0.15);
   }
 
   .cv-section-wrapper > article ol,
