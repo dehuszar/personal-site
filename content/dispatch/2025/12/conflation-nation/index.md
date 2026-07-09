@@ -42,7 +42,7 @@ Okay. So what of it? "That and $1.75 will get you on the subway," as the saying 
 > What would you say... _you do_ here? \
 > -- The Bobs
 
-These layers are important to peel back, examine, and disambiguate, because when a word or idea can mean so many things all at once we can often talk past each other, nodding our head at the same words but walk away with different understandings. Much of the discourse I have followed over the past few years, as it pertains to the internet, social media, AI, and so on, seems very intent to focus on technologies as a having agency.
+These layers are important to peel back, examine, and disambiguate, because when a word or idea can mean so many things all at once we can often talk past each other, nodding our head at the same words but walk away with different understandings. Much of the discourse I have followed over the past few years, as it pertains to the internet, social media, AI, and so on, seems very intent to focus on technologies as having agency.
 
 - "Is social media making us unhappy?"
 - "Will AI take over our jobs?"
@@ -52,7 +52,7 @@ There's a curious hue to all these sentiments. By itself, no technology has any 
 
 A knife and fork can be used to feed ourselves or each other. A sword and trident can both be used to inflict violence, or repel it. The same underlying technologies underpin each implementation, but whether they are used for good or ill is "[omakase](https://www.merriam-webster.com/dictionary/omakase)."
 
-Like a knife or fork, "Social Media" doesn't _do_ anything. Each social media platform is a curated space designed by people, and the decisions made by those people inform how it should be used. Like a public park, the policy decisions that went into the park's design and creation will govern whether it encourages social connection and engagement, or is hostile to certain populations or purposes. The site formerly known as Twitter, under its new leadership, has been heavily refactored to implement [hostile architectural patterns](https://en.wikipedia.org/wiki/Hostile_architecture); boosting specific voices, and encouraging abuse to dissenting communities; not to mention a seemingly bottomless amount of grifting.
+Like a knife or fork, "Social Media" doesn't _do_ anything. Each social media platform is a curated space designed by people, and the decisions made by those people inform how it should be used. Like a public park, the policy decisions that went into the park's design and creation will govern whether it encourages social connection and engagement, or is hostile to certain populations or purposes. The site formerly known as Twitter, under its new leadership, has been heavily refactored to implement [hostile architectural patterns](https://en.wikipedia.org/wiki/Hostile_architecture); boosting specific voices, and encouraging abuse to dissenting communities; not to mention a seemingly endless amount of grifting.
 
 So, _AI_ is not going to "take your job," but your _boss_ might try to replace you with a generative AI product.
 
